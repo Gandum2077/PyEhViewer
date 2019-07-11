@@ -1,0 +1,144 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{711, 796}, {57, 57}}",
+        "class" : "Button",
+        "attributes" : {
+          "flex" : "LTB",
+          "font_size" : 15,
+          "frame" : "{{344, 496}, {80, 32}}",
+          "title" : "",
+          "uuid" : "1607F351-A1FC-4015-A65F-7D7192C2465A",
+          "class" : "Button",
+          "name" : "button_close_view",
+          "image_name" : "iob:close_32"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{711, 662}, {57, 57}}",
+        "class" : "Button",
+        "attributes" : {
+          "flex" : "LTB",
+          "name" : "button_share",
+          "frame" : "{{344, 496}, {80, 32}}",
+          "title" : "",
+          "uuid" : "AF285567-B7AD-4B58-9A46-AD1766802CB3",
+          "class" : "Button",
+          "font_size" : 15,
+          "image_name" : "iob:share_32"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{711, 729}, {57, 57}}",
+        "class" : "Button",
+        "attributes" : {
+          "flex" : "LTB",
+          "name" : "button_refresh",
+          "frame" : "{{344, 496}, {80, 32}}",
+          "title" : "",
+          "uuid" : "0115717A-4652-401D-95EF-D1141C9597E1",
+          "class" : "Button",
+          "font_size" : 15,
+          "image_name" : "iob:refresh_32"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{711, 528}, {57, 57}}",
+        "class" : "Button",
+        "attributes" : {
+          "flex" : "LTB",
+          "font_size" : 15,
+          "frame" : "{{344, 496}, {80, 32}}",
+          "title" : "",
+          "uuid" : "7DD1EB02-832B-4878-B9C1-935894910A0F",
+          "class" : "Button",
+          "name" : "button_info",
+          "image_name" : "iob:information_circled_32"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{711, 595}, {57, 57}}",
+        "class" : "Button",
+        "attributes" : {
+          "flex" : "LTB",
+          "image_name" : "iob:ios7_world_32",
+          "frame" : "{{344, 496}, {80, 32}}",
+          "title" : "",
+          "uuid" : "7DD1EB02-832B-4878-B9C1-935894910A0F",
+          "class" : "Button",
+          "font_size" : 15,
+          "name" : "button_safari"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{711, 461}, {57, 57}}",
+        "class" : "Button",
+        "attributes" : {
+          "flex" : "LTB",
+          "frame" : "{{344, 496}, {80, 32}}",
+          "title" : "更新版本",
+          "uuid" : "5546A374-CDD9-4D3A-AEBE-948F58047B17",
+          "custom_attributes" : "{'hidden':True}",
+          "class" : "Button",
+          "name" : "button_update",
+          "font_size" : 13
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{711, 461}, {57, 57}}",
+        "class" : "Button",
+        "attributes" : {
+          "flex" : "LTB",
+          "frame" : "{{344, 496}, {80, 32}}",
+          "title" : "导入旧版",
+          "uuid" : "5546A374-CDD9-4D3A-AEBE-948F58047B17",
+          "custom_attributes" : "{'hidden':True}",
+          "class" : "Button",
+          "name" : "button_try_import_old_version",
+          "font_size" : 13
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {768, 1024}}",
+    "class" : "View",
+    "attributes" : {
+      "flex" : "",
+      "custom_class" : "GalleryView",
+      "enabled" : true,
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "name" : ""
+    },
+    "selected" : false
+  }
+]

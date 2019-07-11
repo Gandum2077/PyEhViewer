@@ -1,0 +1,268 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 288}, {308, 40}}",
+        "class" : "View",
+        "attributes" : {
+          "frame" : "{{110, 181}, {100, 100}}",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "class" : "View",
+          "name" : "view1",
+          "uuid" : "F3AC6685-2A59-4AD5-AB1B-49071A325862"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 247}, {308, 40}}",
+        "class" : "Label",
+        "attributes" : {
+          "uuid" : "F6257F89-C74C-419D-9176-CAAD219F1E16",
+          "flex" : "W",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "border_width" : 0,
+          "title" : "将当前url作为default url",
+          "alignment" : "left",
+          "text" : "自动翻页速度：",
+          "font_name" : "<System>",
+          "class" : "Label",
+          "name" : "label8",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 165}, {308, 40}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 0,
+          "flex" : "W",
+          "frame" : "{{120, 259}, {80, 32}}",
+          "title" : "Safari打开",
+          "uuid" : "8E46EFA2-D294-4B48-BA2E-83D64826D6D3",
+          "class" : "Button",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "border_color" : "RGBA(0.745283,0.745283,0.745283,1.000000)",
+          "name" : "button_safari",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 206}, {308, 40}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "5E16E1E3-0631-4397-B8F0-701C36FF144F",
+          "font_size" : 15,
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{120, 259}, {80, 32}}",
+          "border_color" : "RGBA(0.745283,0.745283,0.745283,1.000000)",
+          "border_width" : 0,
+          "title" : "刷新infos",
+          "font_bold" : false,
+          "class" : "Button",
+          "name" : "button_refresh_infos",
+          "flex" : "W"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 83}, {308, 40}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 0,
+          "frame" : "{{120, 259}, {80, 32}}",
+          "title" : "保存本页图片",
+          "uuid" : "248A270A-C640-4AED-A61B-BA1A4F1351AF",
+          "class" : "Button",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "border_color" : "RGBA(0.874510,0.874510,0.874510,1.000000)",
+          "name" : "button_save",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{36, 291}, {248, 34}}",
+        "class" : "Slider",
+        "attributes" : {
+          "flex" : "W",
+          "continuous" : false,
+          "frame" : "{{60, 258}, {200, 34}}",
+          "uuid" : "5E3FFD18-2E58-41C0-91F7-1568DF47FC39",
+          "class" : "Slider",
+          "value" : 0.5,
+          "name" : "slider_autopage_speed"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{8, 291}, {26, 34}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 15,
+          "frame" : "{{85, 259}, {150, 32}}",
+          "uuid" : "2F2DBC03-BD41-4209-8DA3-8DE1A0AAAF4B",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "1",
+          "name" : "label6",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{286, 291}, {26, 34}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 15,
+          "frame" : "{{85, 259}, {150, 32}}",
+          "uuid" : "643A454E-A271-4A9F-9CAA-D676502DCA2F",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "30",
+          "number_of_lines" : 0,
+          "name" : "label7",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{199, 247}, {28, 40}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 15,
+          "frame" : "{{85, 215}, {150, 32}}",
+          "uuid" : "2E98BAE2-C4A0-4F6A-B2E2-7C65DE21E97E",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "30",
+          "name" : "label_autopage_speed",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{230, 247}, {80, 40}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 15,
+          "frame" : "{{85, 215}, {150, 32}}",
+          "uuid" : "A6D9DDE5-4106-4EB6-98C2-6B98068203C2",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "秒\/每页",
+          "name" : "label3",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 124}, {308, 40}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 0,
+          "frame" : "{{120, 215}, {80, 32}}",
+          "title" : "删除本页图片",
+          "uuid" : "BCEAB6E3-3D04-4E64-803D-ADC3DA9AC52F",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "class" : "Button",
+          "corner_radius" : 0,
+          "border_color" : "RGBA(0.874510,0.874510,0.874510,1.000000)",
+          "name" : "button_delete_thispage",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 42}, {308, 40}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 0,
+          "flex" : "W",
+          "frame" : "{{120, 259}, {80, 32}}",
+          "title" : "分享本页图片",
+          "uuid" : "8E46EFA2-D294-4B48-BA2E-83D64826D6D3",
+          "class" : "Button",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "border_color" : "RGBA(0.745283,0.745283,0.745283,1.000000)",
+          "name" : "button_share_picture",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 18}, {150, 24}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_name" : "<System>",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "custom_attributes" : "{'touch_enabled':True}",
+          "uuid" : "5FEBC92B-1001-4C94-8627-387C6EFF53C3",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "设置",
+          "name" : "label1",
+          "font_size" : 12
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {320, 462}}",
+    "class" : "View",
+    "attributes" : {
+      "background_color" : "RGBA(0.937255,0.937255,0.956863,1.000000)",
+      "enabled" : true,
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "custom_class" : "",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]

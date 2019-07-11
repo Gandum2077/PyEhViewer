@@ -1,0 +1,158 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{28, 59}, {200, 352}}",
+        "class" : "TableView",
+        "attributes" : {
+          "uuid" : "F924BCFA-125D-4470-88E9-D303409ECD49",
+          "editing" : false,
+          "background_color" : "RGBA(1.0, 1.0, 1.0, 1.0)",
+          "frame" : "{{170, 170}, {200, 200}}",
+          "data_source_items" : "Row 1\nRow 2\nRow 3\nk4\nk5\nk6\nk7\nk8\nk9\nk0\ndelfav",
+          "data_source_number_of_lines" : 1,
+          "data_source_delete_enabled" : false,
+          "data_source_font_size" : 18,
+          "row_height" : 32,
+          "class" : "TableView",
+          "name" : "tableview1",
+          "flex" : "WH"
+        },
+        "selected" : true
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{182, 6}, {150, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label1",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "F946EA39-F981-45DD-83E0-C91944587CF0",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "收藏",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{236, 92}, {285, 287}}",
+        "class" : "TextView",
+        "attributes" : {
+          "uuid" : "D0E91AD3-48F7-484A-9C01-C243BB9E22D7",
+          "font_size" : 14,
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{170, 170}, {200, 200}}",
+          "editable" : true,
+          "border_width" : 1,
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "text" : "",
+          "font_name" : "<System>",
+          "spellchecking_type" : "default",
+          "class" : "TextView",
+          "name" : "textview1",
+          "flex" : "WH"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{236, 59}, {285, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label2",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "99F7E738-A443-460D-876A-8DE87FABD47A",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "Favorite Note",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{236, 380}, {285, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 12,
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "EDAFE390-AC24-4D53-86D8-0D54C9D8833F",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "此处最多只能写200个字节（utf-8编码后的长度，英文1字节，汉字一般3字节）。注意中间换行无效。",
+          "name" : "label3",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{336, 468}, {80, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 0,
+          "frame" : "{{230, 254}, {80, 32}}",
+          "title" : "OK",
+          "uuid" : "6EE7A64C-86E4-42A2-9B27-13D6207E967E",
+          "class" : "Button",
+          "corner_radius" : 10,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "button_confirm",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{148, 468}, {80, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 0,
+          "frame" : "{{230, 254}, {80, 32}}",
+          "title" : "Cancel",
+          "uuid" : "949B19CD-7A8C-4E38-864F-7B9BC28CF265",
+          "class" : "Button",
+          "corner_radius" : 10,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "button_close",
+          "font_size" : 15
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {540, 540}}",
+    "class" : "View",
+    "attributes" : {
+      "flex" : "",
+      "enabled" : true,
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "custom_class" : "FavoriteView",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "name" : ""
+    },
+    "selected" : false
+  }
+]

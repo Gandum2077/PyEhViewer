@@ -1,0 +1,82 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{3, 64}, {314, 410}}",
+        "class" : "TableView",
+        "attributes" : {
+          "uuid" : "E0F83F53-5AF6-47C4-80FB-80956062A671",
+          "editing" : false,
+          "data_source_action" : "",
+          "frame" : "{{60, 140}, {200, 200}}",
+          "data_source_items" : "a\nb\nc\nfemale:shibari$ language:chinese$ female:\"mind control$\" female:shibari$ ",
+          "data_source_number_of_lines" : 0,
+          "data_source_move_enabled" : true,
+          "data_source_delete_enabled" : true,
+          "data_source_font_size" : 14,
+          "row_height" : 44,
+          "class" : "TableView",
+          "name" : "tableview1",
+          "flex" : "WH"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{180, 16}, {80, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "",
+          "border_width" : 0,
+          "font_size" : 15,
+          "frame" : "{{120, 224}, {80, 32}}",
+          "title" : "编辑",
+          "uuid" : "EF164438-880A-4F08-AB1D-A256EA64384C",
+          "class" : "Button",
+          "background_color" : "RGBA(0.941176,0.945098,0.964706,1.000000)",
+          "corner_radius" : 5,
+          "name" : "button_edit",
+          "image_name" : "iob:gear_b_32"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{60, 16}, {80, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "",
+          "border_width" : 0,
+          "font_size" : 15,
+          "frame" : "{{120, 224}, {80, 32}}",
+          "title" : "添加",
+          "uuid" : "FDFB0F19-1A59-43AF-990F-A22DB1E82A2E",
+          "class" : "Button",
+          "background_color" : "RGBA(0.941176,0.945098,0.964706,1.000000)",
+          "corner_radius" : 5,
+          "name" : "button_add",
+          "image_name" : "iob:document_text_32"
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {320, 480}}",
+    "class" : "View",
+    "attributes" : {
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "enabled" : true,
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "custom_class" : "StorageSearchPhrasesView",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]

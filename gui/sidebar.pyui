@@ -1,0 +1,262 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 165}, {45, 45}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 1,
+          "font_size" : 15,
+          "frame" : "{{30, 137}, {80, 32}}",
+          "title" : "",
+          "uuid" : "6063884F-434B-4456-A7BE-7B75F4A80838",
+          "class" : "Button",
+          "border_color" : "RGBA(0.745098,0.745098,0.745098,1.000000)",
+          "corner_radius" : 0,
+          "custom_attributes" : "{'touch_enabled':False}",
+          "name" : "icon_favorites",
+          "image_name" : "iob:bookmark_32"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 220}, {45, 45}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 1,
+          "font_size" : 15,
+          "frame" : "{{30, 137}, {80, 32}}",
+          "title" : "",
+          "uuid" : "63BF1CDA-BE76-47C1-96A9-6B3F483EAF00",
+          "class" : "Button",
+          "corner_radius" : 0,
+          "border_color" : "RGBA(0.745098,0.745098,0.745098,1.000000)",
+          "custom_attributes" : "{'touch_enabled':False}",
+          "name" : "icon_downloads",
+          "image_name" : "iob:archive_32"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 0}, {45, 45}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 1,
+          "font_size" : 15,
+          "frame" : "{{30, 137}, {80, 32}}",
+          "title" : "",
+          "uuid" : "B0342BAC-C8C0-40E5-BDBA-D8E28D8BDD7E",
+          "class" : "Button",
+          "border_color" : "RGBA(0.745098,0.745098,0.745098,1.000000)",
+          "corner_radius" : 0,
+          "custom_attributes" : "{'touch_enabled':False}",
+          "name" : "icon_default",
+          "image_name" : "iob:navicon_32"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 110}, {45, 45}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 1,
+          "font_size" : 15,
+          "frame" : "{{30, 137}, {80, 32}}",
+          "title" : "",
+          "uuid" : "F854A52A-249A-4839-B13A-1508C190EB87",
+          "class" : "Button",
+          "border_color" : "RGBA(0.745098,0.745098,0.745098,1.000000)",
+          "corner_radius" : 0,
+          "custom_attributes" : "{'touch_enabled':False}",
+          "name" : "icon_popular",
+          "image_name" : "iob:arrow_graph_up_right_32"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 55}, {45, 45}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 1,
+          "font_size" : 15,
+          "frame" : "{{30, 137}, {80, 32}}",
+          "title" : "",
+          "uuid" : "11E2ED02-8E96-41A0-ACD2-E8BC589DFCEF",
+          "class" : "Button",
+          "border_color" : "RGBA(0.745098,0.745098,0.745098,1.000000)",
+          "corner_radius" : 0,
+          "custom_attributes" : "{'touch_enabled':False}",
+          "name" : "icon_watched",
+          "image_name" : "iob:ios7_bell_32"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{44, 0}, {119, 45}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 1,
+          "frame" : "{{30, 95}, {80, 32}}",
+          "title" : "Default",
+          "uuid" : "613089AB-893A-4147-A75E-941D5491A00D",
+          "border_color" : "RGBA(0.745098,0.745098,0.745098,1.000000)",
+          "class" : "Button",
+          "corner_radius" : 0,
+          "custom_attributes" : "",
+          "name" : "button_default",
+          "font_size" : 20
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{44, 165}, {119, 45}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 1,
+          "frame" : "{{30, 95}, {80, 32}}",
+          "title" : "Favorites",
+          "uuid" : "59CE3E7F-1EF2-45AC-8741-DD1659A5E2EC",
+          "class" : "Button",
+          "corner_radius" : 0,
+          "border_color" : "RGBA(0.745098,0.745098,0.745098,1.000000)",
+          "custom_attributes" : "{'url':'https:\/\/exhentai.org\/favorites.php'}",
+          "name" : "button_favorites",
+          "font_size" : 20
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{44, 220}, {119, 45}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 1,
+          "frame" : "{{30, 95}, {80, 32}}",
+          "title" : "Downloads",
+          "uuid" : "F42D06F3-3DE7-48A9-91A6-1B1109A94362",
+          "border_color" : "RGBA(0.745098,0.745098,0.745098,1.000000)",
+          "class" : "Button",
+          "corner_radius" : 0,
+          "custom_attributes" : "{'url':'downloads:\/\/?page=0'}",
+          "name" : "button_downloads",
+          "font_size" : 20
+        },
+        "selected" : true
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{44, 110}, {119, 45}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 1,
+          "frame" : "{{30, 95}, {80, 32}}",
+          "title" : "Popular",
+          "uuid" : "51DB7983-CC7F-4DE2-ACA5-B0E3D6A03709",
+          "border_color" : "RGBA(0.745098,0.745098,0.745098,1.000000)",
+          "class" : "Button",
+          "corner_radius" : 0,
+          "custom_attributes" : "{'url':'https:\/\/exhentai.org\/popular'}",
+          "name" : "button_popular",
+          "font_size" : 20
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{44, 55}, {119, 45}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 1,
+          "name" : "button_watched",
+          "frame" : "{{30, 95}, {80, 32}}",
+          "title" : "Watched",
+          "custom_attributes" : "{'url':'https:\/\/exhentai.org\/watched'}",
+          "corner_radius" : 0,
+          "font_bold" : false,
+          "uuid" : "B4923F98-8964-4195-A262-8E83470378E5",
+          "border_color" : "RGBA(0.745098,0.745098,0.745098,1.000000)",
+          "font_size" : 20,
+          "class" : "Button"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 275}, {45, 45}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 1,
+          "name" : "icon_settings",
+          "frame" : "{{42, 144}, {80, 32}}",
+          "title" : "",
+          "uuid" : "09AF4A5A-0CB3-4E07-87C4-B512D16DAD34",
+          "class" : "Button",
+          "custom_attributes" : "{'touch_enabled':False}",
+          "border_color" : "RGBA(0.745098,0.745098,0.745098,1.000000)",
+          "corner_radius" : 0,
+          "font_size" : 15,
+          "image_name" : "iob:gear_a_32"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{44, 275}, {119, 45}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 1,
+          "frame" : "{{42, 144}, {80, 32}}",
+          "title" : "Settings",
+          "uuid" : "448B67D1-0862-457E-8E0F-27C5EF2606F8",
+          "class" : "Button",
+          "corner_radius" : 0,
+          "border_color" : "RGBA(0.745098,0.745098,0.745098,1.000000)",
+          "name" : "button_settings",
+          "font_size" : 20
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {163, 320}}",
+    "class" : "View",
+    "attributes" : {
+      "enabled" : true,
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]

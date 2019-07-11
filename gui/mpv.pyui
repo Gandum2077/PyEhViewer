@@ -1,0 +1,164 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{711, 682}, {57, 57}}",
+        "class" : "Button",
+        "attributes" : {
+          "flex" : "HLTB",
+          "font_size" : 15,
+          "frame" : "{{344, 464}, {80, 32}}",
+          "title" : "",
+          "uuid" : "1456A44E-8203-470B-B8AD-534B92F7BF09",
+          "class" : "Button",
+          "name" : "button_info",
+          "image_name" : "iob:information_circled_32"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{711, 739}, {57, 57}}",
+        "class" : "Button",
+        "attributes" : {
+          "flex" : "HLTB",
+          "font_size" : 15,
+          "frame" : "{{344, 464}, {80, 32}}",
+          "title" : "",
+          "uuid" : "D9801123-C434-4D5A-9207-6947630BB837",
+          "class" : "Button",
+          "font_bold" : false,
+          "name" : "button_refresh",
+          "image_name" : "iob:refresh_32"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{711, 796}, {57, 57}}",
+        "class" : "Button",
+        "attributes" : {
+          "flex" : "HLTB",
+          "font_size" : 15,
+          "frame" : "{{344, 464}, {80, 32}}",
+          "title" : "",
+          "uuid" : "CF0DEFFA-7553-4E26-8A0D-3BC6CC2C3AF8",
+          "class" : "Button",
+          "name" : "button_close",
+          "image_name" : "iob:close_32"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{711, 650}, {40, 30}}",
+        "class" : "Label",
+        "attributes" : {
+          "flex" : "HLTB",
+          "font_size" : 15,
+          "frame" : "{{309, 464}, {150, 32}}",
+          "uuid" : "9443B6CB-C723-47CE-9E49-046F297281EB",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "9999",
+          "name" : "text_total_page",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{446, 304}, {597, 34}}",
+        "class" : "Slider",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "frame" : "{{284, 463}, {200, 34}}",
+          "uuid" : "FA85D903-42D4-473D-A0AA-1C6E8C5DEF42",
+          "custom_attributes" : "{'transform':ui.Transform.rotation(1.5708)}",
+          "value" : 0.5,
+          "class" : "Slider",
+          "name" : "slider1"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{711, 853}, {57, 57}}",
+        "class" : "Button",
+        "attributes" : {
+          "flex" : "HLTB",
+          "name" : "button_autoload",
+          "frame" : "{{344, 496}, {80, 32}}",
+          "title" : "",
+          "uuid" : "EF06F080-D5D4-4A61-905F-88A73DC137B2",
+          "class" : "Button",
+          "font_size" : 15,
+          "image_name" : "iob:ios7_fastforward_32"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{711, 910}, {57, 57}}",
+        "class" : "Button",
+        "attributes" : {
+          "flex" : "HLTB",
+          "name" : "button_setting",
+          "frame" : "{{344, 496}, {80, 32}}",
+          "title" : "",
+          "uuid" : "A75D26B6-86D2-4182-9D54-545659E44153",
+          "class" : "Button",
+          "font_size" : 15,
+          "image_name" : "iob:more_32"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{711, 625}, {40, 30}}",
+        "class" : "Label",
+        "attributes" : {
+          "flex" : "HLTB",
+          "name" : "text_current_page",
+          "frame" : "{{309, 496}, {150, 32}}",
+          "uuid" : "DC128603-7025-42D7-9078-091DEE2B7806",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "0099",
+          "font_size" : 15,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {768, 1024}}",
+    "class" : "View",
+    "attributes" : {
+      "flex" : "",
+      "enabled" : true,
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "custom_class" : "MultiPageView",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "name" : ""
+    },
+    "selected" : false
+  }
+]

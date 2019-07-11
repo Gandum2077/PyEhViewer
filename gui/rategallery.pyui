@@ -1,0 +1,109 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{266, 79}, {46, 34}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "frame" : "{{85, 224}, {150, 32}}",
+          "uuid" : "66943F45-6CCC-44AF-9074-C87C583FA349",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "5",
+          "name" : "label1",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{12, 79}, {253, 34}}",
+        "class" : "Slider",
+        "attributes" : {
+          "uuid" : "9B7DA4D3-BD33-4AD1-B514-E5FD0212CB90",
+          "frame" : "{{60, 223}, {200, 34}}",
+          "value" : 0.5,
+          "class" : "Slider",
+          "name" : "slider1",
+          "flex" : "W"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{50, 140}, {80, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 0,
+          "frame" : "{{136, 83}, {80, 32}}",
+          "title" : "Cancel",
+          "uuid" : "31167780-8AAA-497D-A7B9-07F6929C6DD4",
+          "class" : "Button",
+          "corner_radius" : 5,
+          "border_color" : "RGBA(0.929245,0.929245,0.929245,1.000000)",
+          "background_color" : "RGBA(0.941176,0.945098,0.964706,1.000000)",
+          "name" : "button_cancel",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{190, 140}, {80, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 0,
+          "frame" : "{{136, 83}, {80, 32}}",
+          "title" : "OK",
+          "uuid" : "166CEB10-3A91-41E6-BB69-A54AA9B6DA05",
+          "class" : "Button",
+          "corner_radius" : 5,
+          "background_color" : "RGBA(0.941176,0.945098,0.964706,1.000000)",
+          "name" : "button_confirm",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{110, 23}, {100, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label2",
+          "frame" : "{{101, 83}, {150, 32}}",
+          "uuid" : "510B6A14-EDFC-4DE8-AFA1-27A46373D7D9",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "打分",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {320, 200}}",
+    "class" : "View",
+    "attributes" : {
+      "flex" : "",
+      "enabled" : true,
+      "custom_class" : "RateGalleryView",
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "name" : ""
+    },
+    "selected" : false
+  }
+]

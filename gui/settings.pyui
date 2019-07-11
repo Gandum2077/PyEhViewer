@@ -1,0 +1,400 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 18}, {150, 24}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label1",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "custom_attributes" : "{'touch_enabled':True}",
+          "uuid" : "5FEBC92B-1001-4C94-8627-387C6EFF53C3",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "Default URL",
+          "font_size" : 12,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 124}, {528, 40}}",
+        "class" : "Button",
+        "attributes" : {
+          "flex" : "W",
+          "border_width" : 0,
+          "frame" : "{{230, 254}, {80, 32}}",
+          "title" : "将当前url作为default url",
+          "uuid" : "FB1F6113-03EA-4626-A95E-7FE8B748996C",
+          "class" : "Button",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "button_default_url",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 246}, {528, 40}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "568CBF30-6A2F-42F5-B0AF-81B93498D8BB",
+          "font_size" : 15,
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{230, 254}, {80, 32}}",
+          "border_color" : "RGBA(0.745098,0.745098,0.745098,1.000000)",
+          "border_width" : 0,
+          "custom_attributes" : "{'alignment': ui.ALIGN_LEFT}",
+          "title" : "重设账号密码",
+          "class" : "Button",
+          "name" : "button_reset_account",
+          "flex" : "W"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 287}, {528, 40}}",
+        "class" : "Button",
+        "attributes" : {
+          "flex" : "W",
+          "border_width" : 0,
+          "frame" : "{{230, 254}, {80, 32}}",
+          "title" : "重新登录",
+          "uuid" : "83794861-2CE3-4109-9BF6-5FB161DD5FFA",
+          "class" : "Button",
+          "border_color" : "RGBA(0.741176,0.741176,0.741176,1.000000)",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "button_login",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 409}, {528, 40}}",
+        "class" : "Button",
+        "attributes" : {
+          "flex" : "W",
+          "border_width" : 0,
+          "frame" : "{{230, 254}, {80, 32}}",
+          "title" : "清除缓存",
+          "uuid" : "B1C725D6-8FDE-49FB-959C-DD4BB62BA689",
+          "class" : "Button",
+          "corner_radius" : 0,
+          "border_color" : "RGBA(0.745283,0.745283,0.745283,1.000000)",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "button_rm_cache",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 450}, {528, 40}}",
+        "class" : "Button",
+        "attributes" : {
+          "flex" : "W",
+          "border_width" : 0,
+          "frame" : "{{230, 254}, {80, 32}}",
+          "title" : "清除未收藏的下载内容",
+          "uuid" : "0AAC7020-2E48-4E46-BA30-3F43A8DE5D51",
+          "class" : "Button",
+          "border_color" : "RGBA(0.747642,0.747642,0.747642,1.000000)",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "button_rm_unfav_downloads",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 491}, {528, 40}}",
+        "class" : "Button",
+        "attributes" : {
+          "flex" : "W",
+          "border_width" : 0,
+          "frame" : "{{230, 254}, {80, 32}}",
+          "title" : "清除全部下载内容",
+          "uuid" : "50233D4A-65DE-497F-846B-382DDE6C7770",
+          "class" : "Button",
+          "border_color" : "RGBA(0.745283,0.745283,0.745283,1.000000)",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "button_rm_all_downloads",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 222}, {150, 24}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 12,
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "D2310EC9-21CA-4943-AA08-B6FC7D15ADB3",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "Access",
+          "name" : "label3",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 344}, {150, 24}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 12,
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "1B7F51FB-C348-47F2-BADB-DDA246BC2CC9",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "Storage",
+          "name" : "label4",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 83}, {528, 40}}",
+        "class" : "TextField",
+        "attributes" : {
+          "uuid" : "025B1846-8DC4-44CF-8E1D-FE2468C356A5",
+          "font_size" : 12,
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{170, 254}, {200, 32}}",
+          "secure" : false,
+          "border_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "editable" : true,
+          "border_width" : 0,
+          "custom_attributes" : "{'bordered':False}",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "text" : "qqwwwweerrrrrrtttttttttttttttrrrrrrrrrrrrrrrrrrqqwwwweerrrrrrtttttttttttttttrrrrrrrrrrrrrrrrrrqqwwwweerrrrrrtttttttttttttttrrrrrrrrrrrrrrrrrrqqwwwweerrrrrrtttttttttttttttrrrrrrrrrrrrrrrrrr",
+          "placeholder" : "",
+          "font_name" : "<System>",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "name" : "textfield_default_url",
+          "flex" : "W"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 42}, {528, 40}}",
+        "class" : "Label",
+        "attributes" : {
+          "uuid" : "F6257F89-C74C-419D-9176-CAAD219F1E16",
+          "font_size" : 15,
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "border_width" : 0,
+          "title" : "将当前url作为default url",
+          "alignment" : "left",
+          "text" : "启动时显示downloads页",
+          "font_name" : "<System>",
+          "class" : "Label",
+          "name" : "label6",
+          "flex" : "W"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{472, 47}, {51, 31}}",
+        "class" : "Switch",
+        "attributes" : {
+          "frame" : "{{245, 255}, {51, 31}}",
+          "value" : true,
+          "class" : "Switch",
+          "name" : "switch1",
+          "uuid" : "B437AFD1-B38F-490A-90C6-05AD5A10F0F5"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 164}, {261, 24}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_name" : "<System>",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "D2310EC9-21CA-4943-AA08-B6FC7D15ADB3",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "只有path为空字符串的url才能作为default url",
+          "font_size" : 12,
+          "name" : "label2"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 548}, {150, 24}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_name" : "<System>",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "1B7F51FB-C348-47F2-BADB-DDA246BC2CC9",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "Settings for Favorites",
+          "font_size" : 12,
+          "name" : "label5"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 572}, {528, 40}}",
+        "class" : "Label",
+        "attributes" : {
+          "uuid" : "F6257F89-C74C-419D-9176-CAAD219F1E16",
+          "flex" : "W",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "border_width" : 0,
+          "title" : "将当前url作为default url",
+          "alignment" : "left",
+          "text" : "Favorites排序方式",
+          "font_name" : "<System>",
+          "class" : "Label",
+          "name" : "label7",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{360, 574}, {174, 36}}",
+        "class" : "SegmentedControl",
+        "attributes" : {
+          "segments" : "Favorited|Posted",
+          "frame" : "{{210, 336}, {120, 29}}",
+          "uuid" : "051D255A-CCE2-478D-862A-5B3EECD328F9",
+          "name" : "segmentedcontrol_favorites",
+          "class" : "SegmentedControl",
+          "flex" : "LR"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 368}, {528, 40}}",
+        "class" : "Button",
+        "attributes" : {
+          "flex" : "W",
+          "border_width" : 0,
+          "frame" : "{{230, 254}, {80, 32}}",
+          "title" : "更新数据库",
+          "uuid" : "B1C725D6-8FDE-49FB-959C-DD4BB62BA689",
+          "class" : "Button",
+          "corner_radius" : 0,
+          "border_color" : "RGBA(0.745283,0.745283,0.745283,1.000000)",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "button_update_db",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 613}, {528, 40}}",
+        "class" : "Label",
+        "attributes" : {
+          "uuid" : "F6257F89-C74C-419D-9176-CAAD219F1E16",
+          "font_size" : 15,
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "border_width" : 0,
+          "title" : "将当前url作为default url",
+          "alignment" : "left",
+          "text" : "Downloads排序方式",
+          "font_name" : "<System>",
+          "class" : "Label",
+          "name" : "label8",
+          "flex" : "W"
+        },
+        "selected" : true
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{360, 615}, {174, 36}}",
+        "class" : "SegmentedControl",
+        "attributes" : {
+          "name" : "segmentedcontrol_downloads",
+          "frame" : "{{210, 336}, {120, 29}}",
+          "flex" : "LR",
+          "class" : "SegmentedControl",
+          "segments" : "gid|st_mtime",
+          "uuid" : "051D255A-CCE2-478D-862A-5B3EECD328F9"
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {540, 700}}",
+    "class" : "View",
+    "attributes" : {
+      "background_color" : "RGBA(0.937255,0.937255,0.956863,1.000000)",
+      "enabled" : true,
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "name" : "",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]

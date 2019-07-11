@@ -1,0 +1,158 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{100, 0}, {24, 24}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "44C1A632-AC8A-4ED5-946B-7989B769D2BC",
+          "font_size" : 15,
+          "corner_radius" : 5,
+          "background_color" : "RGBA(1.000000,0.282353,0.760784,1.000000)",
+          "frame" : "{{230, 317}, {80, 32}}",
+          "tint_color" : "RGBA(1.000000,0.985507,0.978261,1.000000)",
+          "border_width" : 2,
+          "custom_attributes" : "{'chosen':True}",
+          "title" : "",
+          "action" : "change_color",
+          "class" : "Button",
+          "name" : "sn",
+          "image_name" : "iob:checkmark_round_32"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{200, 0}, {24, 24}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "44C1A632-AC8A-4ED5-946B-7989B769D2BC",
+          "font_size" : 15,
+          "corner_radius" : 5,
+          "background_color" : "RGBA(1.000000,0.282353,0.760784,1.000000)",
+          "frame" : "{{230, 317}, {80, 32}}",
+          "tint_color" : "RGBA(1.000000,0.985507,0.978261,1.000000)",
+          "border_width" : 2,
+          "custom_attributes" : "{'chosen':True}",
+          "title" : "",
+          "action" : "change_color",
+          "class" : "Button",
+          "image_name" : "iob:checkmark_round_32",
+          "name" : "st"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{300, 0}, {24, 24}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "44C1A632-AC8A-4ED5-946B-7989B769D2BC",
+          "font_size" : 15,
+          "corner_radius" : 5,
+          "background_color" : "RGBA(1.000000,0.282353,0.760784,1.000000)",
+          "frame" : "{{230, 317}, {80, 32}}",
+          "tint_color" : "RGBA(1.000000,0.985507,0.978261,1.000000)",
+          "border_width" : 2,
+          "custom_attributes" : "{'chosen':True}",
+          "title" : "",
+          "action" : "change_color",
+          "class" : "Button",
+          "image_name" : "iob:checkmark_round_32",
+          "name" : "sf"
+        },
+        "selected" : true
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 0}, {100, 24}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label_ f_sp",
+          "frame" : "{{227, 104}, {150, 32}}",
+          "uuid" : "A3B6C796-24AC-4DAC-9303-C61CE0DDC9AB",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "Search: ",
+          "font_size" : 16,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{130, 0}, {70, 24}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label_ f_sp",
+          "frame" : "{{227, 104}, {150, 32}}",
+          "uuid" : "A3B6C796-24AC-4DAC-9303-C61CE0DDC9AB",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "Name",
+          "font_size" : 16,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{230, 0}, {70, 24}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label_ f_sp",
+          "frame" : "{{227, 104}, {150, 32}}",
+          "uuid" : "A3B6C796-24AC-4DAC-9303-C61CE0DDC9AB",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "Tags",
+          "font_size" : 16,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{330, 0}, {70, 24}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label_ f_sp",
+          "frame" : "{{227, 104}, {150, 32}}",
+          "uuid" : "A3B6C796-24AC-4DAC-9303-C61CE0DDC9AB",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "Note",
+          "font_size" : 16,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {400, 24}}",
+    "class" : "View",
+    "attributes" : {
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "enabled" : true,
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "name" : "",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]

@@ -1,0 +1,426 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{364, 112}, {150, 30}}",
+        "class" : "View",
+        "attributes" : {
+          "flex" : "LRTB",
+          "frame" : "{{298, 79}, {100, 100}}",
+          "class" : "View",
+          "name" : "rating_location_view",
+          "uuid" : "3DE2D54E-12CF-4123-9B95-B06BADBDDBF5"
+        },
+        "selected" : true
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{1, 1}, {181, 255}}",
+        "class" : "View",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "frame" : "{{298, 79}, {100, 100}}",
+          "class" : "View",
+          "name" : "thumbnail_location_view",
+          "uuid" : "C6347432-956F-4552-B19B-D4F9D1578421"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{354, 109}, {170, 36}}",
+        "class" : "View",
+        "attributes" : {
+          "border_width" : 2,
+          "flex" : "WHLRTB",
+          "frame" : "{{334, 462}, {100, 100}}",
+          "class" : "View",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "uuid" : "ADB05543-2851-4562-87ED-7427B7DCFAE2",
+          "border_color" : "RGBA(0.784314,0.780392,0.800000,1.000000)",
+          "name" : "lowlevel_view_rank"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{1, 1}, {181, 255}}",
+        "class" : "ImageView",
+        "attributes" : {
+          "flex" : "WHR",
+          "frame" : "{{334, 462}, {100, 100}}",
+          "class" : "ImageView",
+          "name" : "imageview_thumbnail1",
+          "uuid" : "1AEFB1BF-B59A-4814-9119-5C5B4B6B9DD3"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{183, 1}, {511, 40}}",
+        "class" : "Label",
+        "attributes" : {
+          "uuid" : "0A2D9F51-32F7-4E6A-A9B3-224BC88BF28C",
+          "flex" : "WHLRTB",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{309, 496}, {150, 32}}",
+          "border_color" : "RGBA(0.784314,0.780392,0.800000,1.000000)",
+          "border_width" : 0,
+          "alignment" : "left",
+          "text" : "",
+          "font_name" : "<System>",
+          "class" : "Label",
+          "name" : "label_japanese_title",
+          "font_size" : 14
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{530, 184}, {160, 72}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 2,
+          "flex" : "WHLRTB",
+          "frame" : "{{344, 496}, {80, 32}}",
+          "title" : "阅读",
+          "uuid" : "FE4B0C7C-C04B-4163-85A6-25F893C17B03",
+          "class" : "Button",
+          "corner_radius" : 5,
+          "border_color" : "RGBA(0.500000,0.666667,1.000000,1.000000)",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "button_start_mpv",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{354, 220}, {170, 36}}",
+        "class" : "Label",
+        "attributes" : {
+          "uuid" : "D3244723-623B-49B9-89E2-6E9721ED6979",
+          "flex" : "WHLRTB",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{309, 496}, {150, 32}}",
+          "border_color" : "RGBA(0.995283,0.995283,0.995283,1.000000)",
+          "border_width" : 2,
+          "alignment" : "center",
+          "text" : "",
+          "font_name" : "<System>",
+          "class" : "Label",
+          "name" : "label_favorite_num",
+          "font_size" : 12
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{354, 183}, {170, 36}}",
+        "class" : "Label",
+        "attributes" : {
+          "uuid" : "64ED26F5-DAB2-4391-92DF-6BC23304B96A",
+          "flex" : "WHLRTB",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{309, 496}, {150, 32}}",
+          "border_color" : "RGBA(0.784314,0.780392,0.800000,1.000000)",
+          "border_width" : 2,
+          "alignment" : "center",
+          "text" : "未收藏",
+          "font_name" : "<System>",
+          "class" : "Label",
+          "name" : "label_favorite_title",
+          "font_size" : 12
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{183, 42}, {511, 40}}",
+        "class" : "Label",
+        "attributes" : {
+          "uuid" : "0A2D9F51-32F7-4E6A-A9B3-224BC88BF28C",
+          "flex" : "WHLRTB",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{309, 496}, {150, 32}}",
+          "border_color" : "RGBA(0.784314,0.780392,0.800000,1.000000)",
+          "border_width" : 0,
+          "alignment" : "left",
+          "text" : "",
+          "font_name" : "<System>",
+          "class" : "Label",
+          "name" : "label_english_title",
+          "font_size" : 14
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{183, 109}, {170, 36}}",
+        "class" : "Label",
+        "attributes" : {
+          "uuid" : "5BA72552-3879-445C-A4FE-DD8217429C67",
+          "flex" : "WHLRTB",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{273, 64}, {150, 32}}",
+          "border_width" : 0,
+          "alignment" : "center",
+          "text" : "",
+          "text_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "font_name" : "<System-Bold>",
+          "class" : "Label",
+          "name" : "label_category",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{183, 146}, {170, 36}}",
+        "class" : "Label",
+        "attributes" : {
+          "uuid" : "67DF2789-5C34-4C54-961E-640EE8330D6D",
+          "flex" : "WHLRTB",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{273, 64}, {150, 32}}",
+          "border_width" : 0,
+          "alignment" : "center",
+          "text" : "",
+          "font_name" : "<System>",
+          "class" : "Label",
+          "name" : "label_length",
+          "font_size" : 12
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{183, 183}, {170, 36}}",
+        "class" : "Label",
+        "attributes" : {
+          "uuid" : "61F1995A-A289-4AD2-995C-4288C1CFE48F",
+          "flex" : "WHLRTB",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{273, 64}, {150, 32}}",
+          "border_width" : 0,
+          "custom_attributes" : "{'selected':False}",
+          "alignment" : "center",
+          "text" : "",
+          "font_name" : "<System>",
+          "class" : "Label",
+          "name" : "label_uploader",
+          "font_size" : 12
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{183, 220}, {170, 36}}",
+        "class" : "Label",
+        "attributes" : {
+          "uuid" : "EB80DB90-5835-441C-B47F-7884B3F6CE0E",
+          "flex" : "WHLRTB",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{273, 64}, {150, 32}}",
+          "border_color" : "RGBA(0.995283,0.995283,0.995283,1.000000)",
+          "border_width" : 2,
+          "alignment" : "center",
+          "text" : "",
+          "font_name" : "<System>",
+          "class" : "Label",
+          "name" : "label_posted",
+          "font_size" : 12
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{183, 83}, {511, 24}}",
+        "class" : "Label",
+        "attributes" : {
+          "uuid" : "E338F92B-D561-4635-82D4-E92C4440F04E",
+          "flex" : "WHLRTB",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{309, 496}, {150, 32}}",
+          "border_color" : "RGBA(0.784314,0.780392,0.800000,1.000000)",
+          "border_width" : 0,
+          "alignment" : "left",
+          "text" : "",
+          "font_name" : "<System>",
+          "class" : "Label",
+          "name" : "label_url",
+          "font_size" : 12
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{354, 146}, {170, 36}}",
+        "class" : "Label",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "font_size" : 12,
+          "frame" : "{{309, 496}, {150, 32}}",
+          "uuid" : "03C5CB84-A88A-46E3-AA4F-86872C206302",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "label_review",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{354, 183}, {170, 36}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 0,
+          "flex" : "WHLRTB",
+          "frame" : "{{344, 496}, {80, 32}}",
+          "title" : "",
+          "uuid" : "62A47A9D-5A1C-426F-815A-1956359510A1",
+          "class" : "Button",
+          "corner_radius" : 0,
+          "name" : "button_favorite",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{525, 109}, {169, 36}}",
+        "class" : "Label",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "font_size" : 12,
+          "frame" : "{{309, 496}, {150, 32}}",
+          "uuid" : "D77CB33F-9A06-48E2-BFDA-743A2BDFC195",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "label_language",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{525, 146}, {169, 36}}",
+        "class" : "Label",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "font_name" : "<System>",
+          "frame" : "{{309, 496}, {150, 32}}",
+          "uuid" : "D77CB33F-9A06-48E2-BFDA-743A2BDFC195",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "font_size" : 12,
+          "name" : "label_filesize"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{354, 109}, {170, 36}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 0,
+          "flex" : "WHLRTB",
+          "frame" : "{{344, 496}, {80, 32}}",
+          "title" : "",
+          "uuid" : "60F4C7AD-5F06-40F9-A879-159CD1E32544",
+          "class" : "Button",
+          "corner_radius" : 0,
+          "name" : "button_rate_gallery",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{183, 183}, {170, 36}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 0,
+          "flex" : "WHLRTB",
+          "frame" : "{{344, 496}, {80, 32}}",
+          "title" : "",
+          "uuid" : "62A47A9D-5A1C-426F-815A-1956359510A1",
+          "class" : "Button",
+          "corner_radius" : 0,
+          "name" : "button_select_uploader",
+          "font_size" : 15
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {695, 257}}",
+    "class" : "View",
+    "attributes" : {
+      "flex" : "",
+      "custom_class" : "GalleryInfoView",
+      "enabled" : true,
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "background_color" : "RGBA(0.937255,0.937255,0.956863,1.000000)",
+      "name" : "gallery_info_view"
+    },
+    "selected" : false
+  }
+]

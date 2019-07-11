@@ -1,0 +1,217 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{1, 1}, {112, 158}}",
+        "class" : "ImageView",
+        "attributes" : {
+          "frame" : "{{298, 30}, {100, 100}}",
+          "class" : "ImageView",
+          "name" : "imageview_thumbnail",
+          "uuid" : "C44BAA1F-7889-42B8-9F2B-3FCB03F9DBD5"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{114, 1}, {580, 37}}",
+        "class" : "Label",
+        "attributes" : {
+          "uuid" : "9B5A5CA5-4462-44B8-8E44-70B1D0259867",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{273, 64}, {150, 32}}",
+          "number_of_lines" : 0,
+          "border_width" : 0,
+          "border_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "alignment" : "left",
+          "text" : "(軍令部酒保 & 砲雷撃戦!よーい! 合同演習弐戦目) [DogStyle (メネア・ザ・ドッグ)] これでフィニ～これでフィニ～]]",
+          "font_name" : "<System>",
+          "class" : "Label",
+          "name" : "label_title",
+          "font_size" : 13
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{114, 135}, {123, 24}}",
+        "class" : "Label",
+        "attributes" : {
+          "uuid" : "EB80DB90-5835-441C-B47F-7884B3F6CE0E",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{273, 64}, {150, 32}}",
+          "border_color" : "RGBA(0.995283,0.995283,0.995283,1.000000)",
+          "border_width" : 2,
+          "alignment" : "center",
+          "text" : "2018-10-12 23:32",
+          "font_name" : "<System>",
+          "class" : "Label",
+          "name" : "label_posted",
+          "font_size" : 12
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{114, 39}, {123, 24}}",
+        "class" : "Label",
+        "attributes" : {
+          "uuid" : "5BA72552-3879-445C-A4FE-DD8217429C67",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{273, 64}, {150, 32}}",
+          "border_width" : 0,
+          "alignment" : "center",
+          "text" : "Asian Porn",
+          "text_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "font_name" : "<System-Bold>",
+          "class" : "Label",
+          "name" : "label_category",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{114, 111}, {123, 24}}",
+        "class" : "Label",
+        "attributes" : {
+          "border_width" : 0,
+          "name" : "label_uploader",
+          "alignment" : "center",
+          "frame" : "{{273, 64}, {150, 32}}",
+          "uuid" : "61F1995A-A289-4AD2-995C-4288C1CFE48F",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "corner_radius" : 0,
+          "class" : "Label",
+          "text" : "铃猫酱",
+          "font_size" : 12,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{114, 63}, {123, 24}}",
+        "class" : "Label",
+        "attributes" : {
+          "border_width" : 0,
+          "name" : "label_length",
+          "alignment" : "center",
+          "frame" : "{{273, 64}, {150, 32}}",
+          "uuid" : "67DF2789-5C34-4C54-961E-640EE8330D6D",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "corner_radius" : 0,
+          "class" : "Label",
+          "text" : "100页",
+          "font_size" : 12,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{238, 39}, {456, 120}}",
+        "class" : "TextView",
+        "attributes" : {
+          "uuid" : "14CFF8BA-C147-4439-B667-EE9CA7DAC0B5",
+          "font_size" : 11,
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{248, -20}, {200, 200}}",
+          "editable" : false,
+          "border_width" : 0,
+          "custom_attributes" : "{'selectable':False}",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "font_name" : "<System>",
+          "spellchecking_type" : "default",
+          "class" : "TextView",
+          "name" : "textview_taglist",
+          "flex" : "WH"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{1, 1}, {112, 158}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 0,
+          "alpha" : 1,
+          "frame" : "{{308, 64}, {80, 32}}",
+          "title" : "",
+          "uuid" : "A33286FC-FA62-4A1E-9113-8BDE1CDE8A76",
+          "class" : "Button",
+          "corner_radius" : 5,
+          "name" : "button_open_gallery",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{114, 87}, {123, 24}}",
+        "class" : "View",
+        "attributes" : {
+          "frame" : "{{298, 30}, {100, 100}}",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "class" : "View",
+          "name" : "rating_location_view",
+          "uuid" : "A311BEEC-0158-42C7-9CBF-A2792D2BD9F6"
+        },
+        "selected" : true
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{663, 128}, {32, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "font_size" : 15,
+          "frame" : "{{308, 64}, {80, 32}}",
+          "title" : "",
+          "uuid" : "81AFA92E-53AB-47B3-84FC-1A575F181E81",
+          "class" : "Button",
+          "custom_attributes" : "{'hidden':True}",
+          "name" : "button_delete_download",
+          "image_name" : "iob:ios7_close_outline_32"
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {695, 160}}",
+    "class" : "View",
+    "attributes" : {
+      "custom_class" : "CellView",
+      "enabled" : true,
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "background_color" : "RGBA(0.960784,0.960784,0.960784,1.000000)",
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]

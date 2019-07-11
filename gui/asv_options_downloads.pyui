@@ -1,0 +1,257 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{30, 0}, {150, 24}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_name" : "<System>",
+          "frame" : "{{225, 284}, {150, 32}}",
+          "uuid" : "B8D5991F-2096-4484-A86A-5C2AAEB6C241",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "搜索图册名称",
+          "name" : "label1_f_sname",
+          "font_size" : 16
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 0}, {24, 24}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "44C1A632-AC8A-4ED5-946B-7989B769D2BC",
+          "image_name" : "iob:checkmark_round_32",
+          "corner_radius" : 5,
+          "background_color" : "RGBA(1.000000,0.282353,0.760784,1.000000)",
+          "frame" : "{{230, 317}, {80, 32}}",
+          "tint_color" : "RGBA(1.000000,0.985507,0.978261,1.000000)",
+          "border_width" : 2,
+          "custom_attributes" : "{'chosen':True}",
+          "title" : "",
+          "action" : "change_color",
+          "class" : "Button",
+          "name" : "f_sname",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{220, 0}, {24, 24}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "44C1A632-AC8A-4ED5-946B-7989B769D2BC",
+          "image_name" : "iob:checkmark_32",
+          "corner_radius" : 5,
+          "background_color" : "RGBA(1.000000,0.282353,0.760784,1.000000)",
+          "frame" : "{{230, 317}, {80, 32}}",
+          "tint_color" : "RGBA(1.000000,0.985507,0.978261,1.000000)",
+          "border_width" : 2,
+          "custom_attributes" : "{'chosen':True}",
+          "title" : "",
+          "action" : "change_color",
+          "class" : "Button",
+          "name" : "f_stags",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{250, 0}, {150, 24}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 16,
+          "frame" : "{{225, 284}, {150, 32}}",
+          "uuid" : "B8D5991F-2096-4484-A86A-5C2AAEB6C241",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "搜索图册标签",
+          "name" : "label_f_stags",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 30}, {24, 24}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "44C1A632-AC8A-4ED5-946B-7989B769D2BC",
+          "image_name" : "iob:checkmark_32",
+          "corner_radius" : 5,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{230, 317}, {80, 32}}",
+          "tint_color" : "RGBA(1.000000,0.985507,0.978261,1.000000)",
+          "border_width" : 2,
+          "custom_attributes" : "{'chosen':False}",
+          "title" : "",
+          "action" : "change_color",
+          "class" : "Button",
+          "name" : "f_sr",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{30, 30}, {150, 24}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label_f_sr",
+          "frame" : "{{227, 104}, {150, 32}}",
+          "uuid" : "A3B6C796-24AC-4DAC-9303-C61CE0DDC9AB",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "最低评价：",
+          "font_size" : 16,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{220, 30}, {180, 24}}",
+        "class" : "SegmentedControl",
+        "attributes" : {
+          "flex" : "",
+          "segments" : "2|3|4|5",
+          "frame" : "{{242, 106}, {120, 29}}",
+          "tint_color" : "RGBA(1.000000,0.282353,0.760784,1.000000)",
+          "uuid" : "0FA9F121-4427-4969-8949-5B65A8774B4A",
+          "class" : "SegmentedControl",
+          "background_color" : "RGBA(1.000000,0.847826,0.949275,1.000000)",
+          "name" : "f_srdd"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 60}, {24, 24}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "44C1A632-AC8A-4ED5-946B-7989B769D2BC",
+          "image_name" : "iob:checkmark_32",
+          "corner_radius" : 5,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{230, 317}, {80, 32}}",
+          "tint_color" : "RGBA(1.000000,0.985507,0.978261,1.000000)",
+          "border_width" : 2,
+          "custom_attributes" : "{'chosen':False}",
+          "title" : "",
+          "action" : "change_color",
+          "class" : "Button",
+          "name" : "f_sp",
+          "font_size" : 15
+        },
+        "selected" : true
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{30, 60}, {150, 24}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_name" : "<System>",
+          "frame" : "{{227, 104}, {150, 32}}",
+          "uuid" : "A3B6C796-24AC-4DAC-9303-C61CE0DDC9AB",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "页码在此之间：",
+          "name" : "label_f_sp",
+          "font_size" : 16
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{220, 60}, {45, 24}}",
+        "class" : "TextField",
+        "attributes" : {
+          "border_width" : 0,
+          "font_name" : "<System>",
+          "frame" : "{{202, 104}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "uuid" : "8F496076-5CA1-4532-83C0-B5968BB00237",
+          "corner_radius" : 0,
+          "alignment" : "left",
+          "class" : "TextField",
+          "autocorrection_type" : "default",
+          "font_size" : 16,
+          "name" : "f_spf"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{275, 60}, {24, 24}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 16,
+          "frame" : "{{227, 104}, {150, 32}}",
+          "uuid" : "EEFCE4C4-CDDB-40A4-A8AB-865C98800224",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "-",
+          "name" : "label1",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{310, 60}, {45, 24}}",
+        "class" : "TextField",
+        "attributes" : {
+          "font_size" : 16,
+          "frame" : "{{202, 104}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "A7C1A66F-6547-4953-8871-4BC2B5897775",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "name" : "f_spt",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {400, 84}}",
+    "class" : "View",
+    "attributes" : {
+      "name" : "",
+      "enabled" : true,
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]

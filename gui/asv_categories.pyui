@@ -1,0 +1,402 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 0}, {110, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "alpha" : 1,
+          "font_size" : 18,
+          "font_name" : "<System-Bold>",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "CBC38771-BB9B-48DB-A11A-C3C81ED3EBA0",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "同人志",
+          "background_color" : "RGBA(0.619608,0.152941,0.125490,1.000000)",
+          "name" : "label_2",
+          "text_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{232, 38}, {110, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "font_name" : "<System-Bold>",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "8DCAABB9-874F-4CCA-B4F7-62A366459121",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "Cosplay",
+          "background_color" : "RGBA(0.415686,0.196078,0.635294,1.000000)",
+          "name" : "label_64",
+          "text_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{116, 0}, {110, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "alpha" : 1,
+          "font_size" : 18,
+          "font_name" : "<System-Bold>",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "BD78960C-2148-4CCA-8892-4A1D851C878F",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "漫画",
+          "background_color" : "RGBA(0.858824,0.423529,0.141176,1.000000)",
+          "name" : "label_4",
+          "text_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{232, 0}, {110, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "alpha" : 1,
+          "font_size" : 18,
+          "font_name" : "<System-Bold>",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "101C62F3-D8A3-42FF-AEBC-33EA8389CA82",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "画师集",
+          "background_color" : "RGBA(0.827451,0.560784,0.113725,1.000000)",
+          "name" : "label_8",
+          "text_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{348, 0}, {110, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "alpha" : 1,
+          "font_size" : 18,
+          "font_name" : "<System-Bold>",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "83D95D5B-A774-44DB-896A-A2795F6973AE",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "游戏CG",
+          "background_color" : "RGBA(0.380392,0.486275,0.388235,1.000000)",
+          "name" : "label_16",
+          "text_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{464, 0}, {110, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "font_name" : "<System-Bold>",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "C9416DC9-8142-4CA1-8254-D1C080E4698A",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "西方",
+          "background_color" : "RGBA(0.670588,0.623529,0.376471,1.000000)",
+          "name" : "label_512",
+          "text_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 38}, {110, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "alpha" : 1,
+          "font_size" : 18,
+          "font_name" : "<System-Bold>",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "D0A815F5-942B-43A5-91B5-56EDC986F5CC",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "非H",
+          "background_color" : "RGBA(0.372549,0.662745,0.811765,1.000000)",
+          "name" : "label_256",
+          "text_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{116, 38}, {110, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "font_name" : "<System-Bold>",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "473A5BFB-EA49-414A-946D-EA7A29364BA0",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "图集",
+          "background_color" : "RGBA(0.196078,0.360784,0.635294,1.000000)",
+          "name" : "label_32",
+          "text_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{348, 38}, {110, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "font_name" : "<System-Bold>",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "FD13D5CC-5250-4937-A6A2-491AF0DC9D75",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "亚洲",
+          "background_color" : "RGBA(0.635294,0.196078,0.509804,1.000000)",
+          "name" : "label_128",
+          "text_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{464, 38}, {110, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "font_name" : "<System-Bold>",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "3056C720-E280-4FBD-B0FF-F612B627A590",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "其他",
+          "background_color" : "RGBA(0.466667,0.466667,0.466667,1.000000)",
+          "name" : "label_1",
+          "text_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 0}, {110, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "change_alpha",
+          "frame" : "{{247, 19}, {80, 32}}",
+          "title" : "",
+          "uuid" : "C6F1B7BB-D006-4513-A294-CE5F1080BE4B",
+          "custom_attributes" : "{'binding':'label_2'}",
+          "class" : "Button",
+          "name" : "button_2",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{116, 0}, {110, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "change_alpha",
+          "frame" : "{{247, 19}, {80, 32}}",
+          "title" : "",
+          "uuid" : "C6F1B7BB-D006-4513-A294-CE5F1080BE4B",
+          "custom_attributes" : "{'binding':'label_4'}",
+          "class" : "Button",
+          "name" : "button_4",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{232, 0}, {110, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "change_alpha",
+          "frame" : "{{247, 19}, {80, 32}}",
+          "title" : "",
+          "uuid" : "C6F1B7BB-D006-4513-A294-CE5F1080BE4B",
+          "custom_attributes" : "{'binding':'label_8'}",
+          "class" : "Button",
+          "name" : "button_8",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{348, 0}, {110, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "change_alpha",
+          "frame" : "{{247, 19}, {80, 32}}",
+          "title" : "",
+          "uuid" : "C6F1B7BB-D006-4513-A294-CE5F1080BE4B",
+          "custom_attributes" : "{'binding':'label_16'}",
+          "class" : "Button",
+          "name" : "button_16",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{464, 0}, {110, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "change_alpha",
+          "frame" : "{{247, 19}, {80, 32}}",
+          "title" : "",
+          "uuid" : "C6F1B7BB-D006-4513-A294-CE5F1080BE4B",
+          "custom_attributes" : "{'binding':'label_512'}",
+          "class" : "Button",
+          "name" : "button_512",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 38}, {110, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "change_alpha",
+          "frame" : "{{247, 19}, {80, 32}}",
+          "title" : "",
+          "uuid" : "C6F1B7BB-D006-4513-A294-CE5F1080BE4B",
+          "custom_attributes" : "{'binding':'label_256'}",
+          "class" : "Button",
+          "name" : "button_256",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{116, 38}, {110, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "change_alpha",
+          "frame" : "{{247, 19}, {80, 32}}",
+          "title" : "",
+          "uuid" : "C6F1B7BB-D006-4513-A294-CE5F1080BE4B",
+          "custom_attributes" : "{'binding':'label_32'}",
+          "class" : "Button",
+          "name" : "button_32",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{232, 38}, {110, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "change_alpha",
+          "frame" : "{{247, 19}, {80, 32}}",
+          "title" : "",
+          "uuid" : "C6F1B7BB-D006-4513-A294-CE5F1080BE4B",
+          "custom_attributes" : "{'binding':'label_64'}",
+          "class" : "Button",
+          "name" : "button_64",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{348, 38}, {110, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "change_alpha",
+          "frame" : "{{247, 19}, {80, 32}}",
+          "title" : "",
+          "uuid" : "C6F1B7BB-D006-4513-A294-CE5F1080BE4B",
+          "custom_attributes" : "{'binding':'label_128'}",
+          "class" : "Button",
+          "name" : "button_128",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{464, 38}, {110, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "change_alpha",
+          "frame" : "{{247, 19}, {80, 32}}",
+          "title" : "",
+          "uuid" : "C6F1B7BB-D006-4513-A294-CE5F1080BE4B",
+          "custom_attributes" : "{'binding':'label_1'}",
+          "class" : "Button",
+          "name" : "button_1",
+          "font_size" : 15
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {574, 70}}",
+    "class" : "View",
+    "attributes" : {
+      "name" : "",
+      "enabled" : true,
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]
