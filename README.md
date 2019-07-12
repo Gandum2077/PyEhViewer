@@ -1,5 +1,6 @@
 # PyEhViewer
-由于 iOS 平台审查限制，App Store 没有好用的 exhentai.org 阅读器（虽有偷鸡摸狗上架的，但体验也很差），因此利用 Pythonista 3 这个万能平台自己创作，功能上对标 Andiord 平台的 EhViewer，同时也有自己的特色功能
+由于 iOS 平台审查限制，因此 iOS 平台在诸如看 Pornhub、看 Exhentai 之类的功能上一直是缺失的。这是 iOS 让人难以忍受的地方，也是 Android 超越 iOS 的地方。  
+一直以来，App Store 没有好用的 exhentai.org 阅读器（虽有偷鸡摸狗上架的，但体验也很差），但是官方不提供，可以自己做嘛。因此利用 Pythonista 3 这个万能平台自己创作，功能上对标 Android 平台的 EhViewer，同时也有自己的特色功能。
 
 ## Features
 - 自动翻页，让左酱右酱休息一下（原生的EhViewer做不到哦，另外不要抬杠，我知道安卓随便弄一下也就有了）
@@ -15,10 +16,11 @@
 - 代码尽量模块化设计，所以你可以添加想要的任何功能！
 
 ## 前提
-本程序本来是为了本人欣赏艺术才写的，因此很遗憾，可能不适合对艺术没有追求的人。  
+本程序使用需要满足的前提比较多，本来这是本人为了欣赏艺（工）术（口）才写的，因此很遗憾，可能不适合对艺（工）术（口）没有追求的人。  
+虽然前提设置有点复杂，但是程序本身的操作是很易懂、纯 GUI 操作的。  
 适合熟悉Python、Pythonista 3、Exhentai.org 的人使用。  
 你必须满足以下前提才能使用PyEhViewer:
-1. (必要) 目前只支持 iPad 逻辑分辨率为 1024x768 的机型(即除了 iPad Pro 10.5 和 iPad Pro 12.9 以外的所有机型，比如iPad mini、iPad Air、iPad 2018)，iPad Pro 10.5 和 iPad Pro 12.9 应该也没问题，不过我没有条件测试，有条件的可以测试一下。**暂不支持iPhone。**
+1. (必要) 目前只支持 iPad 逻辑分辨率为 1024x768 的机型(即除了 iPad Pro 10.5 和 iPad Pro 12.9 以外的所有机型，比如iPad mini、iPad Air、iPad 2018)，iPad Pro 10.5 和 iPad Pro 12.9 应该也没问题，多数view的layout都已经调整好可以自适应分辨率，不过我没有条件测试，有条件的同学可以测试一下。**暂不支持iPhone。**
 1. (必要) [Pythonista 3](https://apps.apple.com/cn/app/pythonista-3/id1085978097)
 2. (必要) 第三方包 html2text，在 [stash](https://github.com/ywangd/stash) 中运行以下代码安装，未安装 stash 请先安装 stash
 
@@ -51,6 +53,11 @@ pip install html2text
 - 若放在iCloud文件夹中，本程序无法运作
 - 首次运行如果出现`requests.exceptions.SSLError`: 检查代理软件，建议暂时设为全局模式，登录完成以后再改回来
 - 如果出现数据库错误（多为程序卡死强制关闭造成），运行`troublefix.py`里的`rebuild_db()`即可
+
+## Contributions
+- 针对不同设备调整UI需要大量的人力，所以如果你在逻辑分辨率不为1024*768的设备上使用，不要忘了调整UI并贡献代码
+- 第二个问题是总结归纳评论所需要的API，也请贡献代码
+- 另一个重点问题是重构parse模块，使其适用于没有Multi-Page Viewer权限的账号
 
 ## 截图
 ![0.png](https://github.com/Gandum2077/PyEhViewer/blob/master/screenshots/0.png)  

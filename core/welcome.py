@@ -1,13 +1,16 @@
+import json
 import os
 import shutil
+
+import yaml
 
 import console
 import dialogs
 import ui
 
-from parse.exhentaiparser import renew, renew_account
+from parse.exhentaiparser import renew, renew_account, ExhentaiParser
 from core.database import create_db
-from conf.config import CONFIGPATH
+from conf.config import CONFIGPATH, COOKIE_FILE
 
 def is_suitable_device():
     a, b = ui.get_screen_size()
@@ -18,7 +21,20 @@ def init_config():
     if os.path.exists(CONFIGPATH):
         os.remove(CONFIGPATH)
     shutil.copy(CONFIGPATH + '.example', CONFIGPATH)
-
+    
+def get_favcat():
+    parser = ExhentaiParser(
+        cookies_dict=json.loads(open(COOKIE_FILE).read())
+            )
+    url = 'https://exhentai.org/favorites.php'
+    t = parser.get_list_infos(url)
+    with open(CONFIGPATH, encoding='utf-8') as f:
+        config = yaml.load(f.read())
+    config['favcat_nums_titles'] = t['favcat_nums_titles']
+    config['favorites_order_method'] = t['favorites_order_method']
+    text = yaml.safe_dump(config, default_flow_style=False, allow_unicode=True)
+    with open(CONFIGPATH, 'w', encoding='utf-8') as f:
+        f.write(text)
 ipadpro_iphone_warning = "未针对此设备调整UI"
 
 choices_list = [
@@ -54,4 +70,6 @@ def welcome():
             renew()
             init_config()
             create_db()
+            get_favcat()
+            
             
