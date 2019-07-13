@@ -221,10 +221,7 @@ class GalleryView(ui.View):
         else:
             self.info['is_personal_rating'] = True
             self.info['display_rating'] = rating
-            self['gallery_info_view']['imageview_rank'].image = ui.Image.named('gui/fivestars_blue.png')
-            rating = self.info['display_rating']
-            x ,y, w, h = self['gallery_info_view']['imageview_rank'].frame
-            self['gallery_info_view']['imageview_mask'].frame = (x + w*float(rating)/5, y, w-w*float(rating)/5, h)
+            self['gallery_info_view'].refresh()
             glv.PARSER.save_mangainfo(self.info, os.path.join(glv.PARSER.storage_path, verify_url(self.info['url'])))
             sender.superview.close()
     
