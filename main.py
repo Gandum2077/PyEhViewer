@@ -1,10 +1,10 @@
 import os
 import sys
 
-from parse.exhentaiparser import CONFIGPATH
+from parse.exhentaiparser import CONFIGPATH, COOKIE_FILE
 from core.welcome import welcome
 
-if not os.path.exists(CONFIGPATH):
+if not os.path.exists(CONFIGPATH) and not os.path.exists(COOKIE_FILE):
     welcome()
         
 import conf.global_variables as glv
