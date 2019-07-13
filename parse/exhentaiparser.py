@@ -11,7 +11,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-VERSION = '1.5'
+VERSION = '1.6'
 
 DEFAULT_TIMEOUT = 20
 DEFAULT_STORAGE_PATH = 'image'
@@ -393,16 +393,37 @@ class ExhentaiParser:
         for block in comment_blocks:
             posted_time = re.match(r'Posted on (.*UTC)',block.select('.c3 ')[0].text).groups(1)[0]
             commenter = block.select('.c3 > a')[0].text
-            if block.select('.c4 > a') and block.select('.c4 > a')[0].has_attr('name'):
+            if block.select('.c4 > a') and block.select('.c4 > a')[0].has_attr('name'): # 上传者评论
                 is_uploader = True
                 score = None
                 comment_id = None
                 votes = None
+                is_self_comment = False
+                voteable = False
+                my_vote = None
             else:
                 is_uploader = False
                 score = block.select('.c5 > span')[0].text
                 comment_id = block.select('.c6')[0].get('id')[8:]
-                votes = [block.select('.c7')[0].contents[0][:-2]] + [i.text for i in block.select('.c7 span')]
+                votes = block.select('.c7')[0].text
+                if not block.select('.c4'): # 不可投票的普通评论
+                    is_self_comment = False
+                    voteable = False
+                    my_vote = None
+                elif len(block.select('.c4 > a')) == 1: # 自己发表的评论
+                    is_self_comment = True
+                    voteable = False
+                    my_vote = None
+                else: # 可投票的评论
+                    is_self_comment=False
+                    voteable=True
+                    if block.select('.c4 > a')[0]['style']:
+                        my_vote = 1
+                    elif block.select('.c4 > a')[1]['style']:
+                        my_vote = -1
+                    else:
+                        my_vote = None
+
             comment_div = str(block.select('.c6')[0])
             comments.append(dict(
                 posted_time=posted_time,
@@ -411,7 +432,10 @@ class ExhentaiParser:
                 is_uploader=is_uploader,
                 comment_div=comment_div,
                 score=score,
-                votes=votes
+                votes=votes,
+                is_self_comment=is_self_comment,
+                voteable=voteable,
+                my_vote=my_vote
                 ))
         return comments
 
@@ -495,7 +519,62 @@ class ExhentaiParser:
         if not pic_url:
             raise Exception('网络错误')
         return pic_url
+
+    def post_new_comment(self, gallery_url, text):
+        # 最少10个字符（utf-8编码）
+        if len(text.encode('utf-8')) < 10:
+            raise ValueError('comment is too short')
+        payload = {"commenttext_new": text}
+        headers = {
+            'content-type': "application/x-www-form-urlencoded"
+            }
+        headers.update(self.headers)
+        r = self.session.post(gallery_url, data=payload, headers=headers)
+        if r.text[:9] != '<!DOCTYPE':
+            return True
         
+    def get_edit_comment(self, apikey, apiuid, gid, token, comment_id):
+        payload = {
+            "method": "geteditcomment",
+            "apiuid": apiuid,
+            "apikey": apikey,
+            "gid": gid,
+            "token": token,
+            "comment_id": comment_id
+            }
+        r = self.session.request("POST", url_api, data=json.dumps(payload))
+        text = r.json()['editable_comment']
+        soup = BeautifulSoup(text, 'html5lib')
+        return soup.textarea.text
+
+    def post_edited_comment(self, gallery_url, comment_id, text):
+        if len(text.encode('utf-8')) < 10:
+            raise ValueError('comment is too short')
+        payload = {"edit_comment": comment_id, "commenttext_edit": text}
+        headers = {
+            'content-type': "application/x-www-form-urlencoded"
+            }
+        headers.update(self.headers)
+        r = self.session.post(gallery_url, data=payload, headers=headers)
+        if r.text[:9] != '<!DOCTYPE':
+            return True
+        
+    def vote_comment(self, apikey, apiuid, gid, token, comment_id, comment_vote):
+        payload = {
+            "method": "votecomment",
+            "apiuid": apiuid,
+            "apikey": apikey,
+            "gid": gid,
+            "token": token,
+            "comment_id": comment_id,
+            "comment_vote": comment_vote
+            }
+        r = self.session.request("POST", url_api, data=json.dumps(payload))
+        if r.ok and not r.json().get('error'):
+            return True
+        else:
+            return False
+
 # 下载相关
     def save_mangainfo(self, infos, dl_path):
         if not os.path.exists(dl_path):
