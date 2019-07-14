@@ -9,7 +9,7 @@ from core.utility import verify_url
 from core.database import create_db, insert_info
 import parse.exhentaiparser as exhentaiparser
 
-VERSION = '1.5'
+VERSION = '1.6'
 l = os.listdir(IMAGEPATH)
 
 def update_infos():
