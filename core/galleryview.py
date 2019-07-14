@@ -60,9 +60,11 @@ class GalleryView(ui.View):
     def will_close(self):
         """功能：
         - 将阅读过的gallery存入db
+        - 更新manga_infos.json
         """
         if len(list(Path(IMAGEPATH).joinpath(verify_url(self.info['url'])).iterdir())) > 2:
             insert_info(self.info)
+        glv.PARSER.save_mangainfo(self.info, self.dl_path)
         
     def update(self):
         """功能：
