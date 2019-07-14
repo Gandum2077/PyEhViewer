@@ -16,6 +16,7 @@ import html2text
 from conf.config import IMAGEPATH
 import conf.global_variables as glv
 from core.database import insert_info, delete_by_gid, search
+from core.enlarged_comments_view import EnlargedCommentsView
 from core.mpv import mpv, InfoView
 from core.rating_stars_view import render_rating_stars_view
 from core.tagtableview import TagTableView
@@ -271,13 +272,9 @@ class GalleryView(ui.View):
             console.hud_alert('没选中任何标签', 'error')
         
     def present_enlarged_comments(self, sender):
-        text = self['scrollview']['comments_view']['textview_comments'].text
-        v = ui.TextView(
-            editable=False,
-            frame=(0, 0, 600, 800),
-            name='comments',
-            text=text
-            )
+        info = glv.PARSER.get_gallery_infos_only(self.url)
+        self.info.update(comments=info['comments'])
+        v = EnlargedCommentsView(self.info)
         v.present('sheet')
     
     def try_import_old_version(self, sender):
