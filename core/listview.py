@@ -9,6 +9,7 @@ from pathlib import Path
 
 import clipboard
 import console
+import dialogs
 import ui
 
 from conf.config import CACHEPATH, IMAGEPATH, CONFIGPATH, ACCOUNT_FILE
@@ -17,6 +18,7 @@ from core.advancedsearch import AdvancedSearchView
 from core.database import create_db, insert_info, delete_by_gid, search_by_url
 from core.galleryview import galleryview
 from core.rating_stars_view import render_rating_stars_view
+from core.storage_search_phrases_view import render_storage_search_phrases_view
 from core.utility import get_coordinate, get_color, translate_taglist, render_taglist_to_text, get_color_from_favcat, verify_url, detect_url_category, get_search_url, add_querydict_to_url
 import parse.exhentaiparser
 
@@ -281,23 +283,43 @@ class ListView(ui.View):
         if self['storage_search_phrases_view']:
             self.remove_subview(self['storage_search_phrases_view'])
         else:
-            view = ui.load_view('gui/storage_search_phrases_view.pyui')
-            view.frame = (self.width-320-10, 63, 320, 480)
+            # 此处直接传递STORAGE_SEARCH_PHRASES这一对象，
+            # 在其他模块中会直接操作此对象，因此本模块此处不需要再操作此对象
+            view = render_storage_search_phrases_view(
+                STORAGE_SEARCH_PHRASES,
+                self.add_action,
+                self.select_action,
+                frame=(self.width-320-10, 63, 320, 480)
+                )
             view.name = 'storage_search_phrases_view'
-            view.border_width = 1
-            view.border_color = '#c8c7cc'
-            view['button_add'].action = self.add_storage
-            view['tableview1'].data_source.action = self.update_textfield_by_tableview
-            view['tableview1'].data_source.items = STORAGE_SEARCH_PHRASES
             self.add_subview(view)
+        
+    def select_action(self, phrase):
+        self['textfield_search'].text = phrase
     
     @ui.in_background
-    def add_storage(self, sender):
-        t = console.input_alert('添加', '', self.search_phrase)
-        sender.superview['tableview1'].data_source.items.append(t)
-        global STORAGE_SEARCH_PHRASES
-        STORAGE_SEARCH_PHRASES.append(t)
-
+    def add_action(self, sender):
+        raw = self['textfield_search'].text
+        t = dialogs.form_dialog(
+            title='添加搜索词',
+            fields=[
+                {
+                    'type': 'text', 'title': '搜索词',
+                    'key': 'raw', 'value': raw
+                    },
+                {
+                    'type': 'text', 'title': '提示词',
+                    'key': 'display', 'placeholder': 'optional'
+                    }
+                ]
+            )
+        if t:
+            if t['display']:
+                item = {'display': t['display'], 'raw': t['raw']}
+            else:
+                item = t['raw']
+            if item:
+                sender.superview.add_item(item)
         
 # 以下为sidebar
     def present_sidebar(self, sender):
@@ -572,7 +594,6 @@ def get_items(url, url_category):
         nums_of_pics = len(os.listdir(path)) - 2
         return nums_of_pics
 
-# to-do: 目前只支持按照gid顺序排列
     def get_storageview_dict(url):
         search_result = search_by_url(url)
         folders =[
