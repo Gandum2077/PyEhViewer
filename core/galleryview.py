@@ -261,10 +261,16 @@ class GalleryView(ui.View):
                     tag = i[1][:i[1].find('|')].strip()
                 else:
                     tag = i[1]
-                if tag.find(' ') != -1:
-                    texts.append('{}:"{}$"'.format(i[0], tag))
+                if i[0] != 'misc':
+                    if tag.find(' ') != -1:
+                        texts.append('{}:"{}$"'.format(i[0], tag))
+                    else:
+                        texts.append('{}:{}$'.format(i[0], tag))
                 else:
-                    texts.append('{}:{}$'.format(i[0], tag))
+                    if tag.find(' ') != -1:
+                        texts.append('"{}$"'.format(tag))
+                    else:
+                        texts.append('{}$'.format(tag))
         if self['gallery_info_view']['label_uploader'].selected:
             texts.append(self['gallery_info_view']['label_uploader'].text.replace('uploader: ', 'uploader:'))
         if texts:

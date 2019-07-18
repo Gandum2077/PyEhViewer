@@ -85,6 +85,14 @@ def handle_querydict(querydict):
                 querystring = re.match(r'\w+:[^ \$]+\$', text).group()
                 text = text[len(querystring):].strip()
                 query_tags.append(querystring)
+            elif re.match(r'"[^ \$]+ [^ \$]+\$"', text):
+                querystring = re.match(r'"[^ \$]+ [^ \$]+\$"', text).group()
+                text = text[len(querystring):].strip()
+                query_tags.append(querystring)
+            elif re.match(r'[^ \$]+\$', text):
+                querystring = re.match(r'[^ \$]+\$', text).group()
+                text = text[len(querystring):].strip()
+                query_tags.append(querystring)
             elif re.match(r'uploader:[^ ]+', text):
                 querystring = re.match(r'uploader:[^ ]+', text).group()
                 text = text[len(querystring):].strip()
@@ -121,6 +129,8 @@ def handle_querydict(querydict):
         query_title, query_uploader, query_tags = handle_f_search(f_search)
         if query_tags and f_stags:
             for i in query_tags:
+                if i.find(':') == -1:
+                    i = 'misc:' + i
                 condition_clauses.append("EXISTS (SELECT tags.gid FROM tags WHERE downloads.gid=tags.gid AND tags.class='{}' AND tags.tag='{}')".format(i[:i.find(':')], re.match(r'^"?(.*)\$"?',i[i.find(':') + 1:]).groups()[0]))
         if query_uploader:
             condition_clauses.append("downloads.uploader='{}'".format(query_uploader[0][9:]))
