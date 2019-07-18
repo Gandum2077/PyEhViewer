@@ -292,6 +292,7 @@ class ListView(ui.View):
                 frame=(self.width-320-10, 63, 320, 480)
                 )
             view.name = 'storage_search_phrases_view'
+            view.flex = 'L'
             self.add_subview(view)
         
     def select_action(self, phrase):
