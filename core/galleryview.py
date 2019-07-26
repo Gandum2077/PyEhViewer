@@ -297,6 +297,7 @@ class GalleryView(ui.View):
             keyword = keyword.replace("(", "/(")
             keyword = keyword.replace(")", "/)")
             return keyword
+        sender.hidden = True
         parent_url = self.info.get('parent_url')
         foldername = verify_url(parent_url)
         if os.path.exists(os.path.join(IMAGEPATH, foldername)):
@@ -315,7 +316,6 @@ class GalleryView(ui.View):
                 escape(self.info.get('english_title')),
                 self.info.get('gid')
                 )
-            print(clause)
             t = [i[0] for i in search(clause)]
             if t:
                 old_dl_path = os.path.join(IMAGEPATH, t[0])
