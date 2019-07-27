@@ -3,6 +3,8 @@
 一直以来，App Store没有好用的 exhentai.org 阅读器（虽有偷鸡摸狗上架的，但体验也很差），但是官方不提供，可以自己做嘛。因此利用Pythonista 3这个万能平台自己创作，功能上对标Android平台的EhViewer，同时也有自己的特色功能。
 
 ## 紧急更新：不再支持 exhentai.org，改为支持 e-hentai.org
+之前的图库如果要继续使用，请运行`troublefix.py`里面的`fix_infos`，否则旧图库将出现bug
+
 
 ## Features
 - 自动翻页，让左酱右酱休息一下（原生的EhViewer做不到哦，另外不要抬杠，我知道安卓随便弄一下也就有了）
