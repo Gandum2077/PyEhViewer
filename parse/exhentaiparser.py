@@ -456,7 +456,7 @@ class ExhentaiParser:
         format = r'https://e[-x]hentai\.org/g/(\d*)/(\w*)/?'
         gid, t = re.fullmatch(format, gallery_url).groups()
         querystring = {"gid": gid, "t": t, "act": "addfav"}
-        url = urllib.parse.urlunparse(('https', 'exhentai.org', 'gallerypopups.php', '', urllib.parse.urlencode(querystring), ''))
+        url = urllib.parse.urlunparse(('https', 'e-hentai.org', 'gallerypopups.php', '', urllib.parse.urlencode(querystring), ''))
         soup = self.get_soup(url)
         input_selected = soup.find('input',checked='checked')
         if input_selected:
@@ -476,7 +476,7 @@ class ExhentaiParser:
         
     def add_fav(self, gallery_url, favcat='favcat0', favnote=None, old_is_favorited=False):
         headers = {'content-type': "application/x-www-form-urlencoded"}
-        url = "https://exhentai.org/gallerypopups.php"
+        url = "https://e-hentai.org/gallerypopups.php"
         format = r'https://e[-x]hentai\.org/g/(\d*)/(\w*)/?'
         gid, t = re.fullmatch(format, gallery_url).groups()
         querystring = {"gid": gid, "t": t, "act": "addfav"}
