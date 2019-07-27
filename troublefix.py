@@ -23,7 +23,7 @@ def update_infos():
             print(i)
             continue
         parser = exhentaiparser.ExhentaiParser(
-            cookies_dict=json.loads(open(COOKIES_FILE).read())
+            cookies_dict=json.loads(open(COOKIE_FILE).read())
                 )
         image_path = os.path.abspath(parser.storage_path)
         dl_path = os.path.join(image_path, foldername)
@@ -54,9 +54,26 @@ def all_init():
     os.makedirs(IMAGEPATH)
     os.makedirs(CACHEPATH)
     
+    
+def fix_infos():
+    parser = exhentaiparser.ExhentaiParser(
+        cookies_dict=json.loads(open(COOKIE_FILE).read())
+            )
+    n = 1
+    for i in l:
+       # print(n)
+        p = os.path.join(IMAGEPATH, i, 'manga_infos.json')
+        infos = json.loads(open(p).read())
+        foldername = verify_url(infos['url'])
+        image_path = os.path.abspath(parser.storage_path)
+        dl_path = os.path.join(image_path, foldername)
+        infos['url'] = infos['url'].replace('exhentai', 'e-hentai')
+        parser.save_mangainfo(infos, dl_path)
+        
 
 if __name__ == '__main__':
-    rebuild_db()
+    #rebuild_db()
     #update_infos()
     #all_init()
+    fix_infos()
 

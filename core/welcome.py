@@ -26,7 +26,7 @@ def get_favcat():
     parser = ExhentaiParser(
         cookies_dict=json.loads(open(COOKIE_FILE).read())
             )
-    url = 'https://exhentai.org/favorites.php'
+    url = 'https://e-hentai.org/favorites.php'
     t = parser.get_list_infos(url)
     with open(CONFIGPATH, encoding='utf-8') as f:
         config = yaml.load(f.read())

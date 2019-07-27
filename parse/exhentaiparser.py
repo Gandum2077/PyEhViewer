@@ -18,9 +18,9 @@ DEFAULT_STORAGE_PATH = 'image'
 
 url_login = 'https://forums.e-hentai.org/index.php?act=Login&CODE=01'
 url_ehentai = 'https://e-hentai.org/'
-url_exhentai = 'https://exhentai.org/'
-url_exhentai_config = 'https://exhentai.org/uconfig.php'
-url_api = 'https://exhentai.org/api.php'
+url_exhentai = 'https://e-hentai.org/'
+url_exhentai_config = 'https://e-hentai.org/uconfig.php'
+url_api = 'https://e-hentai.org/api.php'
 
 COOKIE_FILE = os.path.join(os.path.split(os.path.realpath(__file__))[0], 'cookie.json')
 CONFIGPATH = os.path.join(os.path.split(os.path.realpath(__file__))[0], 'account.json')

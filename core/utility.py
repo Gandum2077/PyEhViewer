@@ -182,7 +182,7 @@ def get_bilingual_taglist(taglist):
 
 def detect_url_category(url):
     "给url分类，结果为default, popular, watched, favourite, downloads"
-    if url == 'https://exhentai.org/popular':
+    if url == 'https://e-hentai.org/popular':
         return 'popular'
     t = urllib.parse.urlparse(url)
     if t.scheme == 'downloads':
@@ -216,7 +216,7 @@ def get_search_url(querydict, url_category='default'):
         netloc = 'index'
     else:
         scheme = 'https'
-        netloc = 'exhentai.org'
+        netloc = 'e-hentai.org'
     query = urllib.parse.urlencode(querydict)
     url = urllib.parse.urlunparse((scheme, netloc, path, '', query, ''))
     return url

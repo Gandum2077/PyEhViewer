@@ -140,7 +140,7 @@
           "class" : "Button",
           "corner_radius" : 0,
           "border_color" : "RGBA(0.745098,0.745098,0.745098,1.000000)",
-          "custom_attributes" : "{'url':'https:\/\/exhentai.org\/favorites.php'}",
+          "custom_attributes" : "{'url':'https:\/\/e-hentai.org\/favorites.php'}",
           "name" : "button_favorites",
           "font_size" : 20
         },
@@ -180,7 +180,7 @@
           "border_color" : "RGBA(0.745098,0.745098,0.745098,1.000000)",
           "class" : "Button",
           "corner_radius" : 0,
-          "custom_attributes" : "{'url':'https:\/\/exhentai.org\/popular'}",
+          "custom_attributes" : "{'url':'https:\/\/e-hentai.org\/popular'}",
           "name" : "button_popular",
           "font_size" : 20
         },
@@ -197,7 +197,7 @@
           "name" : "button_watched",
           "frame" : "{{30, 95}, {80, 32}}",
           "title" : "Watched",
-          "custom_attributes" : "{'url':'https:\/\/exhentai.org\/watched'}",
+          "custom_attributes" : "{'url':'https:\/\/e-hentai.org\/watched'}",
           "corner_radius" : 0,
           "font_bold" : false,
           "uuid" : "B4923F98-8964-4195-A262-8E83470378E5",
