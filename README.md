@@ -1,10 +1,9 @@
 # PyEhViewer
-由于 iOS 平台审查限制，因此 iOS 平台在诸如看Pornhub、看e-hentai之类的功能上一直是缺失的。这是iOS让人难以忍受的地方，也是Android超越iOS的地方。  
-一直以来，App Store没有好用的 exhentai.org 阅读器（虽有偷鸡摸狗上架的，但体验也很差），但是官方不提供，可以自己做嘛。因此利用Pythonista 3这个万能平台自己创作，功能上对标Android平台的EhViewer，同时也有自己的特色功能。
+由于 iOS 平台审查限制，因此 iOS 平台在诸如看 Pornhub、看 Exhentai 之类的功能上一直是缺失的。这是 iOS 让人难以忍受的地方，也是 Android 超越 iOS 的地方。  
+一直以来，App Store 没有好用的 exhentai.org 阅读器（虽有偷鸡摸狗上架的，但体验也很差），但是官方不提供，可以自己做嘛。因此利用 Pythonista 3 这个万能平台自己创作，功能上对标 Android 平台的 EhViewer，同时也有自己的特色功能。
 
-## 紧急更新：不再支持 exhentai.org，改为支持 e-hentai.org
-之前的图库如果要继续使用，请运行`troublefix.py`里面的`fix_infos`，否则旧图库将出现bug
-
+## Exhentai复活，一切回滚
+如果之前因为关站下载了紧急更新版本，请运行`troublefix.py`里面的`fix_infos`，否则旧图库将出现bug
 
 ## Features
 - 自动翻页，让左酱右酱休息一下（原生的EhViewer做不到哦，另外不要抬杠，我知道安卓随便弄一下也就有了）
@@ -22,23 +21,23 @@
 ## 前提
 本程序使用需要满足的前提比较多，本来这是本人为了欣赏艺（工）术（口）才写的，因此很遗憾，可能不适合对艺（工）术（口）没有追求的人。  
 虽然前提设置有点复杂，但是程序本身的操作是很易懂、纯 GUI 操作的。  
-适合熟悉Python、Pythonista 3、e-hentai.org 的人使用。  
+适合熟悉Python、Pythonista 3、Exhentai.org 的人使用。  
 你必须满足以下前提才能使用PyEhViewer:
-1. (必要) 目前只支持 iPad 逻辑分辨率为 1024x768 的机型(即除了iPad Air 3和iPad Pro 10.5、11、12.9以外的所有机型，比如iPad mini、iPad Air、iPad 2018)，不过逻辑分辨率更高的机型应该也没问题，多数view的layout都已经调整好可以自适应分辨率，不过我没有条件测试，有条件的同学可以测试一下。**暂不支持iPhone。**
+1. (必要) 目前只支持 iPad 逻辑分辨率为 1024x768 的机型(即除了 iPad Pro 10.5 和 iPad Pro 12.9 以外的所有机型，比如iPad mini、iPad Air、iPad 2018)，iPad Pro 10.5 和 iPad Pro 12.9 应该也没问题，多数view的layout都已经调整好可以自适应分辨率，不过我没有条件测试，有条件的同学可以测试一下。**暂不支持iPhone。**
 1. (必要) [Pythonista 3](https://apps.apple.com/cn/app/pythonista-3/id1085978097)
 2. (必要) 第三方包 html2text，在 [stash](https://github.com/ywangd/stash) 中运行以下代码安装，未安装 stash 请先安装 stash
 
 ```
 pip install html2text
 ```
-3. (必要) 可以访问 e-hentai.org 的网络环境。如果你使用代理，请注意可能需要设为全局代理或者手动添加以上两个网址，因为很多代理软件没有这两个网址。
-4. (必要) 注册 e-hentai.org 账号，然后请去 https://e-hentai.org/hathperks.php 点亮Multi-Page Viewer的Hath Perk，需要300Hath币（**最快方法：淘宝买币**。也可以各显神通，赚币方法很多）或捐款100美元
-5. (必要) [设置界面](https://e-hentai.org/uconfig.php)必须做以下设置：
+3. (必要) 可以访问 e-hentai.org 和 exhentai.org 的网络环境。如果你使用代理，请注意可能需要设为全局代理或者手动添加以上两个网址，因为很多代理软件没有这两个网址。
+4. (必要) 注册e-hentai.org账号，并确保可以访问 exhentai.org （刚注册的账号需要等待两星期左右才能访问 exhentai.org），然后请去 https://e-hentai.org/hathperks.php 点亮Multi-Page Viewer的Hath Perk，需要300Hath币（**最快方法：淘宝买币**。也可以各显神通，赚币方法很多）或捐款100美元
+5. (必要) [设置界面](https://exhentai.org/uconfig.php)必须做以下设置：
 
 - Front Page Settings 设为 Extended
 - Thumbnail Settings 中的 Size 设为 Large
 
-6. (可选) [设置界面](https://e-hentai.org/uconfig.php)推荐做以下设置：
+6. (可选) [设置界面](https://exhentai.org/uconfig.php)推荐做以下设置：
 
 - Gallery Name Display 设为 Japanese Title (if available)
 - Search Result Count 设为 50 results

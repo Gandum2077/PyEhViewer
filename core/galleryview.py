@@ -763,5 +763,5 @@ def galleryview(url):
     v.present('fullscreen',hide_title_bar=True,animated=False)
     
 if __name__ == '__main__':
-    url = 'https://e-hentai.org/g/1421690/8879faf2a6/'
+    url = 'https://exhentai.org/g/1421690/8879faf2a6/'
     galleryview(url)

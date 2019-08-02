@@ -54,7 +54,7 @@ def all_init():
     os.makedirs(IMAGEPATH)
     os.makedirs(CACHEPATH)
     
-    
+
 def fix_infos():
     parser = exhentaiparser.ExhentaiParser(
         cookies_dict=json.loads(open(COOKIE_FILE).read())
@@ -67,7 +67,7 @@ def fix_infos():
         foldername = verify_url(infos['url'])
         image_path = os.path.abspath(parser.storage_path)
         dl_path = os.path.join(image_path, foldername)
-        infos['url'] = infos['url'].replace('exhentai', 'e-hentai')
+        infos['url'] = infos['url'].replace('e-hentai', 'exhentai')
         parser.save_mangainfo(infos, dl_path)
         
 
@@ -76,4 +76,3 @@ if __name__ == '__main__':
     #update_infos()
     #all_init()
     fix_infos()
-
