@@ -131,12 +131,10 @@ class MultiPageView(ui.View):
             self.remove_subview(self['igv'])
         pic_path = self._get_pic_path(self.infos['pics'][self.page]['img_id'])
         if pic_path != 'loading':
-            image = ui.Image.named(pic_path)
-            width, height = image.size
             max_width, max_height = get_max_wh()
             igv = ImageWithGestureView(
-                frame = (0, 18, max_width, max_height),
-                image=image,
+                frame=(0, 18, max_width, max_height),
+                image_file=pic_path,
                 name='igv',
                 action_prev=self.action_prev,
                 action_next=self.action_next

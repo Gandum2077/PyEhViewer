@@ -1,3 +1,5 @@
+import os
+
 import ui
 
 from core.pygestures import GestureView 
@@ -7,17 +9,36 @@ class ImageWithGestureView (GestureView):
     def __init__(self, **kwargs):
         super().__init__()
         self.frame = kwargs.get('frame')
-        image = kwargs.get('image')
+        image_file = kwargs.get('image_file')
         self.name = kwargs.get('name')
         self.action_prev = kwargs.get('action_prev')
         self.action_next = kwargs.get('action_next')
+        image = ui.Image.named(image_file)
         w, h = image.size
-        self.imageview = ui.ImageView(
-            frame=get_coordinate(0, 0, self.width, self.height, w, h),
-            image=image,
-            name='imageview'
-            )
-        self.add_subview(self.imageview)
+        if os.path.splitext(image_file)[1].lower() != '.gif':
+            self.imageview = ui.ImageView(
+                frame=get_coordinate(0, 0, self.width, self.height, w, h),
+                image=image,
+                name='imageview'
+                )
+            self.add_subview(self.imageview)
+        else:
+            self.imageview = ui.ImageView(
+                frame=get_coordinate(0, 0, self.width, self.height, w, h),
+                name='imageview'
+                )
+            v = ui.WebView(
+                background_color='white',
+                frame=self.imageview.frame,
+                touch_enabled=False
+                )
+            v.load_url(image_file)
+            self.add_subview(v)
+            self.add_subview(ui.ImageView(
+                background_color='white',
+                frame=(0, self.imageview.y + self.imageview.height - 1, self.imageview.width, 1)
+                ))
+            self.add_subview(self.imageview)
         self.x_prev, self.y_prev, self.w_prev, self.h_prev = self['imageview'].frame
         self.x_orginal, self.y_orginal, self.w_orginal, self.h_orginal = self['imageview'].frame
 
