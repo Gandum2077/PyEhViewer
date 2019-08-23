@@ -77,16 +77,16 @@ def handle_querydict(querydict):
         query_title = []
         text = text.strip()
         while text:
-            if re.match(r'\w+:"[^ \$]+ [^ \$]+\$"', text):
-                querystring = re.match(r'\w+:"[^ ]+ [^ ]+\$"', text).group()
+            if re.match(r'\w+:"[^:\$]+\$"', text):
+                querystring = re.match(r'\w+:"[^:\$]+\$"', text).group()
                 text = text[len(querystring):].strip()
                 query_tags.append(querystring)
             elif re.match(r'\w+:[^ \$]+\$', text):
                 querystring = re.match(r'\w+:[^ \$]+\$', text).group()
                 text = text[len(querystring):].strip()
                 query_tags.append(querystring)
-            elif re.match(r'"[^ \$]+ [^ \$]+\$"', text):
-                querystring = re.match(r'"[^ \$]+ [^ \$]+\$"', text).group()
+            elif re.match(r'"[^:\$]+\$"', text):
+                querystring = re.match(r'"[^:\$]+\$"', text).group()
                 text = text[len(querystring):].strip()
                 query_tags.append(querystring)
             elif re.match(r'[^ \$]+\$', text):
