@@ -8,7 +8,7 @@ try:
     import ui
 except:
     pass
-    
+
 from conf.config import TAGTRANSLATOR_JSON
 
 TAGTRANSLATOR_DICT = json.loads(open(TAGTRANSLATOR_JSON).read())
@@ -87,7 +87,7 @@ def generate_tag_translator_json(ehtagtranslator_wiki_path):
     types_dict = {}
     for tag_type in tag_types:
         filepath = os.path.join(folder, tag_type + '.md')
-        text = open(filepath).read()
+        text = open(filepath, encoding='utf-8').read()
         t = []
         for i in re.findall(r'^\| [^\|]+ \| [^|]+ \|', text, re.MULTILINE)[2:]:
             a, b = re.match(r'^\| ([^\|]+) \| ([^|]+) \|', i).groups()
