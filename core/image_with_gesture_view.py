@@ -27,17 +27,29 @@ class ImageWithGestureView (GestureView):
                 frame=get_coordinate(0, 0, self.width, self.height, w, h),
                 name='imageview'
                 )
-            v = ui.WebView(
-                background_color='white',
-                frame=self.imageview.frame,
-                touch_enabled=False
-                )
+            if w < self.width and h < self.height:
+                v = ui.WebView(
+                    background_color='white',
+                    height=h,
+                    touch_enabled=False,
+                    width=w
+                    )
+                v.center=self.imageview.center
+                line_flag = False
+            else:
+                v = ui.WebView(
+                    background_color='white',
+                    frame=get_coordinate(0, 0, self.width, self.height, w, h),
+                    touch_enabled=False
+                    )
+                line_flag = True
             v.load_url(image_file)
             self.add_subview(v)
-            self.add_subview(ui.ImageView(
-                background_color='white',
-                frame=(0, self.imageview.y + self.imageview.height - 1, self.imageview.width, 1)
-                ))
+            if line_flag:
+                self.add_subview(ui.ImageView(
+                    background_color='white',
+                    frame=(0, v.y + v.height - 1, self.width, 1)
+                    ))
             self.add_subview(self.imageview)
         self.x_prev, self.y_prev, self.w_prev, self.h_prev = self['imageview'].frame
         self.x_orginal, self.y_orginal, self.w_orginal, self.h_orginal = self['imageview'].frame
