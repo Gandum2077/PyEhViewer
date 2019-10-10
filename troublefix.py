@@ -5,7 +5,7 @@ import shutil
 from pathlib import Path
 
 from conf.config import COOKIE_FILE, IMAGEPATH, CACHEPATH
-from core.utility import verify_url
+from core.utility import verify_url, generate_tag_translator_json
 from core.database import create_db, insert_info
 import parse.exhentaiparser as exhentaiparser
 
@@ -71,8 +71,12 @@ def fix_infos():
         parser.save_mangainfo(infos, dl_path)
         
 
+def update_ehtagtranslator_json(ehtagtranslation_database_path):
+    generate_tag_translator_json(ehtagtranslation_database_path)
+    
 if __name__ == '__main__':
     #rebuild_db()
     #update_infos()
     #all_init()
     fix_infos()
+    #update_ehtagtranslator_json()

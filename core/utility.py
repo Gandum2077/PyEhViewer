@@ -81,8 +81,8 @@ def get_favcat_from_color(name):
     }
     return d[name]
 
-def generate_tag_translator_json(ehtagtranslator_wiki_path):
-    folder = os.path.join(ehtagtranslator_wiki_path, 'database')
+def generate_tag_translator_json(ehtagtranslation_database_path):
+    folder = os.path.join(ehtagtranslation_database_path, 'database')
     tag_types = ['artist', 'character', 'female', 'group', 'language', 'male', 'misc', 'parody', 'reclass']
     types_dict = {}
     for tag_type in tag_types:
