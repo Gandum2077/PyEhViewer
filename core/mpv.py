@@ -22,7 +22,7 @@ AUTOPAGE_INTERVAL = yaml.load(open(CONFIGPATH, encoding='utf-8').read()).get('au
 NUM_OF_THREAD_AT_THE_SAME_TIME = 10
 
 def get_max_wh():
-    "此处不写死，而是用时获取，是考虑屏幕旋转的需要而预备的"
+    # 此处不写死，而是用时获取，是为屏幕旋转的需要而预备
     ui_width, ui_height = ui.get_screen_size()
     max_height = ui_height - 18
     max_width = ui_width - 57
@@ -60,6 +60,7 @@ class MultiPageView(ui.View):
         pass
 
     def touch_ended(self, touch):
+        # 此函数是为了loading状态而预留，在image_with_gesture_view启动时会自动失效
         if self.loading_flag:
             if 0 < touch.location[0] <= self.width - 57:
                 if 18 < touch.location[1] <= self.height/2 + 9:
@@ -112,6 +113,8 @@ class MultiPageView(ui.View):
             self.time_last_auto_load = time.time()
 
     def refresh(self):
+        max_width, max_height = get_max_wh()
+        self['indicator'].center = (max_width/2, max_height/2+18)
         self._load_slide()
         self['text_current_page'].text = str(self.page + 1)
         self['slider1'].value = (self.page + 1)/self.length
