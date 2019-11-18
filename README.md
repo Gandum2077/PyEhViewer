@@ -31,7 +31,7 @@
 pip install html2text
 ```
 4. (必要) 可以访问e-hentai.org和exhentai.org的网络环境。如果你使用代理，请注意可能需要设为全局代理或者手动添加以上两个网址，因为很多代理软件没有这两个网址。
-5. (必要) 注册e-hentai.org账号，并确保可以访问exhentai.org（刚注册的账号需要等待两星期左右才能访问），然后请去[Hath Perks页面](https://e-hentai.org/hathperks.php)点亮Multi-Page Viewer的Hath Perk，需要300Hath币或者捐款100美元。
+5. (必要) 注册e-hentai.org账号，并确保可以访问exhentai.org（刚注册的账号需要等待两星期左右才能访问），然后请去[Hath Perks页面](https://e-hentai.org/hathperks.php)点亮Multi-Page Viewer的Hath Perk，需要300Hath币或者捐款价值100美元的Bitcoin或Bitcoin Cash。
 6. (必要) [设置界面](https://exhentai.org/uconfig.php)必须做以下设置：
 
 - Front Page Settings 设为 Extended
@@ -40,7 +40,7 @@ pip install html2text
 7. (可选) [设置界面](https://exhentai.org/uconfig.php)推荐做以下设置：
 
 - Gallery Name Display 设为 Japanese Title (if available)
-- Search Result Count 设为 50 results
+- Search Result Count 设为 50 results。此功能需要Paging Enlargement I的Hath Perk
 
 ## 使用方法
 运行`main.py`即可。
@@ -66,9 +66,9 @@ pip install html2text
 
 ## 已知bugs
 - 若放在iCloud文件夹中，本程序无法运作
-- 首次运行如果出现`requests.exceptions.SSLError`: 检查代理软件，建议暂时设为全局模式，登录完成以后再改回来
-- 如果出现数据库错误（多为程序卡死强制关闭造成），运行`troublefix.py`里的`rebuild_db()`即可
-- 如果之前因为关站下载了紧急更新版本，请运行`troublefix.py`里面的`fix_infos()`，否则旧图库将出现bug
+- 首次运行如果出现`requests.exceptions.SSLError`: 检查代理软件，最好将e-hentai.org和exhentai.org加入代理列表，或者可以暂时设为全局模式，登录完成以后再改回来
+- 如果出现数据库错误（多为程序卡死强制关闭造成），运行`troublefix.py`里的`rebuild_db()`即可，如果App还能打开，也可以在设置里操作
+- 如果之前因为关站风波下载了紧急更新版本，请运行`troublefix.py`里面的`fix_infos()`，否则旧图库将出现bug
 - 由于对gif使用了webview这种折衷方案，所以观看gif的时候不宜过快翻页，否则容易内存告急而导致Pythonista崩溃。不过如果gif文件过大，即使你什么都不做App也会崩溃
 
 ## Contributing
