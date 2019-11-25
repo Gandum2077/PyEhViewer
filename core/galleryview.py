@@ -36,6 +36,8 @@ class GalleryView(ui.View):
         self['button_share'].action = self.share_button
         self['button_refresh'].action = self.refresh_button
         self['button_close_view'].action = self.close_view
+        self['button_archive'].action = self.get_archiver
+        
     
     def layout(self):
         self['gallery_info_view'].width = self.width - 57 - 16
@@ -416,6 +418,18 @@ class GalleryView(ui.View):
         
     def close_view(self, sender):
         self.close()
+    
+    def get_archiver(self, sender):
+        length = int(self.info['length'])
+        if len(list(Path(self.dl_path).iterdir())) == length + 2 and len(list(Path(self.dl_path).joinpath('thumbnails').iterdir())) == length:
+            alert_title = '是否保存为压缩包？'
+        else:
+            alert_title = '本图库还没有下载完，是否保存为压缩包？'
+        t = console.alert(alert_title, '', 'OK')
+        if t:
+            shutil.make_archive(os.path.join(os.path.expanduser('~/Documents'), os.path.split(self.dl_path)[1]), 'zip', self.dl_path)
+            console.hud_alert('成功')
+        
 
 class CommentsView (ui.View):
     def __init__(self, info, width=None):
