@@ -60,10 +60,13 @@ def delete_by_gid(gid):
         cur.execute('DELETE FROM tags WHERE gid=?', (gid,))
         conn.commit()
 
-def search(clause):
+def search(clause, args=None):
     with sqlite3.connect(DATABASE) as conn:
         cur = conn.cursor()
-        cur.execute(clause)
+        if args:
+            cur.execute(clause, args)
+        else:
+            cur.execute(clause)
         t = cur.fetchall()
     return t
 

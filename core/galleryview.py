@@ -288,37 +288,33 @@ class GalleryView(ui.View):
         v.present('sheet')
     
     def try_import_old_version(self, sender):
-        def escape(keyword):
-            keyword = keyword.replace("/", "//")
-            keyword = keyword.replace("'", "''")
-            keyword = keyword.replace("[", "/[")
-            keyword = keyword.replace("]", "/]")
-            keyword = keyword.replace("%", "/%")
-            keyword = keyword.replace("&","/&")
-            keyword = keyword.replace("_", "/_")
-            keyword = keyword.replace("(", "/(")
-            keyword = keyword.replace(")", "/)")
-            return keyword
         sender.hidden = True
         parent_url = self.info.get('parent_url')
         foldername = verify_url(parent_url)
-        if os.path.exists(os.path.join(IMAGEPATH, foldername)):
+        clause = """SELECT DISTINCT gid||'_'||token
+            FROM downloads
+            WHERE gid = ?
+            LIMIT 1
+            """
+        args = (foldername[: foldername.find('_')],)
+        t = [i[0] for i in search(clause, args=args)]
+        if t:
             old_dl_path, old_info = self._get_info(parent_url)
         else:
             clause = """SELECT DISTINCT gid||'_'||token
             FROM downloads
-            WHERE uploader='{}'
-            AND english_title='{}'
-            AND gid < {}
+            WHERE uploader=?
+            AND english_title=?
+            AND gid < ?
             ORDER BY gid DESC
             LIMIT 1
             """
-            clause = clause.format(
-                escape(self.info.get('uploader')),
-                escape(self.info.get('english_title')),
+            args = (
+                self.info.get('uploader'),
+                self.info.get('english_title'),
                 self.info.get('gid')
                 )
-            t = [i[0] for i in search(clause)]
+            t = [i[0] for i in search(clause, args=args)]
             if t:
                 old_dl_path = os.path.join(IMAGEPATH, t[0])
                 manga_infos_file = os.path.join(old_dl_path, 'manga_infos.json')
@@ -374,11 +370,12 @@ class GalleryView(ui.View):
                 ])
             new_pics = dict([
                 (i['key'], i['img_id'])
-                for i in self.info['pics']
+                for i in info['pics']
                 ])
             for key in set(old_pics.keys()) & set(new_pics.keys()):
+                print(key)
                 old_path = os.path.join(old_dl_path, old_pics[key][0] + old_pics[key][1])
-                new_path = os.path.join(self.dl_path, new_pics[key] + old_pics[key][1])
+                new_path = os.path.join(dl_path, new_pics[key] + old_pics[key][1])
                 if os.path.exists(old_path) and not os.path.exists(new_path):
                     shutil.move(old_path, new_path)
                 old_thumbnail_path = os.path.join(old_dl_path, 'thumbnails', old_pics[key][0] + '.jpg')
@@ -392,6 +389,7 @@ class GalleryView(ui.View):
             self.refresh()
             delete_by_gid(old_info['gid'])
             shutil.rmtree(old_dl_path)
+            sender.hidden = True
             console.hud_alert('已完成')
     
     def present_infoview(self, sender):
