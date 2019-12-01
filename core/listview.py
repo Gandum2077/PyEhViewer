@@ -4,7 +4,6 @@ import os
 import re
 import shutil
 import urllib.parse
-import yaml
 from pathlib import Path
 
 import clipboard
@@ -22,9 +21,9 @@ from core.storage_search_phrases_view import render_storage_search_phrases_view
 from core.utility import get_coordinate, get_color, translate_taglist, render_taglist_to_text, get_color_from_favcat, verify_url, detect_url_category, get_search_url, add_querydict_to_url
 import parse.exhentaiparser
 
-# 读取config.yml的变量
+# 读取config.json的变量
 with open(CONFIGPATH, encoding='utf-8') as f:
-    t = yaml.load(f.read())
+    t = json.loads(f.read())
     DEFAULT_URL = t.get('default_url')
     SEARCH_PHRASES = t.get('search_phrases')
     STORAGE_SEARCH_PHRASES = t.get('storage_search_phrases')
@@ -32,6 +31,20 @@ with open(CONFIGPATH, encoding='utf-8') as f:
     FAVCAT_NUMS_TITLES = t.get('favcat_nums_titles')
     FAVORITES_ORDER_METHOD = t.get('favorites_order_method')
     DOWNLOADS_ORDER_METHOD = t.get('downloads_order_method')
+
+def save_config():
+    with open(CONFIGPATH, encoding='utf-8') as f:
+        config = json.loads(f.read())
+    config['default_url'] = DEFAULT_URL
+    config['search_phrases'] = SEARCH_PHRASES
+    config['storage_search_phrases'] = STORAGE_SEARCH_PHRASES
+    config['display_downloads_on_start'] = DISPLAY_DOWNLOADS_ON_START
+    config['favcat_nums_titles'] = FAVCAT_NUMS_TITLES
+    config['favorites_order_method'] = FAVORITES_ORDER_METHOD
+    config['downloads_order_method'] = DOWNLOADS_ORDER_METHOD
+    text = json.dumps(config, indent=2, sort_keys=True)
+    with open(CONFIGPATH, 'w', encoding='utf-8') as f:
+        f.write(text)
 
 class ListView(ui.View):
     """负责产生list页面
@@ -63,22 +76,10 @@ class ListView(ui.View):
     
     def will_close(self):
         """功能:
-            - 将全局变量写回config.yml
+            - 将全局变量写回config.json
         """
-        with open(CONFIGPATH, encoding='utf-8') as f:
-            config = yaml.load(f.read())
-        config['default_url'] = DEFAULT_URL
-        config['search_phrases'] = SEARCH_PHRASES
-        config['storage_search_phrases'] = STORAGE_SEARCH_PHRASES
-        config['display_downloads_on_start'] = DISPLAY_DOWNLOADS_ON_START
-        config['favcat_nums_titles'] = FAVCAT_NUMS_TITLES
-        config['favorites_order_method'] = FAVORITES_ORDER_METHOD
-        config['downloads_order_method'] = DOWNLOADS_ORDER_METHOD
-        text = yaml.safe_dump(config, default_flow_style=False, allow_unicode=True)
-        with open(CONFIGPATH, 'w', encoding='utf-8') as f:
-            f.write(text)
+        save_config()
 
-#to-do: advancedsearch
     def xdid_load(self, url):
         if url:
             self.url = url
@@ -130,6 +131,7 @@ class ListView(ui.View):
             FAVCAT_NUMS_TITLES = t['favcat_nums_titles']
             global FAVORITES_ORDER_METHOD
             FAVORITES_ORDER_METHOD = t['favorites_order_method']
+            save_config()
         self['label_current_page'].text = str(t['current_page_str'])
         self['label_total_pages'].text = str(t['total_pages_str'])
         scrollview = self._render_scrollview(t['items'], t['search_result'], url_category)
@@ -274,6 +276,7 @@ class ListView(ui.View):
                     index = tmp.index(search_text)
                     tmp.pop(index)
                     SEARCH_PHRASES = [search_text] + tmp
+                save_config()
 
     def update_textfield_by_tableview(self, sender):
         self['textfield_search'].text = sender.items[sender.selected_row]
@@ -377,6 +380,7 @@ class ListView(ui.View):
     def set_display_downloads_on_start(self, sender):
         global DISPLAY_DOWNLOADS_ON_START
         DISPLAY_DOWNLOADS_ON_START = sender.value
+        save_config()
     
     @ui.in_background
     def set_default_url_from_textfield(self, sender):
@@ -385,6 +389,7 @@ class ListView(ui.View):
             if t == 1:
                 global DEFAULT_URL
                 DEFAULT_URL = sender.text
+                save_config()
                 console.hud_alert('完成')
             else:
                 sender.text = DEFAULT_URL
@@ -396,6 +401,7 @@ class ListView(ui.View):
             global DEFAULT_URL
             DEFAULT_URL = self.url
             sender.superview['textfield_default_url'].text = self.url
+            save_config()
             console.hud_alert('完成')
 
     @ui.in_background
@@ -465,6 +471,7 @@ class ListView(ui.View):
         else:
             glv.PARSER.set_favorites_use_posted()
             FAVORITES_ORDER_METHOD = 'Posted'
+        save_config()
 
     @ui.in_background
     def set_downloads_order(self, sender):
@@ -473,6 +480,7 @@ class ListView(ui.View):
             DOWNLOADS_ORDER_METHOD = 'gid'
         else:
             DOWNLOADS_ORDER_METHOD = 'st_mtime'
+        save_config()
 
 
 class TextFieldPopupDelegate (object):

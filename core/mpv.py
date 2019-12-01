@@ -4,8 +4,6 @@ import os
 import threading
 import time
 
-import yaml
-
 import console
 import dialogs
 import photos
@@ -18,7 +16,7 @@ from core.image_with_gesture_view import ImageWithGestureView
 from core.utility import verify_url, translate_taglist, render_taglist_to_text
 
 
-AUTOPAGE_INTERVAL = yaml.load(open(CONFIGPATH, encoding='utf-8').read()).get('autopage_interval', 5)
+AUTOPAGE_INTERVAL = json.loads(open(CONFIGPATH, encoding='utf-8').read()).get('autopage_interval', 5)
 NUM_OF_THREAD_AT_THE_SAME_TIME = 10
 
 def get_max_wh():

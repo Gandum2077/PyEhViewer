@@ -3,7 +3,6 @@ import math
 import os
 import re
 import urllib.parse
-import yaml
 try:
     import ui
 except:

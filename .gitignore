@@ -2,3 +2,4 @@ config.yml
 downloads.db
 account.json
 cookie.json
+config.json

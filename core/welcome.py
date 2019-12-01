@@ -2,8 +2,6 @@ import json
 import os
 import shutil
 
-import yaml
-
 import console
 import dialogs
 import ui
@@ -29,10 +27,10 @@ def get_favcat():
     url = 'https://exhentai.org/favorites.php'
     t = parser.get_list_infos(url)
     with open(CONFIGPATH, encoding='utf-8') as f:
-        config = yaml.load(f.read())
+        config = json.loads(f.read())
     config['favcat_nums_titles'] = t['favcat_nums_titles']
     config['favorites_order_method'] = t['favorites_order_method']
-    text = yaml.safe_dump(config, default_flow_style=False, allow_unicode=True)
+    text = json.dumps(config, indent=2, sort_keys=True)
     with open(CONFIGPATH, 'w', encoding='utf-8') as f:
         f.write(text)
 ipadpro_iphone_warning = "未针对此设备调整UI"
