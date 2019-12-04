@@ -373,7 +373,6 @@ class GalleryView(ui.View):
                 for i in info['pics']
                 ])
             for key in set(old_pics.keys()) & set(new_pics.keys()):
-                print(key)
                 old_path = os.path.join(old_dl_path, old_pics[key][0] + old_pics[key][1])
                 new_path = os.path.join(dl_path, new_pics[key] + old_pics[key][1])
                 if os.path.exists(old_path) and not os.path.exists(new_path):
@@ -593,6 +592,7 @@ class GalleryInfoView (ui.View):
                 self._load_slide()
             except AttributeError:
                 pass
+        self.set_download_progress()
         
     def xdid_load(self, info, dl_path):
         self.dl_path = dl_path
@@ -617,7 +617,7 @@ class GalleryInfoView (ui.View):
         self['label_favorite_num'].text = 'favorited: ' + self.info['favorited']
         self['label_language'].text = self.info['language']
         self['label_filesize'].text = self.info['file size']
-        
+        self.set_download_progress()
         x, y, w, h = self['rating_location_view'].frame
         if self.info['is_personal_rating']:
             rating = self.info['display_rating']
@@ -664,6 +664,14 @@ class GalleryInfoView (ui.View):
         else:
             self['indicator'].start() 
             self.loading_flag = True
+            
+    def set_download_progress(self):
+        total = int(self.info['length'])
+        finished = len(os.listdir(self.dl_path)) - 2
+        progress = finished/total
+        self['length_color_view'].width = self['length_white_view'].width * progress
+        if progress == 1.0:
+            self['length_color_view'].background_color = '#b4ffbb'
     
 class RateGalleryView (ui.View):
     def __init__(self):
