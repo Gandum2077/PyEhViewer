@@ -1,11 +1,11 @@
 # PyEhViewer
 
 由于iOS平台审查限制，因此iOS平台在诸如看Pornhub、看Exhentai之类的功能上一直是缺失的。这是iOS让人难以忍受的地方，也是Android超越iOS的地方。  
-一直以来，App Store没有好用的exhentai.org阅读器（虽有偷鸡摸狗上架的，但体验也很差），但是官方不提供，可以自己做嘛。因此利用Pythonista 3这个万能平台自己创作，功能上对标Android平台的EhViewer，同时也有自己的特色功能。
+一直以来，App Store没有好用的exhentai.org阅读器（虽有偷鸡摸狗上架的，但体验也很差），但是官方不提供，可以自己做嘛。利用Pythonista 3这个万能平台创作，功能上对标Android平台的EhViewer，同时也有自己的特色功能。
 
 ## Features
 
-- 自动翻页，让左酱右酱休息一下（原生的EhViewer做不到哦，另外不要抬杠，我知道安卓随便弄一下也就有了）
+- 自动翻页，解放左酱右酱
 - 快捷搜索
 - 高级搜索
 - 边栏、搜索词收藏、直接打开url等快捷功能
@@ -19,28 +19,26 @@
 
 ## 前提
 
-本程序使用需要满足的前提比较多，本来这是本人为了欣赏艺（工）术（口）才写的，因此很遗憾，可能不适合对艺（工）术（口）没有追求的人。虽然前提设置有点复杂，但是程序本身的操作是很易懂、纯 GUI 操作的。适合熟悉Python、Pythonista 3、Exhentai.org的人使用。  
+本来这是本人为了欣赏艺（工）术（口）才写的，因此很遗憾，可能不适合对艺（工）术（口）没有追求的人。  
+本程序虽然前提设置有点复杂，但是程序本身的操作是一目了然的。
 
 **你必须满足以下前提才能使用PyEhViewer:**
 
-1. (必要) 目前只支持逻辑分辨率为1024x768的iPad机型（比如iPad mini 5、iPad Air 2、iPad 2018），更高逻辑分辨率的机型比如iPad Air 3和iPad Pro应该也没问题，多数view的layout都已经调整好可以自适应分辨率，不过我没有条件测试，有条件的同学可以测试一下。**暂不支持iPhone。**
-2. (必要) [Pythonista 3](https://apps.apple.com/cn/app/pythonista-3/id1085978097)
-3. (必要) 第三方包`html2text`，在 [stash](https://github.com/ywangd/stash) 中运行以下代码安装，未安装stash请先安装stash
+1. (必要) [Pythonista 3](https://apps.apple.com/cn/app/pythonista-3/id1085978097)
+2. (必要) iPad。目前完美支持逻辑分辨率为1024x768的iPad机型（比如iPad mini 5、iPad Air 2、iPad 2018），更高逻辑分辨率的机型比如iPad Air 3和iPad Pro应该也没问题，布局可以自适应分辨率，但是我没有设备测试，有条件的同学可以测试并反馈一下。**不支持iPhone。**
+3. (必要) 可以访问e-hentai.org和exhentai.org的网络环境。如果你使用代理，请注意可能需要设为全局代理或者手动添加以上两个网址，因为很多代理软件没有这两个网址。  
+关于如何手动添加代理设置，举两个例子：  
+例一 Quantumult：在配置文件加入`HOST-SUFFIX,e-hentai.org,PROXY,resolve-on-proxy`和`HOST-SUFFIX,exhentai.org,PROXY,resolve-on-proxy`。  
+例二 Surge：在配置文件加入`DOMAIN-SUFFIX,e-hentai.org,Proxy`和`DOMAIN-SUFFIX,exhentai.org,Proxy`。
+4. (必要) 注册[e-hentai.org](https://e-hentai.org)账号，并确保可以访问[exhentai.org](https://exhentai.org)（刚注册的账号需要等待两星期左右才能访问）。  
+然后请去[Hath Perks页面](https://e-hentai.org/hathperks.php)点亮Multi-Page Viewer的Hath Perk，需要300Hath币或者在[捐款页面](https://e-hentai.org/bitcoin.php)捐价值100美元的Bitcoin或Bitcoin Cash。  
 
-```
-pip install html2text
-```
-4. (必要) 可以访问e-hentai.org和exhentai.org的网络环境。如果你使用代理，请注意可能需要设为全局代理或者手动添加以上两个网址，因为很多代理软件没有这两个网址。
-5. (必要) 注册e-hentai.org账号，并确保可以访问exhentai.org（刚注册的账号需要等待两星期左右才能访问），然后请去[Hath Perks页面](https://e-hentai.org/hathperks.php)点亮Multi-Page Viewer的Hath Perk，需要300Hath币或者捐款价值100美元的Bitcoin或Bitcoin Cash。
-6. (必要) [设置界面](https://exhentai.org/uconfig.php)必须做以下设置：
+5. [设置界面](https://exhentai.org/uconfig.php)做以下设置：
 
-- Front Page Settings 设为 Extended
-- Thumbnail Settings 中的 Size 设为 Large
-
-7. (可选) [设置界面](https://exhentai.org/uconfig.php)推荐做以下设置：
-
-- Gallery Name Display 设为 Japanese Title (if available)
-- Search Result Count 设为 50 results。此功能需要Paging Enlargement I的Hath Perk
+- (必要)Front Page Settings 设为 Extended
+- (必要)Thumbnail Settings 中的 Size 设为 Large
+- (可选)Gallery Name Display 设为 Japanese Title (if available)
+- (可选)Search Result Count 设为 50 results。此功能需要Paging Enlargement I的Hath Perk
 
 ## 使用方法
 运行`main.py`即可。
@@ -50,6 +48,10 @@ pip install html2text
 - 请注意所有的数据库写入操作都是在图库关闭的时候进行的，所以如果不关闭图库就直接退出Pythonista，那么这个图库就不会保存到数据库
 
 ## 更新
+### 2019-12-05    版本：1.7 加入表示是否为隐藏图库的标记功能，bugfix
+- 用删除线表示隐藏图库
+- 修复各类Bug
+
 ### 2019-07-14    版本：1.6 加入评论功能，bugfix
 - 此次更新加入评论功能，因此parse版本升级，兼容版本1.5的旧图库，
 如果要全部升级，使用`troublefix`里的`update_infos()`即可。
@@ -59,7 +61,7 @@ pip install html2text
 - [x] CommentsView，可以发表评论，打分，打开链接
 - [ ] 为逻辑分辨率更高的iPad调整测试UI适配
 - [ ] 适配iPhone
-- [ ] 让没有 Multi-Page Viewer 权限的账号也能使用（这需要调整网络模块和整个程序的多线程逻辑，还有UI也要调整，而且运行效率必然下降）
+- [ ] 让没有 Multi-Page Viewer 权限的账号也能使用
 - [ ] 让游客也能使用
 - [ ] 缓存搜索支持‘-’号过滤语法
 

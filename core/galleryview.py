@@ -612,7 +612,11 @@ class GalleryInfoView (ui.View):
         self['label_url'].text = self.info.get('url')
         self['label_category'].text, self['label_category'].background_color = get_color(self.info['category'].lower())
         self['label_length'].text = self.info["length"] + ' pages'
-        self['label_posted'].text = 'posted: ' + self.info["posted"]
+        self['label_posted'].text = self.info["posted"]
+        if self.info["visible"] == 'Yes':
+            self['delete_line_view'].hidden = True
+        else:
+            self['delete_line_view'].hidden = False
         self['label_uploader'].text = 'uploader: ' + self.info["uploader"]
         self['label_favorite_num'].text = 'favorited: ' + self.info['favorited']
         self['label_language'].text = self.info['language']

@@ -11,7 +11,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-VERSION = '1.6'
+VERSION = '1.7'
 
 DEFAULT_TIMEOUT = 20
 DEFAULT_STORAGE_PATH = 'image'
@@ -165,6 +165,10 @@ class ExhentaiParser:
                 # 下面的同时得到posted和favourite的信息
                 posted_div = i.select("td.gl2e > div > div.gl3e > div")[1]
                 posted = posted_div.text
+                if posted_div.s:
+                    visible = "No"
+                else:
+                    visible = "Yes"
                 favcat_title = posted_div.get('title')
                 favcat_style = posted_div.get('style')
                 if favcat_style:
@@ -201,6 +205,7 @@ class ExhentaiParser:
                     title=title,
                     favcat=favcat,
                     favcat_title=favcat_title,
+                    visible=visible,
                     taglist=taglist
                     ))
             return items
@@ -294,10 +299,13 @@ class ExhentaiParser:
         infos.update(pics=pics)
         return infos
 
-    def get_gallery_infos_only(self, gallery_url):
+    def get_gallery_infos_only(self, gallery_url, full_comments=True):
         "只提取gallery的信息"
-        gallery_url_hc = urllib.parse.urlparse(gallery_url)._replace(query='hc=1').geturl()
-        soup0 = self.get_soup(gallery_url_hc)
+        if full_comments:
+            gallery_url_hc = urllib.parse.urlparse(gallery_url)._replace(query='hc=1').geturl()
+            soup0 = self.get_soup(gallery_url_hc)
+        else:
+            soup0 = self.get_soup(gallery_url)
         pics = self.extract_thumbnail_urls(soup0)
         infos = self.extract_manga_infos(soup0)
         comments = self.extract_comments(soup0)
@@ -384,6 +392,8 @@ class ExhentaiParser:
                 ]
         else:
             manga_infos['newer_versions'] = None
+
+        manga_infos['thumbnails_total_pages'] = soup.select('.ptt td')[-2].text
         return manga_infos
 
     def extract_comments(self, soup):
@@ -441,12 +451,13 @@ class ExhentaiParser:
 
     def extract_thumbnail_urls(self, soup):
         "从soup中提取thumbnail_urls，服务于get_gallery_infos_only"
-        pic_blocks = soup.select('#gdt > div.gdtl img')
+        pic_blocks = soup.select('#gdt > div.gdtl')
         return [
             dict(
-                img_id=block['alt'],
-                img_name=re.match(r'Page \d+: (.*)', block['title']).groups(1)[0],
-                thumbnail_url=block['src'],
+                img_id=block.img['alt'],
+                img_name=re.match(r'Page \d+: (.*)', block.img['title']).groups(1)[0],
+                img_url=block.a['href'],
+                thumbnail_url=block.img['src']
                 )
             for block in pic_blocks
             ]
@@ -505,7 +516,7 @@ class ExhentaiParser:
             }
         self.session.request("POST", url_api, data=json.dumps(payload), headers=headers)
 
-    def get_pic_url(self, gid, key, mpvkey, page):
+    def get_pic_api_response(self, gid, key, mpvkey, page):
         headers = {'content-type': "application/json"}
         payload = {
             "method": "imagedispatch",
@@ -515,10 +526,19 @@ class ExhentaiParser:
             "mpvkey": mpvkey
             }
         r = self.session.request("POST", url_api, data=json.dumps(payload), headers=headers)
-        pic_url = r.json().get('i')
+        return r.json()
+
+    def get_pic_url(self, gid, key, mpvkey, page):
+        response = self.get_pic_api_response(gid, key, mpvkey, page)
+        pic_url = response.get('i')
         if not pic_url:
             raise Exception('网络错误')
         return pic_url
+
+    def get_original_image(self, gid, key, mpvkey, page):
+        response = self.get_pic_api_response(gid, key, mpvkey, page)
+        fullimg_url = urllib.parse.urljoin(url_exhentai, response.get('lf'))
+        return self.session.get(fullimg_url).content
 
     def post_new_comment(self, gallery_url, text):
         # 最少10个字符（utf-8编码）

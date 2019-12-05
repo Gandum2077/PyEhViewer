@@ -506,6 +506,10 @@ class CellView (ui.View):
         self['label_category'].text, self['label_category'].background_color = get_color(item["category"])
         self['label_length'].text = item["length"] + '页'
         self['label_posted'].text = item["posted"]
+        if item["visible"] == 'Yes':
+            self['delete_line_view'].hidden = True
+        else:
+            self['delete_line_view'].hidden = False
         self['label_uploader'].text = item["uploader"]
         self['label_title'].text = item['title']
         x, y, w, h = self['rating_location_view'].frame

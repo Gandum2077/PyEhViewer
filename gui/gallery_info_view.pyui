@@ -31,7 +31,7 @@
           "name" : "length_color_view",
           "uuid" : "B1F3406B-2F2D-46FD-9F49-9800E30AA509"
         },
-        "selected" : true
+        "selected" : false
       },
       {
         "nodes" : [
@@ -240,14 +240,14 @@
         "frame" : "{{183, 146}, {170, 36}}",
         "class" : "Label",
         "attributes" : {
-          "uuid" : "67DF2789-5C34-4C54-961E-640EE8330D6D",
           "flex" : "WHLRTB",
-          "corner_radius" : 0,
-          "frame" : "{{273, 64}, {150, 32}}",
           "border_width" : 0,
+          "font_name" : "<System>",
+          "frame" : "{{273, 64}, {150, 32}}",
+          "uuid" : "67DF2789-5C34-4C54-961E-640EE8330D6D",
+          "corner_radius" : 0,
           "alignment" : "center",
           "text" : "",
-          "font_name" : "<System>",
           "class" : "Label",
           "name" : "label_length",
           "font_size" : 12
@@ -292,7 +292,7 @@
           "border_color" : "RGBA(0.995283,0.995283,0.995283,1.000000)",
           "border_width" : 2,
           "alignment" : "center",
-          "text" : "",
+          "text" : "2018-10-12 23:32",
           "font_name" : "<System>",
           "class" : "Label",
           "name" : "label_posted",
@@ -437,6 +437,23 @@
           "corner_radius" : 0,
           "name" : "button_select_uploader",
           "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{213, 238}, {115, 1}}",
+        "class" : "View",
+        "attributes" : {
+          "flex" : "LRB",
+          "alpha" : 0.5,
+          "frame" : "{{298, 79}, {100, 100}}",
+          "class" : "View",
+          "background_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+          "uuid" : "1C982659-279B-4AF9-8614-44FDCA371849",
+          "name" : "delete_line_view"
         },
         "selected" : false
       }
