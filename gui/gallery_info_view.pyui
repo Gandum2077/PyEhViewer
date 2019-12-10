@@ -70,7 +70,7 @@
         "frame" : "{{354, 109}, {170, 36}}",
         "class" : "View",
         "attributes" : {
-          "border_width" : 2,
+          "border_width" : 0,
           "flex" : "WHLRTB",
           "frame" : "{{334, 462}, {100, 100}}",
           "class" : "View",
@@ -177,15 +177,15 @@
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
           "frame" : "{{309, 496}, {150, 32}}",
           "border_color" : "RGBA(0.784314,0.780392,0.800000,1.000000)",
-          "border_width" : 2,
+          "border_width" : 0,
           "alignment" : "center",
           "text" : "未收藏",
-          "font_name" : "<System>",
+          "font_name" : "<System-Bold>",
           "class" : "Label",
           "name" : "label_favorite_title",
-          "font_size" : 12
+          "font_size" : 14
         },
-        "selected" : false
+        "selected" : true
       },
       {
         "nodes" : [
@@ -249,8 +249,8 @@
           "alignment" : "center",
           "text" : "",
           "class" : "Label",
-          "name" : "label_length",
-          "font_size" : 12
+          "font_size" : 12,
+          "name" : "label_length"
         },
         "selected" : false
       },
@@ -331,14 +331,14 @@
         "class" : "Label",
         "attributes" : {
           "flex" : "WHLRTB",
-          "name" : "label_review",
+          "font_size" : 12,
           "frame" : "{{309, 496}, {150, 32}}",
           "uuid" : "03C5CB84-A88A-46E3-AA4F-86872C206302",
           "class" : "Label",
           "alignment" : "center",
           "text" : "",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "font_size" : 12,
+          "name" : "label_review",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -370,14 +370,14 @@
         "class" : "Label",
         "attributes" : {
           "flex" : "WHLRTB",
-          "name" : "label_language",
+          "font_size" : 12,
           "frame" : "{{309, 496}, {150, 32}}",
           "uuid" : "D77CB33F-9A06-48E2-BFDA-743A2BDFC195",
           "class" : "Label",
           "alignment" : "center",
           "text" : "",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "font_size" : 12,
+          "name" : "label_language",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -397,8 +397,8 @@
           "alignment" : "center",
           "text" : "",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "name" : "label_filesize",
-          "font_size" : 12
+          "font_size" : 12,
+          "name" : "label_filesize"
         },
         "selected" : false
       },
