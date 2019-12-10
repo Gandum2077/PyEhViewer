@@ -115,6 +115,7 @@ def handle_querydict(querydict):
 
     cat_sequence = ['Misc', 'Doujinshi', 'Manga', 'Artist CG', 'Game CG', 'Image Set', 'Cosplay', 'Asian Porn', 'Non-H', 'Western']
     condition_clauses = []
+    args = []
     f_search = querydict.get('f_search') # 关键词
     f_cats = querydict.get('f_cats') # 排除的分类
     advsearch = querydict.get('advsearch') #是否启用高级选项，若否下面改为默认选项
@@ -134,12 +135,15 @@ def handle_querydict(querydict):
             for i in query_tags:
                 if i.find(':') == -1:
                     i = 'misc:' + i
-                condition_clauses.append("EXISTS (SELECT tags.gid FROM tags WHERE downloads.gid=tags.gid AND tags.class='{}' AND tags.tag='{}')".format(i[:i.find(':')], re.match(r'^"?(.*)\$"?',i[i.find(':') + 1:]).groups()[0]))
+                condition_clauses.append("EXISTS (SELECT tags.gid FROM tags WHERE downloads.gid=tags.gid AND tags.class=? AND tags.tag=?)")
+                args.extend((i[:i.find(':')], re.match(r'^"?(.*)\$"?',i[i.find(':') + 1:]).groups()[0]))
         if query_uploader:
-            condition_clauses.append("downloads.uploader='{}'".format(query_uploader[0][9:]))
+            condition_clauses.append("downloads.uploader=?")
+            args.append(query_uploader[0][9:])
         if query_title and f_sname:
             for i in query_title:
-                condition_clauses.append("(downloads.japanese_title like '%{}%' OR downloads.english_title like '%{}%')".format(i, i))
+                condition_clauses.append("(downloads.japanese_title like ? OR downloads.english_title like ?)")
+                args.extend(('%' + i + '%', '%' + i + '%'))
     if f_cats:
         nums = '{:0>10}'.format(str(bin(int(f_cats)))[2:])
         filtered_cat = [cat for cat, n in zip(reversed(cat_sequence), nums) if n == '1']
@@ -161,12 +165,11 @@ def handle_querydict(querydict):
         where_clause = ' WHERE ' + ' AND '.join(condition_clauses)
     else:
         where_clause = ''
-    return "SELECT DISTINCT downloads.gid||'_'||downloads.token FROM downloads" + where_clause
+    return "SELECT DISTINCT downloads.gid||'_'||downloads.token FROM downloads" + where_clause, tuple(args)
 
 
 def search_by_url(url):
     querydict = dict(urllib.parse.parse_qsl(urllib.parse.urlparse(url).query))
-    clause = handle_querydict(querydict)
-    foldernames = [i[0] for i in search(clause)]
+    clause, args = handle_querydict(querydict)
+    foldernames = [i[0] for i in search(clause, args=args)]
     return foldernames
-
