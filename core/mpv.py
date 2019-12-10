@@ -13,7 +13,7 @@ import webbrowser
 from conf.config import CONFIGPATH, IMAGEPATH
 import conf.global_variables as glv
 from core.image_with_gesture_view import ImageWithGestureView
-from core.utility import verify_url, translate_taglist, render_taglist_to_text
+from core.utility import verify_url, translate_taglist, render_taglist_to_text, get_round_progess_image
 
 
 AUTOPAGE_INTERVAL = json.loads(open(CONFIGPATH, encoding='utf-8').read()).get('autopage_interval', 5)
@@ -71,6 +71,7 @@ class MultiPageView(ui.View):
                         self.refresh()
         
     def update(self):
+        self.set_download_progress()
         if self.loading_flag:
             try:
                 self.refresh_without_slider()
@@ -200,7 +201,16 @@ class MultiPageView(ui.View):
         else:
             # unfinished_downloads为负的临时解决方案
             console.hud_alert('当前下载未完成，还有{}张未完成，{}张已失败'.format(unfinished_pics, max(0, unfinished_pics - unfinished_downloads)), 'error')
-
+    
+    def set_download_progress(self):
+        total = int(self.infos['length'])
+        finished = len(os.listdir(self.dlpath)) - 2
+        progress = finished/total
+        if progress < 1:
+            self['length_imageview'].image = get_round_progess_image(progress)
+        else:
+            self['length_imageview'].image = None
+            
 # 以下为settings部分
     def load_settingview(self, sender):
         self.setting_view = ui.load_view('gui/setting.pyui')

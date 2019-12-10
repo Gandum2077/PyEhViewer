@@ -236,3 +236,23 @@ def get_diamond(color):
             ui.fill_rect((0.5+a)/math.sqrt(2)*100, (a-0.5)/math.sqrt(2)*100, math.sqrt(2)*(0.5-a)*100, math.sqrt(2)*(0.5-a)*100)
         im = ctx.get_image()
     return im
+
+def get_round_progess_image(progress):
+    with ui.ImageContext(100, 100) as ctx:
+        if progress < 1:
+            color = '#ffcb0f'
+        elif progress == 1:
+            color = '#00ff16'
+        ui.set_color(color)
+        path = ui.Path()
+        path.line_width = 1
+        path.line_join_style = ui.LINE_JOIN_ROUND
+        path.line_cap_style = ui.LINE_CAP_BUTT
+        path.move_to(50, 50)
+        path.line_to(50, 35)
+        path.add_arc(50, 50, 15, -math.pi / 2, -math.pi / 2 + math.pi * 2 * progress)
+        path.line_to(50, 50)
+        path.stroke()
+        path.fill()
+        img = ctx.get_image()
+    return img

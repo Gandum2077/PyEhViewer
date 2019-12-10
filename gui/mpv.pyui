@@ -5,6 +5,20 @@
         "nodes" : [
 
         ],
+        "frame" : "{{711, 739}, {57, 57}}",
+        "class" : "ImageView",
+        "attributes" : {
+          "frame" : "{{334, 462}, {100, 100}}",
+          "class" : "ImageView",
+          "name" : "length_imageview",
+          "uuid" : "BBCA1E13-E086-42C3-9F87-BAC343696933"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
         "frame" : "{{711, 682}, {57, 57}}",
         "class" : "Button",
         "attributes" : {
