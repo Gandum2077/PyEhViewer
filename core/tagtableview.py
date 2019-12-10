@@ -55,7 +55,7 @@ class TagsView (ui.View):
         self.height = self.handle_tags(tags, translated=translated)
         
         
-    def handle_tags(self, tags, translated=True, blank=6):
+    def handle_tags(self, tags, translated=True, inset=6):
         x = 0
         y = 0
         for i in tags:
@@ -79,12 +79,12 @@ class TagsView (ui.View):
             if x + t.width <= self.width:
                 t.x = x
                 t.y = y
-                x = x + t.width + blank
+                x = x + t.width + inset
             else:
                 t.x = 0
-                t.y = y + t.height + blank
-                x = 0 + t.width + blank
-                y = y + t.height + blank
+                t.y = y + t.height + inset
+                x = 0 + t.width + inset
+                y = y + t.height + inset
             self.add_subview(t)
         return t.y + t.height
             
@@ -95,11 +95,11 @@ class TagTableView (ui.View):
         self.height = self.handle_taglist(bilingual_taglist, translated=translated)
         #self.add_subview(ui.View(background_color='#c8c7cc', frame=(89, 0, 1, self.height)))
         
-    def handle_taglist(self, bilingual_taglist, translated=True, horizontal_blank=1, vertical_blank=11):
+    def handle_taglist(self, bilingual_taglist, translated=True, horizontal_inset=1, vertical_inset=11):
         y = 0
         for k, v in bilingual_taglist.items():
             tagsview = TagsView(v, tag_type=k, width=self.width-90, translated=translated)
-            tagsview.x = 90 + horizontal_blank
+            tagsview.x = 90 + horizontal_inset
             tagsview.y = y
             self.add_subview(tagsview)
             h = tagsview.height
@@ -118,9 +118,9 @@ class TagTableView (ui.View):
             titleview.x = 0
             titleview.y = y
             self.add_subview(titleview)
-            y = y + h + vertical_blank
+            y = y + h + vertical_inset
             self.add_subview(ui.View(background_color='#c8c7cc', frame=(0, y-6, self.width, 1)))
-        return y - vertical_blank
+        return y - vertical_inset
     
     def get_selected(self):
         selected = []
