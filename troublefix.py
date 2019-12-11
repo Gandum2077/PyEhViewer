@@ -9,7 +9,7 @@ from core.utility import verify_url, generate_tag_translator_json
 from core.database import create_db, insert_info
 import parse.exhentaiparser as exhentaiparser
 
-VERSION = '1.6'
+VERSION = '1.7'
 l = os.listdir(IMAGEPATH)
 
 def update_infos():
@@ -71,12 +71,21 @@ def fix_infos():
         parser.save_mangainfo(infos, dl_path)
         
 
-def update_ehtagtranslator_json(ehtagtranslation_database_path):
-    generate_tag_translator_json(ehtagtranslation_database_path)
+def update_ehtagtranslator_json():
+    generate_tag_translator_json()
+    
+def rm_cache():
+    shutil.rmtree(CACHEPATH)
+    os.mkdir(CACHEPATH)
+    for i in Path(IMAGEPATH).iterdir():
+        if len(list(i.iterdir())) == 2:
+            print(i)
+            shutil.rmtree(str(i))
     
 if __name__ == '__main__':
     #rebuild_db()
     #update_infos()
     #all_init()
-    fix_infos()
-    #update_ehtagtranslator_json()
+    #fix_infos()
+    update_ehtagtranslator_json()
+    #rm_cache()

@@ -3,6 +3,9 @@ import math
 import os
 import re
 import urllib.parse
+
+import requests
+
 try:
     import ui
 except:
@@ -80,22 +83,15 @@ def get_favcat_from_color(name):
     }
     return d[name]
 
-def generate_tag_translator_json(ehtagtranslation_database_path):
-    folder = os.path.join(ehtagtranslation_database_path, 'database')
-    tag_types = ['artist', 'character', 'female', 'group', 'language', 'male', 'misc', 'parody', 'reclass']
+def generate_tag_translator_json():
+    url = 'https://api.github.com/repos/EhTagTranslation/Database/releases/latest'
+    info = requests.get(url).json()
+    db_text_url = list(filter(lambda n: n['name'] == 'db.text.json', info['assets']))[0]['browser_download_url']
+    db_text_json = requests.get(db_text_url).json()
+
     types_dict = {}
-    for tag_type in tag_types:
-        filepath = os.path.join(folder, tag_type + '.md')
-        text = open(filepath, encoding='utf-8').read()
-        t = []
-        for i in re.findall(r'^\| [^\|]+ \| [^|]+ \|', text, re.MULTILINE)[2:]:
-            a, b = re.match(r'^\| ([^\|]+) \| ([^|]+) \|', i).groups()
-            test = re.fullmatch(r'\!\[[^\[\]\(\)]+\]\([^\[\]\(\)]+\)(.*)', b)
-            if test:
-                b = test.groups()[0]
-            t.append((a, b))
-    
-        types_dict.update({tag_type: dict(t)})
+    for i in db_text_json['data']:
+        types_dict[i['namespace']] = {k:v['name'] for k, v in i['data'].items()}
 
     text = json.dumps(types_dict, indent=2, sort_keys=True)
     open(TAGTRANSLATOR_JSON, 'w').write(text)
