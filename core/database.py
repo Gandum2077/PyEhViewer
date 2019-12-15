@@ -112,7 +112,7 @@ def handle_querydict(querydict):
             if len(i.encode('utf-8')) < 3:
                 raise ValueError('存在过短的关键词')
         return query_title, query_uploader, query_tags
-
+    print(querydict)
     cat_sequence = ['Misc', 'Doujinshi', 'Manga', 'Artist CG', 'Game CG', 'Image Set', 'Cosplay', 'Asian Porn', 'Non-H', 'Western']
     condition_clauses = []
     args = []
@@ -135,8 +135,11 @@ def handle_querydict(querydict):
             for i in query_tags:
                 if i.find(':') == -1:
                     i = 'misc:' + i
-                condition_clauses.append("EXISTS (SELECT tags.gid FROM tags WHERE downloads.gid=tags.gid AND tags.class=? AND tags.tag=?)")
-                args.extend((i[:i.find(':')], re.match(r'^"?(.*)\$"?',i[i.find(':') + 1:]).groups()[0]))
+                condition_clauses.append("EXISTS (SELECT tags.gid FROM tags WHERE downloads.gid=tags.gid AND tags.class=? AND (tags.tag=? OR tags.tag like ?))")
+                tagclass = i[:i.find(':')]
+                tagname = re.match(r'^"?(.*)\$"?',i[i.find(':') + 1:]).groups()[0]
+                taglike = tagname + ' |%'
+                args.extend((tagclass, tagname, taglike))
         if query_uploader:
             condition_clauses.append("downloads.uploader=?")
             args.append(query_uploader[0][9:])
