@@ -1,0 +1,382 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{37, 264}, {279, 132}}",
+        "class" : "TextView",
+        "attributes" : {
+          "uuid" : "0EF729B0-5ABA-4BFD-88F5-012AD0BC7F1B",
+          "font_size" : 14,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{77, 112}, {200, 200}}",
+          "editable" : false,
+          "custom_attributes" : "{'selectable':False,'scroll_enabled':False}",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "text" : "(必须)Front Page Settings设为Extended\n(必须)Thumbnail Settings中的Size设为Large\n(可选)Gallery Name Display 设为 Japanese Title (if available)\n(可选)Search Result Count 设为 50 results",
+          "font_name" : "<System>",
+          "spellchecking_type" : "default",
+          "class" : "TextView",
+          "name" : "textview_condition5",
+          "flex" : ""
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{37, 236}, {279, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_name" : "<System>",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "48B0B094-12F5-4699-BE9E-7390A5A9F3C5",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "5. 设置",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "font_size" : 16,
+          "name" : "label5"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{4, 70}, {312, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_name" : "<System>",
+          "frame" : "{{85, 268}, {150, 32}}",
+          "uuid" : "32BDE9E2-E085-46D3-8061-E8753C6B937F",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "🔻五大诉求，缺一不可",
+          "name" : "label_title",
+          "font_size" : 12
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{37, 104}, {279, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 16,
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "DDF03019-FDF7-4A4C-9974-062E046D5AB3",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "1. iPad",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "label1",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{37, 137}, {279, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 16,
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "50C060FE-8E1F-4869-8114-468A73C5F4BC",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "2. 科学的网络环境",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "label2",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{37, 170}, {279, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 16,
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "D2256F72-B361-4003-9A49-4E4D4D869DF6",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "3. 可以访问exhentai.org的账号",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "label3",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{37, 203}, {279, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 16,
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "48B0B094-12F5-4699-BE9E-7390A5A9F3C5",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "4. Hath Perk: Multi-Page Viewer",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "label4",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{4, 104}, {32, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "image_name" : "iob:ipad_32",
+          "frame" : "{{230, 254}, {80, 32}}",
+          "title" : "",
+          "uuid" : "A98ED738-FB48-4084-9C0D-3E56366F07B5",
+          "class" : "Button",
+          "custom_attributes" : "{'touch_enabled':False}",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "button1",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{4, 137}, {32, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "font_size" : 15,
+          "frame" : "{{230, 254}, {80, 32}}",
+          "title" : "",
+          "uuid" : "A98ED738-FB48-4084-9C0D-3E56366F07B5",
+          "class" : "Button",
+          "custom_attributes" : "{'touch_enabled':False}",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "button2",
+          "image_name" : "iob:earth_32"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{4, 170}, {32, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "image_name" : "iob:ios7_unlocked_32",
+          "frame" : "{{230, 254}, {80, 32}}",
+          "title" : "",
+          "uuid" : "A98ED738-FB48-4084-9C0D-3E56366F07B5",
+          "class" : "Button",
+          "custom_attributes" : "{'touch_enabled':False}",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "font_size" : 15,
+          "name" : "button3"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{4, 203}, {32, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "image_name" : "iob:star_32",
+          "frame" : "{{230, 254}, {80, 32}}",
+          "title" : "",
+          "uuid" : "A98ED738-FB48-4084-9C0D-3E56366F07B5",
+          "class" : "Button",
+          "custom_attributes" : "{'touch_enabled':False}",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "button4",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{4, 236}, {32, 160}}",
+        "class" : "Button",
+        "attributes" : {
+          "image_name" : "iob:gear_a_32",
+          "frame" : "{{230, 254}, {80, 32}}",
+          "title" : "",
+          "uuid" : "A98ED738-FB48-4084-9C0D-3E56366F07B5",
+          "class" : "Button",
+          "custom_attributes" : "{'touch_enabled':False}",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "button5",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{185, 500}, {110, 50}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 1,
+          "frame" : "{{120, 268}, {80, 32}}",
+          "title" : "输入账号",
+          "uuid" : "8B946304-7238-4E8D-BD90-777E59CD3FA4",
+          "background_color" : "RGBA(0.941176,0.945098,0.964706,1.000000)",
+          "class" : "Button",
+          "corner_radius" : 5,
+          "border_color" : "RGBA(0.784314,0.780392,0.800000,1.000000)",
+          "name" : "button_next",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{25, 500}, {110, 50}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 1,
+          "frame" : "{{120, 268}, {80, 32}}",
+          "title" : "退出设置",
+          "uuid" : "8B946304-7238-4E8D-BD90-777E59CD3FA4",
+          "background_color" : "RGBA(0.941176,0.945098,0.964706,1.000000)",
+          "class" : "Button",
+          "corner_radius" : 5,
+          "border_color" : "RGBA(0.784314,0.780392,0.800000,1.000000)",
+          "name" : "button_cancel",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{223, 138}, {80, 30}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 1,
+          "frame" : "{{120, 268}, {80, 32}}",
+          "title" : "帮我测试",
+          "uuid" : "65BC8B2D-416B-49F0-AE24-623706CD605E",
+          "class" : "Button",
+          "corner_radius" : 3,
+          "border_color" : "RGBA(0.784314,0.780392,0.800000,1.000000)",
+          "background_color" : "RGBA(0.941176,0.945098,0.964706,1.000000)",
+          "name" : "button_test_web",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{85, 24}, {150, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "frame" : "{{85, 268}, {150, 32}}",
+          "uuid" : "A1716E3F-87C9-45E2-8A3D-FA54E5EDC4EC",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "初始设置",
+          "name" : "label_title",
+          "font_name" : "<System>"
+        },
+        "selected" : true
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{4, 404}, {312, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label_readme",
+          "frame" : "{{85, 268}, {150, 32}}",
+          "uuid" : "FFA5654E-ECA9-4D5D-9282-DD36BF85E542",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "阅读README了解详情    ⇒ ",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "font_size" : 16,
+          "font_name" : "<System-Bold>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{218, 404}, {98, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "font_size" : 15,
+          "frame" : "{{120, 268}, {80, 32}}",
+          "title" : "README",
+          "uuid" : "73294710-C7B2-4C0D-8A3F-69D6363AE053",
+          "class" : "Button",
+          "name" : "button_readme",
+          "image_name" : "iob:ios7_information_outline_24"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{4, 460}, {312, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label_next",
+          "frame" : "{{85, 268}, {150, 32}}",
+          "uuid" : "32BDE9E2-E085-46D3-8061-E8753C6B937F",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "满足全部诉求后，请点击输入账号进行下一步",
+          "font_size" : 12,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {320, 568}}",
+    "class" : "View",
+    "attributes" : {
+      "flex" : "",
+      "custom_class" : "WelcomeView",
+      "enabled" : true,
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "background_color" : "RGBA(0.937255,0.937255,0.956863,1.000000)",
+      "name" : ""
+    },
+    "selected" : false
+  }
+]
