@@ -112,7 +112,7 @@ def handle_querydict(querydict):
             if len(i.encode('utf-8')) < 3:
                 raise ValueError('存在过短的关键词')
         return query_title, query_uploader, query_tags
-    print(querydict)
+
     cat_sequence = ['Misc', 'Doujinshi', 'Manga', 'Artist CG', 'Game CG', 'Image Set', 'Cosplay', 'Asian Porn', 'Non-H', 'Western']
     condition_clauses = []
     args = []
