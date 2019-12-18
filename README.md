@@ -41,8 +41,21 @@
 - (可选)Search Result Count 设为 50 results。此功能需要Paging Enlargement I的Hath Perk
 
 ## 安装和更新
-建议安装[stash](https://github.com/ywangd/stash)，然后通过git来安装和更新
+建议安装[stash](https://github.com/ywangd/stash)，然后通过git来安装和更新。`stash`必须要运行在Python 2.7环境下。
 
+- 安装
+```
+git clone https://github.com/Gandum2077/PyEhViewer.git
+# 请注意后面的.git不要漏了
+```
+
+- 更新
+```
+cd PyEhViewer # 此句是为了进入PyEhViewer的目录，如果你安装在别的地方，那么要对应的修改
+git pull
+```
+请注意此方法只保证在你没有过编辑行为，仅运行过`main.py`时可用，如果出现`WARNING: there are uncommitted modified files and/or staged changes. These could be overwritten by this command. Continue anyway? [y/n]`的提示，那么你应该修改过里面的文件，如果你认为自己的修改并不重要，可以输入y继续  
+更新完请看看Readme，**因为不能保证更新一定是平滑升级，说不定会需要一定的操作**（这个更新也许会很快到来，我已经在写了）
 ## 使用方法
 运行`main.py`即可。
 
