@@ -25,7 +25,7 @@
 **你必须满足以下前提才能使用PyEhViewer:**
 
 1. (必要) [Pythonista 3](https://apps.apple.com/cn/app/pythonista-3/id1085978097)
-2. (必要) iPad。目前完美支持逻辑分辨率为1024x768的iPad机型（比如iPad mini 5、iPad Air 2、iPad 2018），更高逻辑分辨率的机型比如iPad Air 3和iPad Pro应该也没问题，布局可以自适应分辨率，但是我没有设备测试，有条件的同学可以测试并反馈一下。**不支持iPhone。**
+2. (必要) iPad。**不支持iPhone。**目前完美支持逻辑分辨率为1024x768的iPad机型（比如iPad mini 5、iPad Air 2、iPad 2018），更高逻辑分辨率的机型比如iPad Air 3和iPad Pro应该也没问题，布局可以自适应分辨率，但是我没有设备测试，有条件的同学可以测试并反馈一下。
 3. (必要) 可以访问e-hentai.org和exhentai.org的网络环境。如果你使用代理，请注意可能需要设为全局代理或者手动添加以上两个网址，因为很多代理软件没有这两个网址。  
 关于如何手动添加代理设置，举两个例子：  
 例一 Quantumult：在配置文件加入`HOST-SUFFIX,e-hentai.org,PROXY,resolve-on-proxy`和`HOST-SUFFIX,exhentai.org,PROXY,resolve-on-proxy`。  
@@ -39,6 +39,9 @@
 - (必要)Thumbnail Settings 中的 Size 设为 Large
 - (可选)Gallery Name Display 设为 Japanese Title (if available)
 - (可选)Search Result Count 设为 50 results。此功能需要Paging Enlargement I的Hath Perk
+
+## 安装和更新
+建议安装[stash](https://github.com/ywangd/stash)，然后通过git来安装和更新
 
 ## 使用方法
 运行`main.py`即可。
