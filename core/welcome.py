@@ -1,14 +1,12 @@
 import json
 import os
 import shutil
-import sys
 import time
 
 import markdown2
 import requests
 
 import console
-import dialogs
 import ui
 
 from parse.exhentaiparser import renew, renew_account, ExhentaiParser
@@ -39,7 +37,7 @@ class WelcomeView (ui.View):
         self['button_next'].action = self.get_account_password
         is_ipad = check_is_ipad()
         if not is_ipad:
-            self['button1'].image = ui.Image.named('iob:close_32')
+            self['button1'].image = ui.Image.named('iob:close_24')
             self['button1'].tint_color = 'red'
             self['label_next'].text = '很遗憾，您的设备不是iPad'
             t = console.alert('本App只适配iPad，是否继续？', '', 'Yes')
@@ -85,7 +83,7 @@ class WelcomeView (ui.View):
             console.hud_alert('成功')
         else:
             console.hud_alert('失败', 'error')
-            self['button2'].image = ui.Image.named('iob:close_32')
+            self['button2'].image = ui.Image.named('iob:close_24')
             self['button2'].tint_color = 'red'
             self['label_next'].text = '很遗憾，似乎您的网络还没设置好'
     
@@ -124,4 +122,4 @@ def get_favcat():
 
 def welcome():
     v = ui.load_view('gui/welcome_view.pyui')
-    v.present('sheet')
+    v.present('sheet', hide_title_bar=True)

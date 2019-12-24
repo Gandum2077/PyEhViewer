@@ -25,7 +25,7 @@
 **你必须满足以下前提才能使用PyEhViewer:**
 
 1. (必要) [Pythonista 3](https://apps.apple.com/cn/app/pythonista-3/id1085978097)
-2. (必要) iPad。**不支持iPhone。**目前完美支持逻辑分辨率为1024x768的iPad机型（比如iPad mini 5、iPad Air 2、iPad 2018），更高逻辑分辨率的机型比如iPad Air 3和iPad Pro应该也没问题，布局可以自适应分辨率，但是我没有设备测试，有条件的同学可以测试并反馈一下。
+2. (必要) iPad。 **不支持iPhone。** 目前完美支持逻辑分辨率为1024x768的iPad机型（比如iPad mini 5、iPad Air 2、iPad 2018），更高逻辑分辨率的机型比如iPad Air 3和iPad Pro应该也没问题，布局可以自适应分辨率，但是我没有设备测试，有条件的同学可以测试并反馈一下。
 3. (必要) 可以访问e-hentai.org和exhentai.org的网络环境。如果你使用代理，请注意可能需要设为全局代理或者手动添加以上两个网址，因为很多代理软件没有这两个网址。  
 关于如何手动添加代理设置，举两个例子：  
 例一 Quantumult：在配置文件加入`HOST-SUFFIX,e-hentai.org,PROXY,resolve-on-proxy`和`HOST-SUFFIX,exhentai.org,PROXY,resolve-on-proxy`。  
@@ -44,17 +44,21 @@
 建议安装[stash](https://github.com/ywangd/stash)，然后通过git来安装和更新。`stash`必须要运行在Python 2.7环境下。
 
 - 安装
+
 ```
-git clone https://github.com/Gandum2077/PyEhViewer.git
-# 请注意后面的.git不要漏了
+git clone https://github.com/Gandum2077/PyEhViewer.git  
 ```
 
+请注意后面的.git不要漏了
+
 - 更新
+
 ```
-cd PyEhViewer # 此句是为了进入PyEhViewer的目录，如果你安装在别的地方，那么要对应的修改
-git pull
+cd PyEhViewer; git pull
 ```
-请注意此方法只保证在你没有过编辑行为，仅运行过`main.py`时可用，如果出现`WARNING: there are uncommitted modified files and/or staged changes. These could be overwritten by this command. Continue anyway? [y/n]`的提示，那么你应该修改过里面的文件，如果你认为自己的修改并不重要，可以输入y继续  
+
+请注意需要先进入PyEhViewer的目录，如果你安装在别的地方，那么要对应的修改。  
+此方法只保证在你没有过编辑行为，仅运行过`main.py`时可用，如果出现`WARNING: there are uncommitted modified files and/or staged changes. These could be overwritten by this command. Continue anyway? [y/n]`的提示，那么你应该修改过里面的文件，如果你认为自己的修改并不重要，可以输入y继续。  
 更新完请看看Readme，**因为不能保证更新一定是平滑升级，说不定会需要一定的操作**（这个更新也许会很快到来，我已经在写了）
 ## 使用方法
 运行`main.py`即可。

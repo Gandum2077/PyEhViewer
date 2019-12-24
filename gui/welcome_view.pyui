@@ -5,7 +5,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{37, 264}, {279, 132}}",
+        "frame" : "{{45, 276}, {271, 132}}",
         "class" : "TextView",
         "attributes" : {
           "uuid" : "0EF729B0-5ABA-4BFD-88F5-012AD0BC7F1B",
@@ -29,7 +29,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{37, 236}, {279, 32}}",
+        "frame" : "{{45, 248}, {271, 32}}",
         "class" : "Label",
         "attributes" : {
           "font_name" : "<System>",
@@ -39,8 +39,8 @@
           "alignment" : "left",
           "text" : "5. 设置",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "font_size" : 16,
-          "name" : "label5"
+          "name" : "label5",
+          "font_size" : 16
         },
         "selected" : false
       },
@@ -48,7 +48,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{4, 70}, {312, 32}}",
+        "frame" : "{{4, 52}, {312, 32}}",
         "class" : "Label",
         "attributes" : {
           "font_name" : "<System>",
@@ -57,8 +57,8 @@
           "class" : "Label",
           "alignment" : "left",
           "text" : "🔻五大诉求，缺一不可",
-          "name" : "label_title",
-          "font_size" : 12
+          "font_size" : 12,
+          "name" : "label_title"
         },
         "selected" : false
       },
@@ -66,17 +66,17 @@
         "nodes" : [
 
         ],
-        "frame" : "{{37, 104}, {279, 32}}",
+        "frame" : "{{45, 84}, {271, 40}}",
         "class" : "Label",
         "attributes" : {
-          "font_size" : 16,
+          "name" : "label1",
           "frame" : "{{195, 254}, {150, 32}}",
           "uuid" : "DDF03019-FDF7-4A4C-9974-062E046D5AB3",
           "class" : "Label",
           "alignment" : "left",
           "text" : "1. iPad",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "name" : "label1",
+          "font_size" : 16,
           "font_name" : "<System>"
         },
         "selected" : false
@@ -85,17 +85,17 @@
         "nodes" : [
 
         ],
-        "frame" : "{{37, 137}, {279, 32}}",
+        "frame" : "{{45, 125}, {271, 40}}",
         "class" : "Label",
         "attributes" : {
-          "font_size" : 16,
+          "name" : "label2",
           "frame" : "{{195, 254}, {150, 32}}",
           "uuid" : "50C060FE-8E1F-4869-8114-468A73C5F4BC",
           "class" : "Label",
           "alignment" : "left",
           "text" : "2. 科学的网络环境",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "name" : "label2",
+          "font_size" : 16,
           "font_name" : "<System>"
         },
         "selected" : false
@@ -104,17 +104,17 @@
         "nodes" : [
 
         ],
-        "frame" : "{{37, 170}, {279, 32}}",
+        "frame" : "{{45, 166}, {271, 40}}",
         "class" : "Label",
         "attributes" : {
-          "font_size" : 16,
+          "name" : "label3",
           "frame" : "{{195, 254}, {150, 32}}",
           "uuid" : "D2256F72-B361-4003-9A49-4E4D4D869DF6",
           "class" : "Label",
           "alignment" : "left",
           "text" : "3. 可以访问exhentai.org的账号",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "name" : "label3",
+          "font_size" : 16,
           "font_name" : "<System>"
         },
         "selected" : false
@@ -123,17 +123,17 @@
         "nodes" : [
 
         ],
-        "frame" : "{{37, 203}, {279, 32}}",
+        "frame" : "{{45, 207}, {271, 40}}",
         "class" : "Label",
         "attributes" : {
-          "font_size" : 16,
+          "name" : "label4",
           "frame" : "{{195, 254}, {150, 32}}",
           "uuid" : "48B0B094-12F5-4699-BE9E-7390A5A9F3C5",
           "class" : "Label",
           "alignment" : "left",
           "text" : "4. Hath Perk: Multi-Page Viewer",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "name" : "label4",
+          "font_size" : 16,
           "font_name" : "<System>"
         },
         "selected" : false
@@ -142,18 +142,18 @@
         "nodes" : [
 
         ],
-        "frame" : "{{4, 104}, {32, 32}}",
+        "frame" : "{{4, 84}, {40, 40}}",
         "class" : "Button",
         "attributes" : {
-          "image_name" : "iob:ipad_32",
+          "image_name" : "iob:ipad_24",
           "frame" : "{{230, 254}, {80, 32}}",
           "title" : "",
           "uuid" : "A98ED738-FB48-4084-9C0D-3E56366F07B5",
           "class" : "Button",
           "custom_attributes" : "{'touch_enabled':False}",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "name" : "button1",
-          "font_size" : 15
+          "font_size" : 15,
+          "name" : "button1"
         },
         "selected" : false
       },
@@ -161,29 +161,10 @@
         "nodes" : [
 
         ],
-        "frame" : "{{4, 137}, {32, 32}}",
+        "frame" : "{{4, 125}, {40, 40}}",
         "class" : "Button",
         "attributes" : {
-          "font_size" : 15,
-          "frame" : "{{230, 254}, {80, 32}}",
-          "title" : "",
-          "uuid" : "A98ED738-FB48-4084-9C0D-3E56366F07B5",
-          "class" : "Button",
-          "custom_attributes" : "{'touch_enabled':False}",
-          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
           "name" : "button2",
-          "image_name" : "iob:earth_32"
-        },
-        "selected" : false
-      },
-      {
-        "nodes" : [
-
-        ],
-        "frame" : "{{4, 170}, {32, 32}}",
-        "class" : "Button",
-        "attributes" : {
-          "image_name" : "iob:ios7_unlocked_32",
           "frame" : "{{230, 254}, {80, 32}}",
           "title" : "",
           "uuid" : "A98ED738-FB48-4084-9C0D-3E56366F07B5",
@@ -191,7 +172,7 @@
           "custom_attributes" : "{'touch_enabled':False}",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
           "font_size" : 15,
-          "name" : "button3"
+          "image_name" : "iob:earth_24"
         },
         "selected" : false
       },
@@ -199,17 +180,17 @@
         "nodes" : [
 
         ],
-        "frame" : "{{4, 203}, {32, 32}}",
+        "frame" : "{{4, 166}, {40, 40}}",
         "class" : "Button",
         "attributes" : {
-          "image_name" : "iob:star_32",
+          "image_name" : "iob:ios7_unlocked_outline_24",
           "frame" : "{{230, 254}, {80, 32}}",
           "title" : "",
           "uuid" : "A98ED738-FB48-4084-9C0D-3E56366F07B5",
           "class" : "Button",
           "custom_attributes" : "{'touch_enabled':False}",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "name" : "button4",
+          "name" : "button3",
           "font_size" : 15
         },
         "selected" : false
@@ -218,18 +199,37 @@
         "nodes" : [
 
         ],
-        "frame" : "{{4, 236}, {32, 160}}",
+        "frame" : "{{4, 207}, {40, 40}}",
         "class" : "Button",
         "attributes" : {
-          "image_name" : "iob:gear_a_32",
+          "image_name" : "iob:star_24",
           "frame" : "{{230, 254}, {80, 32}}",
           "title" : "",
           "uuid" : "A98ED738-FB48-4084-9C0D-3E56366F07B5",
           "class" : "Button",
           "custom_attributes" : "{'touch_enabled':False}",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "name" : "button5",
-          "font_size" : 15
+          "font_size" : 15,
+          "name" : "button4"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{4, 248}, {40, 160}}",
+        "class" : "Button",
+        "attributes" : {
+          "image_name" : "iob:gear_a_24",
+          "frame" : "{{230, 254}, {80, 32}}",
+          "title" : "",
+          "uuid" : "A98ED738-FB48-4084-9C0D-3E56366F07B5",
+          "class" : "Button",
+          "custom_attributes" : "{'touch_enabled':False}",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "font_size" : 15,
+          "name" : "button5"
         },
         "selected" : false
       },
@@ -277,7 +277,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{223, 138}, {80, 30}}",
+        "frame" : "{{223, 130}, {80, 30}}",
         "class" : "Button",
         "attributes" : {
           "border_width" : 1,
@@ -297,35 +297,35 @@
         "nodes" : [
 
         ],
-        "frame" : "{{85, 24}, {150, 32}}",
+        "frame" : "{{85, 20}, {150, 32}}",
         "class" : "Label",
         "attributes" : {
-          "font_size" : 18,
+          "name" : "label_title",
           "frame" : "{{85, 268}, {150, 32}}",
           "uuid" : "A1716E3F-87C9-45E2-8A3D-FA54E5EDC4EC",
           "class" : "Label",
           "alignment" : "center",
           "text" : "初始设置",
-          "name" : "label_title",
+          "font_size" : 18,
           "font_name" : "<System>"
         },
-        "selected" : true
+        "selected" : false
       },
       {
         "nodes" : [
 
         ],
-        "frame" : "{{4, 404}, {312, 32}}",
+        "frame" : "{{4, 424}, {312, 32}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label_readme",
+          "font_size" : 16,
           "frame" : "{{85, 268}, {150, 32}}",
           "uuid" : "FFA5654E-ECA9-4D5D-9282-DD36BF85E542",
           "class" : "Label",
           "alignment" : "left",
           "text" : "阅读README了解详情    ⇒ ",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "font_size" : 16,
+          "name" : "label_readme",
           "font_name" : "<System-Bold>"
         },
         "selected" : false
@@ -334,16 +334,16 @@
         "nodes" : [
 
         ],
-        "frame" : "{{218, 404}, {98, 32}}",
+        "frame" : "{{218, 424}, {98, 32}}",
         "class" : "Button",
         "attributes" : {
-          "font_size" : 15,
+          "name" : "button_readme",
           "frame" : "{{120, 268}, {80, 32}}",
           "title" : "README",
           "uuid" : "73294710-C7B2-4C0D-8A3F-69D6363AE053",
           "class" : "Button",
-          "name" : "button_readme",
-          "image_name" : "iob:ios7_information_outline_24"
+          "font_bold" : true,
+          "font_size" : 16
         },
         "selected" : false
       },
@@ -351,16 +351,16 @@
         "nodes" : [
 
         ],
-        "frame" : "{{4, 460}, {312, 32}}",
+        "frame" : "{{4, 468}, {312, 32}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label_next",
+          "font_size" : 12,
           "frame" : "{{85, 268}, {150, 32}}",
           "uuid" : "32BDE9E2-E085-46D3-8061-E8753C6B937F",
           "class" : "Label",
           "alignment" : "center",
           "text" : "满足全部诉求后，请点击输入账号进行下一步",
-          "font_size" : 12,
+          "name" : "label_next",
           "font_name" : "<System>"
         },
         "selected" : false
