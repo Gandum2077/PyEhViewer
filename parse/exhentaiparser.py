@@ -479,7 +479,7 @@ class ExhentaiParser:
         else:
             is_favorited = False
         return {
-            'favcat_titles': [{'favcat' + str(i):v.text.strip()} for i, v in enumerate(soup.select('div.nosel > div')[:10])],
+            'favcat_titles': [{'favcat': 'favcat' + str(i), 'title': v.text.strip()} for i, v in enumerate(soup.select('div.nosel > div')[:10])],
             'favcat_selected': favcat_selected,
             'favnote': soup.find('textarea').text,
             'is_favorited': is_favorited

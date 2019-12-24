@@ -493,8 +493,8 @@ class FavoriteView (ui.View):
         self.background_color = '#efeff4'
         l = ui.ListDataSource([])
         l.items = [
-            {'title': list(i.values())[0],
-            'image': get_diamond(get_color_from_favcat(list(i.keys())[0])),
+            {'title': i['title'],
+            'image': get_diamond(get_color_from_favcat(i['favcat'])),
             'accessory_type':'none'}
             for i in favcat_titles
             ]
