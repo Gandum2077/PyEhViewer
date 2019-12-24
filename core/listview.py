@@ -580,20 +580,7 @@ class CellView (ui.View):
                 self.refresh()
             except AttributeError:
                 pass
-                
-class StorageSearchPhrasesView (ui.View):
-    def __init__(self):
-        pass
-        
-    def did_load(self):
-        self['button_edit'].action = self.edit
-        
-    def xdid_load(self, items):
-        self['tableview1'].data_source.items = items
-    
-    def edit(self, sender):
-        sender.superview['tableview1'].editing = not sender.superview['tableview1'].editing
-      
+
 
 def get_items(url, url_category):
     """此函数根据url去获取对应的dict
