@@ -87,7 +87,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{6, 409}, {528, 40}}",
+        "frame" : "{{6, 449}, {528, 40}}",
         "class" : "Button",
         "attributes" : {
           "flex" : "W",
@@ -108,7 +108,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{6, 450}, {528, 40}}",
+        "frame" : "{{6, 490}, {528, 40}}",
         "class" : "Button",
         "attributes" : {
           "flex" : "W",
@@ -129,7 +129,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{6, 491}, {528, 40}}",
+        "frame" : "{{6, 531}, {528, 40}}",
         "class" : "Button",
         "attributes" : {
           "flex" : "W",
@@ -271,7 +271,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{6, 548}, {150, 24}}",
+        "frame" : "{{6, 588}, {150, 24}}",
         "class" : "Label",
         "attributes" : {
           "font_name" : "<System>",
@@ -279,7 +279,7 @@
           "uuid" : "1B7F51FB-C348-47F2-BADB-DDA246BC2CC9",
           "class" : "Label",
           "alignment" : "left",
-          "text" : "Settings for Favorites",
+          "text" : "Others",
           "font_size" : 12,
           "name" : "label5"
         },
@@ -289,7 +289,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{6, 572}, {528, 40}}",
+        "frame" : "{{6, 612}, {528, 40}}",
         "class" : "Label",
         "attributes" : {
           "uuid" : "F6257F89-C74C-419D-9176-CAAD219F1E16",
@@ -312,14 +312,14 @@
         "nodes" : [
 
         ],
-        "frame" : "{{360, 574}, {174, 36}}",
+        "frame" : "{{360, 614}, {174, 36}}",
         "class" : "SegmentedControl",
         "attributes" : {
-          "segments" : "Favorited|Posted",
+          "name" : "segmentedcontrol_favorites",
           "frame" : "{{210, 336}, {120, 29}}",
           "uuid" : "051D255A-CCE2-478D-862A-5B3EECD328F9",
-          "name" : "segmentedcontrol_favorites",
           "class" : "SegmentedControl",
+          "segments" : "Favorited|Posted",
           "flex" : "LR"
         },
         "selected" : false
@@ -328,7 +328,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{6, 368}, {528, 40}}",
+        "frame" : "{{6, 408}, {528, 40}}",
         "class" : "Button",
         "attributes" : {
           "flex" : "W",
@@ -349,7 +349,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{6, 613}, {528, 40}}",
+        "frame" : "{{6, 653}, {528, 40}}",
         "class" : "Label",
         "attributes" : {
           "uuid" : "F6257F89-C74C-419D-9176-CAAD219F1E16",
@@ -366,33 +366,54 @@
           "name" : "label8",
           "flex" : "W"
         },
-        "selected" : true
+        "selected" : false
       },
       {
         "nodes" : [
 
         ],
-        "frame" : "{{360, 615}, {174, 36}}",
+        "frame" : "{{360, 655}, {174, 36}}",
         "class" : "SegmentedControl",
         "attributes" : {
-          "name" : "segmentedcontrol_downloads",
+          "class" : "SegmentedControl",
           "frame" : "{{210, 336}, {120, 29}}",
           "flex" : "LR",
-          "class" : "SegmentedControl",
           "segments" : "gid|st_mtime",
+          "name" : "segmentedcontrol_downloads",
           "uuid" : "051D255A-CCE2-478D-862A-5B3EECD328F9"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 367}, {528, 40}}",
+        "class" : "Button",
+        "attributes" : {
+          "flex" : "W",
+          "border_width" : 0,
+          "frame" : "{{230, 254}, {80, 32}}",
+          "title" : "更新标签翻译",
+          "uuid" : "B1C725D6-8FDE-49FB-959C-DD4BB62BA689",
+          "class" : "Button",
+          "corner_radius" : 0,
+          "border_color" : "RGBA(0.745283,0.745283,0.745283,1.000000)",
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "button_update_tagtranslation",
+          "font_size" : 15
         },
         "selected" : false
       }
     ],
-    "frame" : "{{0, 0}, {540, 700}}",
+    "frame" : "{{0, 0}, {540, 750}}",
     "class" : "View",
     "attributes" : {
       "background_color" : "RGBA(0.937255,0.937255,0.956863,1.000000)",
       "enabled" : true,
       "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
-      "name" : "",
       "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "name" : "",
       "flex" : ""
     },
     "selected" : false

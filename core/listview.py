@@ -18,7 +18,7 @@ from core.database import create_db, insert_info, delete_by_gid, search_by_url
 from core.galleryview import galleryview
 from core.rating_stars_view import render_rating_stars_view
 from core.storage_search_phrases_view import render_storage_search_phrases_view
-from core.utility import get_coordinate, get_color, translate_taglist, render_taglist_to_text, get_color_from_favcat, verify_url, detect_url_category, get_search_url, add_querydict_to_url
+from core.utility import get_coordinate, get_color, generate_tag_translator_json, update_tagtranslator_dict, translate_taglist, render_taglist_to_text, get_color_from_favcat, verify_url, detect_url_category, get_search_url, add_querydict_to_url
 import parse.exhentaiparser
 
 # 读取config.json的变量
@@ -358,6 +358,7 @@ class ListView(ui.View):
         view['button_default_url'].action = self.set_default_url_from_button
         view['button_reset_account'].action = self.reset_account
         view['button_login'].action = self.login
+        view['button_update_tagtranslation'].action = self.update_tagtranslation
         view['button_update_db'].action = self.update_db
         view['button_rm_cache'].action = self.rm_cache
         view['button_rm_unfav_downloads'].action = self.rm_unfav_downloads
@@ -423,6 +424,14 @@ class ListView(ui.View):
             parse.exhentaiparser.renew()
             console.hud_alert('完成')
 
+    @ui.in_background
+    def update_tagtranslation(self, sender):
+        t = console.alert('确定要更新标签翻译？', '', 'Yes')
+        if t == 1:
+            generate_tag_translator_json()
+            update_tagtranslator_dict()
+            console.hud_alert('完成')
+        
     @ui.in_background
     def update_db(self, sender):
         t = console.alert('确定要更新数据库？', '', 'Yes')

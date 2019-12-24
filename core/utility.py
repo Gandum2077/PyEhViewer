@@ -96,6 +96,10 @@ def generate_tag_translator_json():
     text = json.dumps(types_dict, indent=2, sort_keys=True)
     open(TAGTRANSLATOR_JSON, 'w').write(text)
 
+def update_tagtranslator_dict():
+    global TAGTRANSLATOR_DICT
+    TAGTRANSLATOR_DICT = json.loads(open(TAGTRANSLATOR_JSON).read()) 
+
 def translate_taglist(taglist):
     def translate_key(eng):
             d = {
