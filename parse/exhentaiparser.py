@@ -654,7 +654,7 @@ class ExhentaiParser:
             img_extname = os.path.splitext(urllib.parse.urlparse(url).path)[1]
             img_name = img_id + img_extname
             fullpath = os.path.join(dl_path, img_name)
-            self.download_pic(fullpath, url, timeout)
+            self.download_pic(fullpath, url, timeout, use_cookies=False)
     
     def start_download_thumbnails(self, pics, dl_path, start=True):
         "为Pythonista专门设计的下载函数，用于下载thumbnails"
@@ -684,16 +684,19 @@ class ExhentaiParser:
         with semaphore:
             self.download_pic(fullpath, url, timeout)
     
-    def download_pic(self, fullpath, url, timeout):
-        def download(src, session):
+    def download_pic(self, fullpath, url, timeout, use_cookies=True):
+        def download(src, session, use_cookies=True):
             try:
-                r = session.get(src, timeout=timeout)
+                if use_cookies:
+                    r = session.get(src, timeout=timeout)
+                else:
+                    r = requests.get(src, timeout=timeout)
             except:
                 return
             if not r.ok:
                 return
             return r.content
-        img_bytes = download(url, self.session)
+        img_bytes = download(url, self.session, use_cookies=use_cookies)
         if not img_bytes:
             return
         try:
