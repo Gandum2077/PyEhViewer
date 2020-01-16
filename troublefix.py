@@ -39,7 +39,24 @@ def rm_cache():
             print(i)
             shutil.rmtree(str(i))
 
-
+def transfer_to_v2():
+    import datetime
+    import time
+    for i in Path(IMAGEPATH).iterdir():
+        print(str(i))
+        t = i.stat().st_mtime
+        tt = datetime.datetime.utcfromtimestamp(t).isoformat()
+        info = json.loads(i.joinpath('manga_infos.json').open().read())
+        info['create_time'] = tt
+        if info.get('version'):
+            del info['version']
+        text = json.dumps(info, indent=2, sort_keys=True)
+        with open(str(i.joinpath('manga_infos.json')), 'w', encoding='utf-8') as f:
+            f.write(text)
+    rebuild_db()
+        
+        
+    
 def show_dialogs():
     items = [
         {
@@ -61,6 +78,11 @@ def show_dialogs():
             "index": 3,
             "title": '升级标签翻译',
             "action": update_ehtagtranslator_json
+        },
+        {
+            "index": 4,
+            "title": '迁移到2.0',
+            "action": transfer_to_v2
         }
     ]
     result = dialogs.list_dialog(
@@ -68,8 +90,9 @@ def show_dialogs():
         items=list(map(lambda x: x['title'], items)),
         multiple=False
         )
-    action = next(filter(lambda x: x['title'] == result, items))['action']
-    action()
+    if result:
+        action = next(filter(lambda x: x['title'] == result, items))['action']
+        action()
 
 
 if __name__ == '__main__':
