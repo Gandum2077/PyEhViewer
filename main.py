@@ -3,9 +3,10 @@ import sys
 
 from parse.exhentaiparser import CONFIGPATH, COOKIE_FILE
 from core.welcome import welcome
-
+from core.utility import get_latest_version
 
 if __name__ == '__main__':
+    get_latest_version()
     if not os.path.exists(CONFIGPATH) or not os.path.exists(COOKIE_FILE):
         welcome()
     else:        

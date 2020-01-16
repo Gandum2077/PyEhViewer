@@ -8,10 +8,11 @@ import requests
 
 try:
     import ui
+    import console
 except:
     pass
 
-from conf.config import TAGTRANSLATOR_JSON
+from conf.config import TAGTRANSLATOR_JSON, APP_CONFIGPATH
 
 if os.path.exists(TAGTRANSLATOR_JSON):
     TAGTRANSLATOR_DICT = json.loads(open(TAGTRANSLATOR_JSON).read())
@@ -85,6 +86,23 @@ def get_favcat_from_color(name):
         '#e8e': 'favcat9',
     }
     return d[name]
+
+@ui.in_background
+def get_latest_version():
+    url = 'https://api.github.com/repos/Gandum2077/PyEhViewer/releases/latest'
+    try:
+        r = requests.get(url, timeout=10)
+    except:
+        return
+    else:
+        info = r.json()
+        latest_version = info['tag_name']
+        with open(APP_CONFIGPATH, encoding='utf-8') as f:
+            config = json.loads(f.read())
+            current_version = config['info']['version']
+        if latest_version != current_version:
+            console.hud_alert('可更新，请从Github更新')
+        
 
 def generate_tag_translator_json():
     url = 'https://api.github.com/repos/EhTagTranslation/Database/releases/latest'
