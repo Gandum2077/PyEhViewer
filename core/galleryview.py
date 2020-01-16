@@ -104,7 +104,12 @@ class GalleryView(ui.View):
         self.add_subview(self._render_scrollview())
         
         if self.info.get('parent_url') and len(os.listdir(self.dl_path)) == 2:
-            self['button_try_import_old_version'].hidden = False
+            filename_old_version = self._search_old_version()
+            if filename_old_version:
+                self['button_try_import_old_version'].hidden = False
+                self['button_try_import_old_version'].filename = filename_old_version
+            else:
+                self['button_try_import_old_version'].hidden = True
         else:
             self['button_try_import_old_version'].hidden = True
             if self.info.get('newer_versions'):
@@ -287,19 +292,20 @@ class GalleryView(ui.View):
         v = EnlargedCommentsView(self.info)
         v.present('sheet')
     
-    def try_import_old_version(self, sender):
-        sender.hidden = True
+    def _search_old_version(self):
         parent_url = self.info.get('parent_url')
-        foldername = verify_url(parent_url)
+        if not parent_url:
+            return 
+        filename = verify_url(parent_url)
         clause = """SELECT DISTINCT gid||'_'||token
             FROM downloads
             WHERE gid = ?
             LIMIT 1
             """
-        args = (foldername[: foldername.find('_')],)
-        t = [i[0] for i in search(clause, args=args)]
-        if t:
-            old_dl_path, old_info = self._get_info(parent_url)
+        args = (filename[: filename.find('_')],)
+        result = search(clause, args=args)
+        if result:
+            return filename
         else:
             clause = """SELECT DISTINCT gid||'_'||token
             FROM downloads
@@ -314,73 +320,70 @@ class GalleryView(ui.View):
                 self.info.get('english_title'),
                 self.info.get('gid')
                 )
-            t = [i[0] for i in search(clause, args=args)]
-            if t:
-                old_dl_path = os.path.join(IMAGEPATH, t[0])
-                manga_infos_file = os.path.join(old_dl_path, 'manga_infos.json')
-                old_info = json.loads(open(manga_infos_file).read())
-            else:
-                console.hud_alert('未找到旧版本', 'error')
-                return
+            result = search(clause, args=args)
+            if result:
+                return list(result[0].values())[0]
+    
+    def try_import_old_version(self, sender):
+        sender.hidden = True
+        filename = sender.filename
+        if filename:
+            old_dl_path = os.path.join(IMAGEPATH, filename)
+            manga_infos_file = os.path.join(old_dl_path, 'manga_infos.json')
+            old_info = json.loads(open(manga_infos_file).read())
+        else:
+            console.hud_alert('未找到旧版本', 'error')
+            return
         self.thread_list.clear()
-        imgid_extname_dict = dict([
-            os.path.splitext(i)
-            for i in os.listdir(old_dl_path)
-            if i not in ['manga_infos.json', 'thumbnails']
-            ])
-        old_pics = dict([
-            (i['key'], (i['img_id'], imgid_extname_dict[i['img_id']]))
-            for i in old_info['pics']
-            if i['img_id'] in imgid_extname_dict
-            ])
-        new_pics = dict([
-            (i['key'], i['img_id'])
-            for i in self.info['pics']
-            ])
-        for key in set(old_pics.keys()) & set(new_pics.keys()):
-            old_path = os.path.join(old_dl_path, old_pics[key][0] + old_pics[key][1])
-            new_path = os.path.join(self.dl_path, new_pics[key] + old_pics[key][1])
-            if os.path.exists(old_path) and not os.path.exists(new_path):
-                shutil.move(old_path, new_path)
-            old_thumbnail_path = os.path.join(old_dl_path, 'thumbnails', old_pics[key][0] + '.jpg')
-            new_thumbnail_path = os.path.join(self.dl_path, 'thumbnails', new_pics[key] + '.jpg')
-            if os.path.exists(old_thumbnail_path) and not os.path.exists(new_thumbnail_path):
-                shutil.move(old_thumbnail_path, new_thumbnail_path)
+        old_pics_dict = {}
+        old_thumbnails_dict = {}
+        for pic in old_info["pics"]:
+            old_pics_dict[pic['key']] = os.path.join(old_dl_path, pic['img_id'] + os.path.splitext(pic['img_name'])[1])
+            old_thumbnails_dict[pic['key']] = os.path.join(old_dl_path, 'thumbnails', pic['img_id'] + '.jpg')
+
+        dl_path = self.dl_path
+        info = self.info
+        new_pics_dict = {}
+        new_thumbnails_dict = {}
+        for pic in info["pics"]:
+            new_pics_dict[pic['key']] = os.path.join(dl_path, pic['img_id'] + os.path.splitext(pic['img_name'])[1])
+            new_thumbnails_dict[pic['key']] = os.path.join(dl_path, 'thumbnails', pic['img_id'] + '.jpg')
+
+        for key in old_pics_dict:
+            if (os.path.exists(old_pics_dict[key]) and key in new_pics_dict and not os.path.exists(new_pics_dict[key])):
+                shutil.move(old_pics_dict[key], new_pics_dict[key])
+            if (os.path.exists(old_thumbnails_dict[key]) and key in new_thumbnails_dict and not os.path.exists(new_thumbnails_dict[key])):
+                shutil.move(old_thumbnails_dict[key], new_thumbnails_dict[key])
+
         delete_by_gid(old_info['gid'])
         shutil.rmtree(old_dl_path)
         self.thread_list = glv.PARSER.start_download_thumbnails(self.info['pics'], os.path.join(self.dl_path, 'thumbnails'), start=False)
+        console.hud_alert('已完成')
             
     def update_gallery_version(self, sender):
         if hasattr(sender, 'new_url'):
             url = sender.new_url
             old_info = self.info
             old_dl_path = self.dl_path
+            old_pics_dict = {}
+            old_thumbnails_dict = {}
+            for pic in old_info["pics"]:
+                old_pics_dict[pic['key']] = os.path.join(old_dl_path, pic['img_id'] + os.path.splitext(pic['img_name'])[1])
+                old_thumbnails_dict[pic['key']] = os.path.join(old_dl_path, 'thumbnails', pic['img_id'] + '.jpg')
+
             dl_path, info = self._get_info(url)
-            if not os.path.exists(os.path.join(dl_path, 'thumbnails')):
-                os.mkdir(os.path.join(dl_path, 'thumbnails'))
-            imgid_extname_dict = dict([
-                os.path.splitext(i)
-                for i in os.listdir(old_dl_path)
-                if i not in ['manga_infos.json', 'thumbnails']
-                ])
-            old_pics = dict([
-                (i['key'], (i['img_id'], imgid_extname_dict[i['img_id']]))
-                for i in old_info['pics']
-                if i['img_id'] in imgid_extname_dict
-                ])
-            new_pics = dict([
-                (i['key'], i['img_id'])
-                for i in info['pics']
-                ])
-            for key in set(old_pics.keys()) & set(new_pics.keys()):
-                old_path = os.path.join(old_dl_path, old_pics[key][0] + old_pics[key][1])
-                new_path = os.path.join(dl_path, new_pics[key] + old_pics[key][1])
-                if os.path.exists(old_path) and not os.path.exists(new_path):
-                    shutil.move(old_path, new_path)
-                old_thumbnail_path = os.path.join(old_dl_path, 'thumbnails', old_pics[key][0] + '.jpg')
-                new_thumbnail_path = os.path.join(dl_path, 'thumbnails', new_pics[key] + '.jpg')
-                if os.path.exists(old_thumbnail_path) and not os.path.exists(new_thumbnail_path):
-                    shutil.move(old_thumbnail_path, new_thumbnail_path)
+            new_pics_dict = {}
+            new_thumbnails_dict = {}
+            for pic in info["pics"]:
+                new_pics_dict[pic['key']] = os.path.join(dl_path, pic['img_id'] + os.path.splitext(pic['img_name'])[1])
+                new_thumbnails_dict[pic['key']] = os.path.join(dl_path, 'thumbnails', pic['img_id'] + '.jpg')
+
+            for key in old_pics_dict:
+                if (os.path.exists(old_pics_dict[key]) and key in new_pics_dict and not os.path.exists(new_pics_dict[key])):
+                    shutil.move(old_pics_dict[key], new_pics_dict[key])
+                if (os.path.exists(old_thumbnails_dict[key]) and key in new_thumbnails_dict and not os.path.exists(new_thumbnails_dict[key])):
+                    shutil.move(old_thumbnails_dict[key], new_thumbnails_dict[key])
+
             self.dl_path = dl_path
             self.url = url
             self.info = info

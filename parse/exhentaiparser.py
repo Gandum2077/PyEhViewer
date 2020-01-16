@@ -599,6 +599,9 @@ class ExhentaiParser:
     def save_mangainfo(self, infos, dl_path):
         if not os.path.exists(dl_path):
             os.makedirs(dl_path)
+        thumbnails = os.path.join(dl_path, "thumbnails")
+        if not os.path.exists(thumbnails):
+            os.mkdir(thumbnails)
         t = json.dumps(infos, sort_keys=True, indent=2)
         open(os.path.join(dl_path, 'manga_infos.json'), 'w').write(t)
     
