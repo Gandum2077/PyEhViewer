@@ -55,7 +55,7 @@
           "title" : "",
           "action" : "change_color",
           "class" : "Button",
-          "image_name" : "iob:checkmark_round_32",
+          "image_name" : "iob:checkmark_24",
           "font_size" : 15
         },
         "selected" : false
@@ -409,7 +409,7 @@
           "image_name" : "iob:checkmark_32",
           "font_size" : 15
         },
-        "selected" : true
+        "selected" : false
       },
       {
         "nodes" : [
@@ -632,11 +632,11 @@
     "frame" : "{{0, 0}, {400, 204}}",
     "class" : "View",
     "attributes" : {
-      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
-      "enabled" : true,
-      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
       "name" : "",
+      "enabled" : true,
       "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
       "flex" : ""
     },
     "selected" : false

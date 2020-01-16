@@ -14,8 +14,8 @@
           "class" : "Label",
           "alignment" : "left",
           "text" : "搜索图册名称",
-          "name" : "label1_f_sname",
-          "font_size" : 16
+          "font_size" : 16,
+          "name" : "label1_f_sname"
         },
         "selected" : false
       },
@@ -27,7 +27,7 @@
         "class" : "Button",
         "attributes" : {
           "uuid" : "44C1A632-AC8A-4ED5-946B-7989B769D2BC",
-          "image_name" : "iob:checkmark_round_32",
+          "name" : "f_sname",
           "corner_radius" : 5,
           "background_color" : "RGBA(1.000000,0.282353,0.760784,1.000000)",
           "frame" : "{{230, 317}, {80, 32}}",
@@ -37,7 +37,7 @@
           "title" : "",
           "action" : "change_color",
           "class" : "Button",
-          "name" : "f_sname",
+          "image_name" : "iob:checkmark_24",
           "font_size" : 15
         },
         "selected" : false
@@ -50,7 +50,7 @@
         "class" : "Button",
         "attributes" : {
           "uuid" : "44C1A632-AC8A-4ED5-946B-7989B769D2BC",
-          "image_name" : "iob:checkmark_32",
+          "name" : "f_stags",
           "corner_radius" : 5,
           "background_color" : "RGBA(1.000000,0.282353,0.760784,1.000000)",
           "frame" : "{{230, 317}, {80, 32}}",
@@ -60,7 +60,7 @@
           "title" : "",
           "action" : "change_color",
           "class" : "Button",
-          "name" : "f_stags",
+          "image_name" : "iob:checkmark_32",
           "font_size" : 15
         },
         "selected" : false
@@ -72,13 +72,13 @@
         "frame" : "{{250, 0}, {150, 24}}",
         "class" : "Label",
         "attributes" : {
-          "font_size" : 16,
+          "name" : "label_f_stags",
           "frame" : "{{225, 284}, {150, 32}}",
           "uuid" : "B8D5991F-2096-4484-A86A-5C2AAEB6C241",
           "class" : "Label",
           "alignment" : "left",
           "text" : "搜索图册标签",
-          "name" : "label_f_stags",
+          "font_size" : 16,
           "font_name" : "<System>"
         },
         "selected" : false
@@ -91,7 +91,7 @@
         "class" : "Button",
         "attributes" : {
           "uuid" : "44C1A632-AC8A-4ED5-946B-7989B769D2BC",
-          "image_name" : "iob:checkmark_32",
+          "name" : "f_sr",
           "corner_radius" : 5,
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
           "frame" : "{{230, 317}, {80, 32}}",
@@ -101,7 +101,7 @@
           "title" : "",
           "action" : "change_color",
           "class" : "Button",
-          "name" : "f_sr",
+          "image_name" : "iob:checkmark_32",
           "font_size" : 15
         },
         "selected" : false
@@ -113,13 +113,13 @@
         "frame" : "{{30, 30}, {150, 24}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label_f_sr",
+          "font_size" : 16,
           "frame" : "{{227, 104}, {150, 32}}",
           "uuid" : "A3B6C796-24AC-4DAC-9303-C61CE0DDC9AB",
           "class" : "Label",
           "alignment" : "left",
           "text" : "最低评价：",
-          "font_size" : 16,
+          "name" : "label_f_sr",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -150,7 +150,7 @@
         "class" : "Button",
         "attributes" : {
           "uuid" : "44C1A632-AC8A-4ED5-946B-7989B769D2BC",
-          "image_name" : "iob:checkmark_32",
+          "name" : "f_sp",
           "corner_radius" : 5,
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
           "frame" : "{{230, 317}, {80, 32}}",
@@ -160,10 +160,10 @@
           "title" : "",
           "action" : "change_color",
           "class" : "Button",
-          "name" : "f_sp",
+          "image_name" : "iob:checkmark_32",
           "font_size" : 15
         },
-        "selected" : true
+        "selected" : false
       },
       {
         "nodes" : [
@@ -178,8 +178,8 @@
           "class" : "Label",
           "alignment" : "left",
           "text" : "页码在此之间：",
-          "name" : "label_f_sp",
-          "font_size" : 16
+          "font_size" : 16,
+          "name" : "label_f_sp"
         },
         "selected" : false
       },
@@ -199,8 +199,8 @@
           "alignment" : "left",
           "class" : "TextField",
           "autocorrection_type" : "default",
-          "font_size" : 16,
-          "name" : "f_spf"
+          "name" : "f_spf",
+          "font_size" : 16
         },
         "selected" : false
       },
@@ -211,13 +211,13 @@
         "frame" : "{{275, 60}, {24, 24}}",
         "class" : "Label",
         "attributes" : {
-          "font_size" : 16,
+          "name" : "label1",
           "frame" : "{{227, 104}, {150, 32}}",
           "uuid" : "EEFCE4C4-CDDB-40A4-A8AB-865C98800224",
           "class" : "Label",
           "alignment" : "center",
           "text" : "-",
-          "name" : "label1",
+          "font_size" : 16,
           "font_name" : "<System>"
         },
         "selected" : false
@@ -229,14 +229,14 @@
         "frame" : "{{310, 60}, {45, 24}}",
         "class" : "TextField",
         "attributes" : {
-          "font_size" : 16,
+          "name" : "f_spt",
           "frame" : "{{202, 104}, {200, 32}}",
           "spellchecking_type" : "default",
           "class" : "TextField",
           "uuid" : "A7C1A66F-6547-4953-8871-4BC2B5897775",
           "alignment" : "left",
           "autocorrection_type" : "default",
-          "name" : "f_spt",
+          "font_size" : 16,
           "font_name" : "<System>"
         },
         "selected" : false
@@ -245,11 +245,11 @@
     "frame" : "{{0, 0}, {400, 84}}",
     "class" : "View",
     "attributes" : {
-      "name" : "",
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
       "enabled" : true,
       "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "name" : "",
       "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
-      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
       "flex" : ""
     },
     "selected" : false

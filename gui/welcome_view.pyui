@@ -39,8 +39,8 @@
           "alignment" : "left",
           "text" : "5. 设置",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "name" : "label5",
-          "font_size" : 16
+          "font_size" : 16,
+          "name" : "label5"
         },
         "selected" : false
       },
@@ -57,8 +57,8 @@
           "class" : "Label",
           "alignment" : "left",
           "text" : "🔻五大诉求，缺一不可",
-          "font_size" : 12,
-          "name" : "label_title"
+          "name" : "label_title",
+          "font_size" : 12
         },
         "selected" : false
       },
@@ -69,14 +69,14 @@
         "frame" : "{{45, 84}, {271, 40}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label1",
+          "font_size" : 16,
           "frame" : "{{195, 254}, {150, 32}}",
           "uuid" : "DDF03019-FDF7-4A4C-9974-062E046D5AB3",
           "class" : "Label",
           "alignment" : "left",
           "text" : "1. iPad",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "font_size" : 16,
+          "name" : "label1",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -88,14 +88,14 @@
         "frame" : "{{45, 125}, {271, 40}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label2",
+          "font_size" : 16,
           "frame" : "{{195, 254}, {150, 32}}",
           "uuid" : "50C060FE-8E1F-4869-8114-468A73C5F4BC",
           "class" : "Label",
           "alignment" : "left",
           "text" : "2. 科学的网络环境",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "font_size" : 16,
+          "name" : "label2",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -107,14 +107,14 @@
         "frame" : "{{45, 166}, {271, 40}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label3",
+          "font_size" : 16,
           "frame" : "{{195, 254}, {150, 32}}",
           "uuid" : "D2256F72-B361-4003-9A49-4E4D4D869DF6",
           "class" : "Label",
           "alignment" : "left",
           "text" : "3. 可以访问exhentai.org的账号",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "font_size" : 16,
+          "name" : "label3",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -126,14 +126,14 @@
         "frame" : "{{45, 207}, {271, 40}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label4",
+          "font_size" : 16,
           "frame" : "{{195, 254}, {150, 32}}",
           "uuid" : "48B0B094-12F5-4699-BE9E-7390A5A9F3C5",
           "class" : "Label",
           "alignment" : "left",
           "text" : "4. Hath Perk: Multi-Page Viewer",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "font_size" : 16,
+          "name" : "label4",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -152,8 +152,8 @@
           "class" : "Button",
           "custom_attributes" : "{'touch_enabled':False}",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "font_size" : 15,
-          "name" : "button1"
+          "name" : "button1",
+          "font_size" : 15
         },
         "selected" : false
       },
@@ -164,15 +164,15 @@
         "frame" : "{{4, 125}, {40, 40}}",
         "class" : "Button",
         "attributes" : {
-          "name" : "button2",
+          "font_size" : 15,
           "frame" : "{{230, 254}, {80, 32}}",
           "title" : "",
           "uuid" : "A98ED738-FB48-4084-9C0D-3E56366F07B5",
           "class" : "Button",
           "custom_attributes" : "{'touch_enabled':False}",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "font_size" : 15,
-          "image_name" : "iob:earth_24"
+          "name" : "button2",
+          "image_name" : "iob:connection_bars_24"
         },
         "selected" : false
       },
@@ -183,15 +183,15 @@
         "frame" : "{{4, 166}, {40, 40}}",
         "class" : "Button",
         "attributes" : {
-          "image_name" : "iob:ios7_unlocked_outline_24",
+          "image_name" : "iob:ios7_unlocked_24",
           "frame" : "{{230, 254}, {80, 32}}",
           "title" : "",
           "uuid" : "A98ED738-FB48-4084-9C0D-3E56366F07B5",
           "class" : "Button",
           "custom_attributes" : "{'touch_enabled':False}",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "name" : "button3",
-          "font_size" : 15
+          "font_size" : 15,
+          "name" : "button3"
         },
         "selected" : false
       },
@@ -209,8 +209,8 @@
           "class" : "Button",
           "custom_attributes" : "{'touch_enabled':False}",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "font_size" : 15,
-          "name" : "button4"
+          "name" : "button4",
+          "font_size" : 15
         },
         "selected" : false
       },
@@ -228,8 +228,8 @@
           "class" : "Button",
           "custom_attributes" : "{'touch_enabled':False}",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "font_size" : 15,
-          "name" : "button5"
+          "name" : "button5",
+          "font_size" : 15
         },
         "selected" : false
       },
@@ -300,13 +300,13 @@
         "frame" : "{{85, 20}, {150, 32}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label_title",
+          "font_size" : 18,
           "frame" : "{{85, 268}, {150, 32}}",
           "uuid" : "A1716E3F-87C9-45E2-8A3D-FA54E5EDC4EC",
           "class" : "Label",
           "alignment" : "center",
           "text" : "初始设置",
-          "font_size" : 18,
+          "name" : "label_title",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -318,14 +318,14 @@
         "frame" : "{{4, 424}, {312, 32}}",
         "class" : "Label",
         "attributes" : {
-          "font_size" : 16,
+          "name" : "label_readme",
           "frame" : "{{85, 268}, {150, 32}}",
           "uuid" : "FFA5654E-ECA9-4D5D-9282-DD36BF85E542",
           "class" : "Label",
           "alignment" : "left",
           "text" : "阅读README了解详情    ⇒ ",
           "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-          "name" : "label_readme",
+          "font_size" : 16,
           "font_name" : "<System-Bold>"
         },
         "selected" : false
@@ -337,12 +337,12 @@
         "frame" : "{{218, 424}, {98, 32}}",
         "class" : "Button",
         "attributes" : {
-          "name" : "button_readme",
           "frame" : "{{120, 268}, {80, 32}}",
           "title" : "README",
           "uuid" : "73294710-C7B2-4C0D-8A3F-69D6363AE053",
           "class" : "Button",
           "font_bold" : true,
+          "name" : "button_readme",
           "font_size" : 16
         },
         "selected" : false
@@ -354,13 +354,13 @@
         "frame" : "{{4, 468}, {312, 32}}",
         "class" : "Label",
         "attributes" : {
-          "font_size" : 12,
+          "name" : "label_next",
           "frame" : "{{85, 268}, {150, 32}}",
           "uuid" : "32BDE9E2-E085-46D3-8061-E8753C6B937F",
           "class" : "Label",
           "alignment" : "center",
           "text" : "满足全部诉求后，请点击输入账号进行下一步",
-          "name" : "label_next",
+          "font_size" : 12,
           "font_name" : "<System>"
         },
         "selected" : false

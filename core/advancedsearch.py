@@ -116,9 +116,7 @@ class FavcatLabel (ui.View):
             ))
         self.add_subview(ui.ImageView(
             frame=(53, 3, 24, 32),
-            image=get_diamond(get_color_from_favcat(favcat)),
-            alignment=ui.ALIGN_LEFT,
-            font=('<system>', 16)
+            image=get_diamond(get_color_from_favcat(favcat))
             ))
         self.add_subview(ui.Label(
             frame=(77, 3, 100, 32),

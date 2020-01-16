@@ -8,14 +8,14 @@
         "frame" : "{{6, 18}, {150, 24}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label1",
+          "font_size" : 12,
           "frame" : "{{195, 254}, {150, 32}}",
           "custom_attributes" : "{'touch_enabled':True}",
           "uuid" : "5FEBC92B-1001-4C94-8627-387C6EFF53C3",
           "class" : "Label",
           "alignment" : "left",
           "text" : "Default URL",
-          "font_size" : 12,
+          "name" : "label1",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -153,13 +153,13 @@
         "frame" : "{{6, 222}, {150, 24}}",
         "class" : "Label",
         "attributes" : {
-          "font_size" : 12,
+          "name" : "label3",
           "frame" : "{{195, 254}, {150, 32}}",
           "uuid" : "D2310EC9-21CA-4943-AA08-B6FC7D15ADB3",
           "class" : "Label",
           "alignment" : "left",
           "text" : "Access",
-          "name" : "label3",
+          "font_size" : 12,
           "font_name" : "<System>"
         },
         "selected" : false
@@ -171,13 +171,13 @@
         "frame" : "{{6, 344}, {150, 24}}",
         "class" : "Label",
         "attributes" : {
-          "font_size" : 12,
+          "name" : "label4",
           "frame" : "{{195, 254}, {150, 32}}",
           "uuid" : "1B7F51FB-C348-47F2-BADB-DDA246BC2CC9",
           "class" : "Label",
           "alignment" : "left",
           "text" : "Storage",
-          "name" : "label4",
+          "font_size" : 12,
           "font_name" : "<System>"
         },
         "selected" : false
@@ -262,8 +262,8 @@
           "class" : "Label",
           "alignment" : "left",
           "text" : "只有path为空字符串的url才能作为default url",
-          "font_size" : 12,
-          "name" : "label2"
+          "name" : "label2",
+          "font_size" : 12
         },
         "selected" : false
       },
@@ -280,8 +280,8 @@
           "class" : "Label",
           "alignment" : "left",
           "text" : "Others",
-          "font_size" : 12,
-          "name" : "label5"
+          "name" : "label5",
+          "font_size" : 12
         },
         "selected" : false
       },
@@ -409,10 +409,10 @@
     "frame" : "{{0, 0}, {540, 750}}",
     "class" : "View",
     "attributes" : {
-      "background_color" : "RGBA(0.937255,0.937255,0.956863,1.000000)",
-      "enabled" : true,
       "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "enabled" : true,
       "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "background_color" : "RGBA(0.937255,0.937255,0.956863,1.000000)",
       "name" : "",
       "flex" : ""
     },

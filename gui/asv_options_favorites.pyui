@@ -19,8 +19,8 @@
           "title" : "",
           "action" : "change_color",
           "class" : "Button",
-          "name" : "sn",
-          "image_name" : "iob:checkmark_round_32"
+          "image_name" : "iob:checkmark_24",
+          "name" : "sn"
         },
         "selected" : false
       },
@@ -42,8 +42,8 @@
           "title" : "",
           "action" : "change_color",
           "class" : "Button",
-          "image_name" : "iob:checkmark_round_32",
-          "name" : "st"
+          "name" : "st",
+          "image_name" : "iob:checkmark_24"
         },
         "selected" : false
       },
@@ -65,10 +65,10 @@
           "title" : "",
           "action" : "change_color",
           "class" : "Button",
-          "image_name" : "iob:checkmark_round_32",
-          "name" : "sf"
+          "name" : "sf",
+          "image_name" : "iob:checkmark_24"
         },
-        "selected" : true
+        "selected" : false
       },
       {
         "nodes" : [
@@ -77,13 +77,13 @@
         "frame" : "{{0, 0}, {100, 24}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label_ f_sp",
+          "font_size" : 16,
           "frame" : "{{227, 104}, {150, 32}}",
           "uuid" : "A3B6C796-24AC-4DAC-9303-C61CE0DDC9AB",
           "class" : "Label",
           "alignment" : "center",
           "text" : "Search: ",
-          "font_size" : 16,
+          "name" : "label_ f_sp",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -95,13 +95,13 @@
         "frame" : "{{130, 0}, {70, 24}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label_ f_sp",
+          "font_size" : 16,
           "frame" : "{{227, 104}, {150, 32}}",
           "uuid" : "A3B6C796-24AC-4DAC-9303-C61CE0DDC9AB",
           "class" : "Label",
           "alignment" : "left",
           "text" : "Name",
-          "font_size" : 16,
+          "name" : "label_ f_sp",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -113,13 +113,13 @@
         "frame" : "{{230, 0}, {70, 24}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label_ f_sp",
+          "font_size" : 16,
           "frame" : "{{227, 104}, {150, 32}}",
           "uuid" : "A3B6C796-24AC-4DAC-9303-C61CE0DDC9AB",
           "class" : "Label",
           "alignment" : "left",
           "text" : "Tags",
-          "font_size" : 16,
+          "name" : "label_ f_sp",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -131,13 +131,13 @@
         "frame" : "{{330, 0}, {70, 24}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label_ f_sp",
+          "font_size" : 16,
           "frame" : "{{227, 104}, {150, 32}}",
           "uuid" : "A3B6C796-24AC-4DAC-9303-C61CE0DDC9AB",
           "class" : "Label",
           "alignment" : "left",
           "text" : "Note",
-          "font_size" : 16,
+          "name" : "label_ f_sp",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -146,11 +146,11 @@
     "frame" : "{{0, 0}, {400, 24}}",
     "class" : "View",
     "attributes" : {
-      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "name" : "",
       "enabled" : true,
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
       "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
       "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-      "name" : "",
       "flex" : ""
     },
     "selected" : false
