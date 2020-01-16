@@ -85,25 +85,8 @@ def search(clause, args=None):
         else:
             cur.execute(clause)
         t = cur.fetchall()
-    title = [
-        'gid',
-        'token',
-        'category',
-        'create_time',
-        'display_rating',
-        'english_title',
-        'favcat',
-        'is_personal_rating',
-        'japanese_title',
-        'length',
-        'posted',
-        'rating',
-        'taglist',
-        'thumbnail_url',
-        'uploader',
-        'url',
-        'visible',
-        ]
+        t1 = cur.description
+    title = list(map(lambda x: x[0], t1))
     items = []
     for i in t:
         items.append(dict(zip(title, i)))
