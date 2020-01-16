@@ -1,3 +1,4 @@
+import json
 import os
 import re
 import sqlite3
@@ -11,15 +12,23 @@ def create_db():
     conn = sqlite3.connect(DATABASE)
     c = conn.cursor()
     c.execute("""CREATE TABLE downloads (
-        gid INTEGER NOT NULL, 
-        token TEXT, 
-        category TEXT, 
+        gid INTEGER NOT NULL,
+        token TEXT,
+        category TEXT,
+        create_time TEXT,
+        display_rating REAL,
         english_title TEXT,
+        favcat TEXT,
+        is_personal_rating INTEGER,
         japanese_title TEXT,
-        length INTEGER, 
-        posted TEXT, 
+        length INTEGER,
+        posted TEXT,
         rating REAL,
-        uploader TEXT, 
+        taglist TEXT,
+        thumbnail_url TEXT,
+        uploader TEXT,
+        url TEXT,
+        visible INTEGER,
         PRIMARY KEY(gid))""")
     c.execute("""CREATE TABLE tags (
         gid INTEGER NOT NULL, 
@@ -34,12 +43,20 @@ def insert_info(info):
         gid,
         info.get('token'),
         info.get('category'),
+        info.get('create_time'),
+        info.get('display_rating'),
         info.get('english_title'),
+        info.get('favcat'),
+        info.get('is_personal_rating'),
         info.get('japanese_title'),
         info.get('length'),
         info.get('posted'),
         info.get('rating'),
-        info.get('uploader')
+        json.dumps(info['taglist'], indent=2, sort_keys=True),
+        info.get('thumbnail_url'),
+        info.get('uploader'),
+        info.get('url'),
+        info.get('visible')
         )
     values_keys = []
     for k, v in info['taglist'].items():
@@ -68,10 +85,32 @@ def search(clause, args=None):
         else:
             cur.execute(clause)
         t = cur.fetchall()
-    return t
+    title = [
+        'gid',
+        'token',
+        'category',
+        'create_time',
+        'display_rating',
+        'english_title',
+        'favcat',
+        'is_personal_rating',
+        'japanese_title',
+        'length',
+        'posted',
+        'rating',
+        'taglist',
+        'thumbnail_url',
+        'uploader',
+        'url',
+        'visible',
+        ]
+    items = []
+    for i in t:
+        items.append(dict(zip(title, i)))
+    return items
 
 
-def handle_querydict(querydict):
+def handle_querydict(querydict, downloads_order_method = "gid"):
     """处理querydict，返回sql语句
     """
     def handle_f_search(text):
@@ -168,11 +207,14 @@ def handle_querydict(querydict):
         where_clause = ' WHERE ' + ' AND '.join(condition_clauses)
     else:
         where_clause = ''
-    return "SELECT DISTINCT downloads.gid||'_'||downloads.token FROM downloads" + where_clause, tuple(args)
+    if downloads_order_method == "gid":
+        sort_clause = ' ORDER BY gid DESC'
+    else:
+        sort_clause = ' ORDER BY create_time DESC'
+    return "SELECT DISTINCT * FROM downloads" + where_clause + sort_clause, tuple(args)
 
 
-def search_by_url(url):
+def search_by_url(url, downloads_order_method = "gid"):
     querydict = dict(urllib.parse.parse_qsl(urllib.parse.urlparse(url).query))
-    clause, args = handle_querydict(querydict)
-    foldernames = [i[0] for i in search(clause, args=args)]
-    return foldernames
+    clause, args = handle_querydict(querydict, downloads_order_method = downloads_order_method)
+    return search(clause, args=args)

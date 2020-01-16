@@ -512,15 +512,15 @@ class CellView (ui.View):
         self.border_color = '#c3c3c3'
         self.border_width = 1
         self.url = item['url']
-        self['label_category'].text, self['label_category'].background_color = get_color(item["category"])
-        self['label_length'].text = item["length"] + '页'
+        self['label_category'].text, self['label_category'].background_color = get_color(item["category"].lower())
+        self['label_length'].text = str(item["length"]) + '页'
         self['label_posted'].text = item["posted"]
         if item["visible"] == 'Yes':
             self['delete_line_view'].hidden = True
         else:
             self['delete_line_view'].hidden = False
         self['label_uploader'].text = item["uploader"]
-        self['label_title'].text = item['title']
+        self['label_title'].text = item.get("title") or item.get('japanese_title') or item.get('english_title')
         x, y, w, h = self['rating_location_view'].frame
         if item['is_personal_rating']:
             rating = item['display_rating']
@@ -541,7 +541,11 @@ class CellView (ui.View):
         favcat = item.get('favcat')
         if favcat:
             self['label_posted'].border_color = get_color_from_favcat(favcat)
-        self['textview_taglist'].text = render_taglist_to_text(translate_taglist(item['taglist']))
+        if type(item['taglist']) == str:
+            taglist = json.loads(item['taglist'])
+        else:
+            taglist = item['taglist']
+        self['textview_taglist'].text = render_taglist_to_text(translate_taglist(taglist))
         self['button_open_gallery'].action = self.open_gallery
         self.add_subview(ui.ActivityIndicator(name='indicator', center=(56, 80)))
         thumbnail_url = item['thumbnail_url']
@@ -590,54 +594,22 @@ def get_items(url, url_category):
     def get_listview_dict(url):
         return glv.PARSER.get_list_infos(url)
 
-    def transfer_config(path):
-        config = json.loads(open(path).read())
-        if config['japanese_title']:
-            config['title'] = config['japanese_title']
-        else:
-            config['title'] = config['english_title']
-        config['category'] = config['category'].lower()
-        return config
-
-    def checkpics(path):
-        nums_of_pics = len(os.listdir(path)) - 2
-        return nums_of_pics
-
     def get_storageview_dict(url):
-        search_result = search_by_url(url)
-        folders =[
-            Path(IMAGEPATH).joinpath(i)
-            for i in search_result
-            if Path(IMAGEPATH).joinpath(i).exists
-            ]
-        if len(folders) != len(search_result):
-            console.hud_alert('数据库出错，请更新', 'error')
-        if DOWNLOADS_ORDER_METHOD == 'gid':
-            key=lambda f: int(f.name[:f.name.find('_')])
-        elif DOWNLOADS_ORDER_METHOD == 'st_mtime':
-            key = lambda f: f.stat().st_mtime
-        folders = sorted(
-            folders, 
-            key=key,
-            reverse=True
-            )
+        result = search_by_url(url, DOWNLOADS_ORDER_METHOD)
         t = urllib.parse.parse_qs(urllib.parse.urlparse(url).query)
         if t.get('page'):
             page = int(t.get('page')[0])
         else:
             page = 0
-        items = []
-        for i in folders[page*50:page*50+50]:
-            info = transfer_config(str(i.joinpath('manga_infos.json')))
-            items.append(info)
-        search_result = 'Showing {} results'.format(len(folders))
-        return dict(
-            items=items,
-            current_page_str=str(page + 1),
-            total_pages_str=str(math.ceil(len(folders)/50)),
-            search_result=search_result,
-            favcat_nums_titles=None
-            )
+        t= dict(
+            items = result[page * 50: (page + 1) * 50],
+            current_page_str = str(page + 1),
+            total_pages_str = str(math.ceil(len(result) / 50)),
+            favcat_nums_titles = None,
+            favorites_order_method = None,
+            search_result = 'Showing ' + str(len(result)) + ' results'
+        )
+        return t
 
     if url_category == 'downloads':
         return get_storageview_dict(url)
