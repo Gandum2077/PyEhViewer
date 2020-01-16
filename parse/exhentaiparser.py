@@ -1,3 +1,4 @@
+import datetime
 import json
 import os
 import re
@@ -10,8 +11,6 @@ from PIL import Image
 import requests
 from bs4 import BeautifulSoup
 
-
-VERSION = '1.7'
 
 DEFAULT_TIMEOUT = 20
 DEFAULT_STORAGE_PATH = 'image'
@@ -310,7 +309,8 @@ class ExhentaiParser:
         infos = self.extract_manga_infos(soup0)
         comments = self.extract_comments(soup0)
         filename = infos['gid'] + '_' + infos['token']
-        infos.update(url=gallery_url, pics=pics, comments=comments, filename=filename, version=VERSION)
+        create_time = datetime.datetime.utcnow().isoformat()
+        infos.update(url=gallery_url, pics=pics, comments=comments, filename=filename, create_time=create_time)
         return infos
 
     def extract_page_urls_mpv(self, gallery_url):
@@ -624,22 +624,18 @@ class ExhentaiParser:
                     
     def start_download_mpv(self, pics, dl_path, start=True):
         "多线程下载图片，为manga_infos.json的pics设计"
-        def does_exist(img_id, dl_path):
-            for i in os.listdir(dl_path):
-                if os.path.splitext(i)[0] == img_id:
-                    return True
-
         if not os.path.exists(dl_path):
             os.makedirs(dl_path)
         
         thread_list = []
 
         for pic in pics:
-            if not does_exist(pic['img_id'], dl_path):
+            fullpath = os.path.join(dl_path, pic['img_id'] + os.path.splitext(pic['img_name'])[1])
+            if not os.path.exists(fullpath):
                 t = threading.Thread(
                     name='pic_mpv_{}'.format(pic['img_id']),
                     target=self.download_pic_mpv_middle,
-                    args=(pic['gid'], pic['mpvkey'], pic['page'], pic['key'], pic['img_id'], dl_path, self.timeout)
+                    args=(pic['gid'], pic['mpvkey'], pic['page'], pic['key'], fullpath, self.timeout)
                     )
                 thread_list.append(t)
         if start:
@@ -648,12 +644,9 @@ class ExhentaiParser:
         else:
             return thread_list
 
-    def download_pic_mpv_middle(self, gid, mpvkey, page, key, img_id, dl_path, timeout):
+    def download_pic_mpv_middle(self, gid, mpvkey, page, key, fullpath, timeout):
         with semaphore:
             url = self.get_pic_url(gid, key, mpvkey, page)
-            img_extname = os.path.splitext(urllib.parse.urlparse(url).path)[1]
-            img_name = img_id + img_extname
-            fullpath = os.path.join(dl_path, img_name)
             self.download_pic(fullpath, url, timeout, use_cookies=False)
     
     def start_download_thumbnails(self, pics, dl_path, start=True):
