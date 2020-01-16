@@ -1,5 +1,5 @@
-config.yml
-downloads.db
-account.json
-cookie.json
-config.json
+conf/config.json
+conf/downloads.db
+conf/ehtagtranslator.json
+parse/account.json
+parse/cookie.json

@@ -13,7 +13,10 @@ except:
 
 from conf.config import TAGTRANSLATOR_JSON
 
-TAGTRANSLATOR_DICT = json.loads(open(TAGTRANSLATOR_JSON).read())
+if os.path.exists(TAGTRANSLATOR_JSON):
+    TAGTRANSLATOR_DICT = json.loads(open(TAGTRANSLATOR_JSON).read())
+else:
+    TAGTRANSLATOR_DICT = {}
 
 def get_coordinate(x, y, w, h, w1, h1):
     """在一个长方形内居中放置一个长方形(w1,h1)，求新长方形的形如(x,y,w,h)的坐标

@@ -12,6 +12,7 @@ import ui
 from parse.exhentaiparser import renew, renew_account, ExhentaiParser
 from core.database import create_db
 from conf.config import CONFIGPATH, COOKIE_FILE, CACHEPATH, IMAGEPATH
+from core.utility import generate_tag_translator_json, update_tagtranslator_dict
 
 class ReadmeView (ui.View):
     def __init__(self, md_text):
@@ -53,6 +54,8 @@ class WelcomeView (ui.View):
             init_config()
             create_db()
             get_favcat()
+            generate_tag_translator_json()
+            update_tagtranslator_dict()
             import conf.global_variables as glv
             glv.init()
             self.present_listview()
