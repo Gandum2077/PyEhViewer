@@ -1,7 +1,7 @@
 # PyEhViewer
 
-由于iOS平台审查限制，因此iOS平台在诸如看Pornhub、看Exhentai之类的功能上一直是缺失的。这是iOS让人难以忍受的地方，也是Android超越iOS的地方。  
-一直以来，App Store没有好用的exhentai.org阅读器（虽有偷鸡摸狗上架的，但体验也很差），但是官方不提供，可以自己做嘛。利用Pythonista 3这个万能平台创作，功能上对标Android平台的EhViewer，同时也有自己的特色功能。
+提升[exhentai.org](https://exhentai.org)在iOS平台的阅读体验，并尽情使用其强大的搜索、评分、收藏、评论等诸多功能！  
+本应用基于Pythonista 3平台。在功能上对标Android平台的EhViewer。另外，也选择在JSBox平台的孪生应用[JSEhViewer](https://github.com/Gandum2077/JSEhViewer)。
 
 ## Features
 
@@ -19,14 +19,14 @@
 
 ## 前提
 
-本来这是本人为了欣赏艺（工）术（口）才写的，因此很遗憾，可能不适合对艺（工）术（口）没有追求的人。  
+这是本人为了欣赏艺术、提升欣赏艺术的体验才写的，因此很遗憾，可能不适合对艺术没有追求的人。  
 本程序虽然前提设置有点复杂，但是程序本身的操作是一目了然的。
 
 **你必须满足以下前提才能使用PyEhViewer:**
 
 1. (必要) [Pythonista 3](https://apps.apple.com/cn/app/pythonista-3/id1085978097)
-2. (必要) iPad。 **不支持iPhone。** 目前完美支持逻辑分辨率为1024x768的iPad机型（比如iPad mini 5、iPad Air 2、iPad 2018），更高逻辑分辨率的机型比如iPad Air 3和iPad Pro应该也没问题，布局可以自适应分辨率，但是我没有设备测试，有条件的同学可以测试并反馈一下。
-3. (必要) 可以访问e-hentai.org和exhentai.org的网络环境。如果你使用代理，请注意可能需要设为全局代理或者手动添加以上两个网址，因为很多代理软件没有这两个网址。  
+2. (必要) iPad。 **不支持iPhone。** 
+3. (必要) 可以访问e-hentai.org和exhentai.org的网络环境，并且不可以使用MITM软件。如果你使用代理，请注意可能需要设为全局代理或者手动添加以上两个网址，因为很多代理软件没有这两个网址。  
 关于如何手动添加代理设置，举两个例子：  
 例一 Quantumult：在配置文件加入`HOST-SUFFIX,e-hentai.org,PROXY,resolve-on-proxy`和`HOST-SUFFIX,exhentai.org,PROXY,resolve-on-proxy`。  
 例二 Surge：在配置文件加入`DOMAIN-SUFFIX,e-hentai.org,Proxy`和`DOMAIN-SUFFIX,exhentai.org,Proxy`。
@@ -59,7 +59,8 @@ cd PyEhViewer; git pull
 
 请注意需要先进入PyEhViewer的目录，如果你安装在别的地方，那么要对应的修改。  
 此方法只保证在你没有过编辑行为，仅运行过`main.py`时可用，如果出现`WARNING: there are uncommitted modified files and/or staged changes. These could be overwritten by this command. Continue anyway? [y/n]`的提示，那么你应该修改过里面的文件，如果你认为自己的修改并不重要，可以输入y继续。  
-更新完请看看Readme，**因为不能保证更新一定是平滑升级，说不定会需要一定的操作**（这个更新也许会很快到来，我已经在写了）
+更新完请看看Readme，**因为不能保证更新一定是平滑升级，尤其是大版本升级**
+
 ## 使用方法
 运行`main.py`即可。
 
@@ -68,6 +69,11 @@ cd PyEhViewer; git pull
 - 请注意所有的数据库写入操作都是在图库关闭的时候进行的，所以如果不关闭图库就直接退出Pythonista，那么这个图库就不会保存到数据库
 
 ## 更新
+### 2020-01-16    版本：2.0 
+- 此版本为大版本升级，不兼容之前的版本，请先运行`troublefix.py`，并选择“迁移到2.0”
+- 优化downloads页搜索速度
+- 更新提示
+
 ### 2019-12-05    版本：1.7 加入表示是否为隐藏图库的标记功能，bugfix
 - 用删除线表示隐藏图库
 - 修复各类Bug
@@ -78,7 +84,6 @@ cd PyEhViewer; git pull
 - 修复评分以后的刷新bug
 
 ## TO-DO
-- [x] CommentsView，可以发表评论，打分，打开链接
 - [ ] 为逻辑分辨率更高的iPad调整测试UI适配
 - [ ] 适配iPhone
 - [ ] 让没有 Multi-Page Viewer 权限的账号也能使用
@@ -86,11 +91,8 @@ cd PyEhViewer; git pull
 - [ ] 缓存搜索支持‘-’号过滤语法
 
 ## 已知bugs
-- 若放在iCloud文件夹中，本程序无法运作
-- 首次运行如果出现`requests.exceptions.SSLError`: 检查代理软件，最好将e-hentai.org和exhentai.org加入代理列表，或者可以暂时设为全局模式，登录完成以后再改回来
-- 如果出现数据库错误（多为程序卡死强制关闭造成），运行`troublefix.py`里的`rebuild_db()`即可，如果App还能打开，也可以在设置里操作
-- 如果之前因为关站风波下载了紧急更新版本，请运行`troublefix.py`里面的`fix_infos()`，否则旧图库将出现bug
-- 由于对gif使用了webview这种折衷方案，所以观看gif的时候不宜过快翻页，否则容易内存告急而导致Pythonista崩溃。不过如果gif文件过大，即使你什么都不做App也会崩溃
+- 如果出现`requests.exceptions.SSLError`: 1. 不可以使用MITM软件；2. 请检查代理软件，最好将e-hentai.org和exhentai.org加入代理列表，或者可以暂时设为全局模式，登录完成以后再改回来
+- 如果出现数据库错误（多为程序卡死强制关闭造成），运行`troublefix.py`里的“修复数据库”即可，如果App还能打开，也可以在设置里操作
 
 ## Contributing
 - 针对不同设备调整UI需要大量的人力，所以如果你在逻辑分辨率不为1024*768的设备上使用，不要忘了调整UI并贡献代码
