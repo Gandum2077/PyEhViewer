@@ -30,9 +30,7 @@
 关于如何手动添加代理设置，举两个例子：  
 例一 Quantumult：在配置文件加入`HOST-SUFFIX,e-hentai.org,PROXY,resolve-on-proxy`和`HOST-SUFFIX,exhentai.org,PROXY,resolve-on-proxy`。  
 例二 Surge：在配置文件加入`DOMAIN-SUFFIX,e-hentai.org,Proxy`和`DOMAIN-SUFFIX,exhentai.org,Proxy`。
-4. (必要) 注册[e-hentai.org](https://e-hentai.org)账号，并确保可以访问[exhentai.org](https://exhentai.org)（刚注册的账号需要等待两星期左右才能访问）。  
-然后请去[Hath Perks页面](https://e-hentai.org/hathperks.php)点亮Multi-Page Viewer的Hath Perk，需要300Hath币或者在[捐款页面](https://e-hentai.org/bitcoin.php)捐价值100美元的Bitcoin或Bitcoin Cash。  
-
+4. (必要) 注册[e-hentai.org](https://e-hentai.org)账号，并确保可以访问[exhentai.org](https://exhentai.org)，然后请去[Hath Perks页面](https://e-hentai.org/hathperks.php)点亮Multi-Page Viewer的Hath Perk
 5. [设置界面](https://exhentai.org/uconfig.php)做以下设置：
 
 - (必要)Front Page Settings 设为 Extended
